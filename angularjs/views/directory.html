@@ -1,0 +1,42 @@
+<div class="content">
+    <h1>Views and Routing</h1>
+    <!-- controller remove since is coming from the route definition -->
+    <!-- <div ng-controller="NinjaController"> -->
+        <!-- passing order filter value through click event -->
+        <button ng-click="order='type'">Order by type</button>
+        <button ng-click="order='price'">Order by price</button>
+        <button ng-click="order='wheels'">Order by wheels</button>
+        <ul class="ninja-list">
+            <li ng-repeat="vehicle in vehicles | orderBy: order">
+                <p style="padding: 0.2rem; border: 0.2rem solid {{vehicle.color}};">
+                    <!-- using 'ng-src' directive instead src attribute  o avoid parsing errors  -->
+                    <!-- ng-show will return false if not data provided -->
+                    <img 
+                        ng-src="{{vehicle.thumb}}" 
+                        ng-show="vehicle.thumb"  
+                        style="width: 2rem;" alt=""
+                    >
+                    {{vehicle.type | uppercase}} - {{vehicle.price | currency: '€'}} 
+                    
+                    <!-- passing vehicle object to 'NinjaController' function (removeVehicle) -->
+                    <span class="remove" ng-click="removeVehicle(vehicle)">x</span>
+                    <span>{{vehicle.wheels}} wheels</span>
+                </p>
+            </li>
+        </ul>
+        <!-- ng-submit directive-->
+        <form ng-submit="addVehicle(newVehicle)">
+            <input type="text" placeholder="type" ng-model="newVehicle.type">
+            <input type="text" placeholder="wheels" ng-model="newVehicle.wheels">
+            <input type="text" placeholder="price" ng-model="newVehicle.price">
+            <input type="text" placeholder="color" ng-model="newVehicle.color">
+            <button type="submit">Add New vehicle</button>
+            <button href="" ng-click="removeAll($event)">Remove all vehicles</button>
+            
+        </form>
+        
+       
+    <!-- </div> -->
+    
+    <hr>
+</div>

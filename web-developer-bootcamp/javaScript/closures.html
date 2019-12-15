@@ -1,0 +1,157 @@
+<script>
+
+    "use-strict";
+    
+    // basic example
+    // ----------
+
+    // Closures only exists when an inner function is returned and uses
+    // values defined in the parent function
+
+    function outer() {
+        var data = "closures are ";
+        return function inner() {
+            var innerData = 'awesome';
+            return data + innerData;
+        };
+    }
+
+
+    console.log(outer());   // returns the whole inner() function
+    console.log(outer()()); // closures are awesome, outer was executed
+                            // in the previous line, but still accessible here
+
+    // example two
+    // ----------
+    console.log('\n---');
+
+    function outerB(a) {
+        return function innerB(b) {
+            // the inner function is using 'a'
+            // once outer is executed 'a' should be inaccesible
+            // inner() function is a closure 
+            // because make use of the value of 'a' in memory
+            return console.log(a + b);
+        };
+    }
+
+    outerB(5)(5); // 10
+
+    var addToInner = outerB(2);
+
+    addToInner(3); // 5
+
+    // example three
+    // ----------
+    console.log('\n---');
+    
+    function counter(){
+        var count = 0;
+        //  returning anonymous function
+        return function() {
+            return ++ count;
+        };
+    }
+
+    var counter0 = counter(); // function definition
+    var counter1 = counter0();
+    var counter2 = counter0();
+    var counter3 = counter0();
+
+    console.log(counter0);  // returns the whole function
+    console.log(counter1);  // 1
+    console.log(counter2);  // 2
+    console.log(counter3);  // 3
+
+
+    // example four
+    // ----------
+    console.log('\n---');
+
+    function classRoom() {
+        var instructors = ['Jonh Doe', 'Jane Doe', 'Richard Doe'];
+
+        return {
+            getInstructors: function() {
+                return console.log(instructors);
+            },
+            addInstructors: function(instructor) {
+                instructors.push(instructor);
+                return instructors;
+            }
+        };
+    }
+
+    var course1 = classRoom();
+
+    course1.getInstructors(); // ["Jonh Doe", "Jane Doe", "Richard Doe"]
+
+    course1.addInstructors('Alex Doe');
+    course1.getInstructors(); // ["Jonh Doe", "Jane Doe", "Richard Doe", "Alex Doe"]
+
+    classRoom().getInstructors(); // ["Jonh Doe", "Jane Doe", "Richard Doe"]
+                                  // initial value not affected
+
+    var course2 = classRoom();
+
+    course2.addInstructors('Charles Doe');
+    course2.getInstructors(); // ["Jonh Doe", "Jane Doe", "Richard Doe", "Charles Doe"]
+
+
+    // Prototype and closures
+    // ----------
+    console.log('\n---');
+
+
+    // var Student = function(firstName, middleInitial, lastName) {
+    //     this.firstName = firstName;
+    //     this.middleInitial = middleInitial;
+    //     this.lastName = lastName;
+    //     this.fullName = firstName + " " + middleInitial + " " + lastName;
+    // };
+    
+    // Student.prototype.greeter = function() {
+    //     return "Hello, " + this.firstName + " " + this.lastName + ' ' + this.middleInitial;
+    // };
+
+    // var user = new Student("Jane", "M.", "User");
+    // console.log(user.greeter());
+
+    var Student = (function () {
+        function Student(firstName, middleInitial, lastName) {
+            this.firstName = firstName;
+            this.middleInitial = middleInitial;
+            this.lastName = lastName;
+            this.fullName = firstName + " " + middleInitial + " " + lastName;
+        }
+        return Student;
+    }());
+
+    function greeter(person) {
+        return "Hello, " + person.firstName + " " + person.lastName + ' ' + person.middleInitial;
+    }
+    var user = new Student("Jane", "M.", "User");
+
+    console.log(greeter(user));
+
+
+    var myTest = (function(){
+        function myTest(thing) {
+            this.thing = thing;
+        }
+        return myTest;
+    })();
+
+    function howsMyThing(theThing){
+        return theThing.thing + ' is awesome!!';
+    }
+
+    var newThing = new myTest('This new thing');
+
+    console.log(howsMyThing(newThing));
+
+    //
+    // ----------
+    console.log('\n---');
+
+</script>

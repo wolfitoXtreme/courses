@@ -1,0 +1,26 @@
+{
+  "name": "javascript-es6",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "lite-server",
+    "build": "browserify ./src/app.js -d -t babelify -o ./dest/app.js",
+    "watch": "watchify app.js -d -v -t babelify -o build/app.js",
+    "serve": "concurrently --kill-others-on-fail  \"npm run build\" \"npm run watch\" \"npm start\""
+  },
+  "author": "CESAR",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/cli": "^7.7.4",
+    "@babel/core": "^7.7.4",
+    "@babel/preset-env": "^7.7.4",
+    "babelify": "^10.0.0",
+    "browserify": "^16.5.0",
+    "concurrently": "^5.0.0",
+    "lite-server": "^2.5.4",
+    "watchify": "^3.11.1"
+  },
+  "dependencies": {}
+}

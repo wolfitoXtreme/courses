@@ -1,0 +1,239 @@
+//landscape/Portrait Mixings
+
+/*//////////////////////////////////////*/
+/*/////////MEDIA QUERIES////////////*/
+/*//////////////////////////////////////*/
+
+//set query dummies initial state
+@include queryDummy($breakpoints);
+
+@include mediaQuery('x-large') {
+
+    #main:before {
+        @include queryInfo("x-large #{nth($breakValues, 4)}");
+    }
+
+}
+
+@include mediaQuery('large') {
+
+    #main:before {
+        @include queryInfo("large #{nth($breakValues, 3)}");
+    }
+    
+    body {
+        font-size: 100%;
+    }
+
+    /* form */
+    #center form div {
+
+        $col_gap: getPercentageFrom(
+            21px, 
+            $cuerpo_maxWidth - nth($cuerpoSet_padding, 2) - nth($cuerpoSet_padding, 4) - nth($main_padding, 2) - $colIzquierda_width
+        );
+        $col_amount: 2;
+        
+        //floatedColumnList($col_gap, $col_amount, $colWidth: 100%)
+        @include floatedColumnList($col_gap, $col_amount);
+
+        &.bio {
+            margin-left: 0;
+            padding-left: 10%;
+            width: 100%;
+            clear: both;
+            float: none;
+
+            label {
+                margin-top: 0;
+
+                // left: 0;
+                // top: 8px;
+                width: 10%;
+                float: none;
+                // position: absolute;
+                transform: none;
+            }
+
+            textarea {
+                width: 100%;
+                margin-left: 0;
+            }
+        }
+
+    }
+
+}
+
+@include mediaQuery('medium') {
+   
+    #main:before {
+        @include queryInfo("medium #{nth($breakValues, 2)}");
+    }
+    
+    $font_stretch: 100%;
+    $fSize_base: getProportionalSize($fSize_base, $font_stretch);
+    
+    html {
+        font-size: $fSize_base;
+    }
+
+
+}
+
+@include mediaQuery('small') {
+
+    #main:before {
+        @include queryInfo("small #{nth($breakValues, 1)}");
+    }
+
+    html {
+        font-size: $fSize_base;
+    }
+
+    body {
+        outline: transparent solid 0;
+        // overflow-x: hidden;
+    }
+
+
+    /*///////////////////////////////*/    
+    /*/////////LAYOUT////////////*/
+    /*///////////////////////////////*/
+    #main {
+    }
+        
+    #header {
+        
+    }
+        
+    #content {
+
+        #contentSet {
+        
+        }
+    }
+        
+        /*left column*/
+        #content #leftColumn {
+            width: 100%;
+            float: none;
+        }
+            
+        /*center column*/
+        #content #center {
+            width: 100%;
+        }
+            
+        /*right column*/
+        #content #rightColumn {
+        }
+
+    #footer {
+        
+        #footerSet {
+        }
+        
+        #footerSet_wrapper {
+        }
+
+    }
+
+    
+}
+
+
+@include mediaQuery('x-small') {
+    
+    #main:before {
+        @include queryInfo("x-small 0");
+    }
+   
+    $font_stretch: 100%;
+    $fSize_base: getProportionalSize($fSize_base, $font_stretch);
+ 
+    html {
+        font-size: $fSize_base;
+    }
+
+    body {
+        outline: transparent solid 0;
+        overflow-x: hidden;
+    }
+    
+    /*///////////////////////////////*/    
+    /*/////////LAYOUT////////////*/
+    /*///////////////////////////////*/
+    #main {
+    }
+        
+    #header {
+        
+    }
+        
+    #content {
+
+        #contentSet {
+        
+        }
+    }
+        
+        /*left column*/
+        #content #leftColumn {
+            width: 100%;
+            float: none;
+        }
+            
+        /*center column*/
+        #content #center {
+            width: 100%;
+        }
+            
+        /*right column*/
+        #content #rightColumn {
+        }
+
+    #footer {
+        
+        #footerSet {
+        }
+        
+        #footerSet_wrapper {
+        }
+
+    }
+
+}
+
+//@include mediaQuery('large-landscape') {
+//    
+//    #main:before {
+//        @include queryInfo("large-landscape #{nth($breakValues, 3)}");
+//    }
+//
+//}
+//
+//@include mediaQuery('medium-landscape') {
+//    
+//    #main:before {
+//        @include queryInfo("medium-landscape #{nth($breakValues, 2)}");
+//    }
+//    
+//}
+//
+//@include mediaQuery('small-landscape') {
+//    
+//    #main:before {
+//        @include queryInfo("small-landscape #{nth($breakValues, 1)}");
+//    }
+//
+//}
+//
+//@include mediaQuery('x-small-landscape') {
+//
+//    #main:before {
+//        @include queryInfo("x-small-landscape");
+//    }
+//
+//    
+//}

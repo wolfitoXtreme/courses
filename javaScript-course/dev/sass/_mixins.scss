@@ -1,0 +1,1451 @@
+////////////////////
+//SASS MIXINS
+////////////////////
+
+//layout paint
+@mixin layoutPaint($bgColor, $opacity: 1, $forceDebug: false) {
+        
+    @if $deploy == false {
+        @if $debug == true or $forceDebug == true {
+
+            background-color: $bgColor;
+            opacity: $opacity;
+            //opacity: 0.8;
+
+        }
+    }
+
+}
+
+//testFSize
+@mixin testFSize($targetSize, $fSize:$fSize_base) {
+    
+    &:after {
+        content: "";
+        width: pem($targetSize, $fSize);
+        height: pem($targetSize, $fSize);
+        display: block;
+        position: relative;
+        background-color: #000000;
+    }
+}
+
+//clear fix
+//@mixin clearFix($extend: true) {
+//    content: " ";
+//    display: block;
+//    clear: both;
+//    height: 0;
+//    overflow: hidden;
+//    visibility: hidden;
+//}
+
+
+//clear fix
+@mixin clearFix($extend: true) {
+    @if $extend {
+        @extend %clearFix-placeholder;
+    } @else {
+        content: " ";
+        display: block;
+        clear: both;
+        height: 0;
+        overflow: hidden;
+        visibility: hidden;  
+    }
+}
+
+%clearFix-placeholder {
+  @include clearFix($extend: false);
+}
+
+
+//readable hide
+@mixin hide($extend: true) {
+    @if $extend {
+        @extend %hide-placeholder;
+    } @else {
+        padding: 0 !important;
+        margin: 0 !important;
+        height: 0;
+        width: 0;
+        // font-size: 0;
+        // line-height: 0;
+        overflow: hidden;
+        visibility: hidden;
+        display: block;
+        position: absolute;
+    }
+}
+
+%hide-placeholder {
+    @include hide($extend: false);
+}
+
+
+//show (override hide)
+@mixin show($extend: true) {
+    @if $extend {
+        @extend %show-placeholder;
+    } @else {
+        padding: 0 !important;
+        margin: 0 !important;
+        height: auto;
+        width: auto;
+        overflow: visible;
+        visibility: visible;
+        position: static;
+    }
+}
+
+%show-placeholder {
+    @include show($extend: false);
+}
+
+//noFontSpaces
+@mixin noFontSpaces {
+    font-size: 0;
+    line-height: 0;
+}
+
+//remove default list bullets
+@mixin removeDefaultList {
+    &:before {
+        content: none;
+        display: none;
+        background-color: transparent;
+    }
+}
+
+
+//floated column lists
+@mixin floatedColumnList($col_gap, $col_amount, $colWidth: 100%) {
+    
+    //first row items
+    $rowItems: ('nth-child(' + $col_amount + 'n+1)');
+    
+    margin-left: $col_gap;
+    float: left;
+    clear: none;
+    //columnWidth($colWidth, $gap, $colNumber)
+    width: columnWidth($colWidth, $col_gap, $col_amount);
+    
+    //clear first row item
+    &:first-child, &:#{nth($rowItems, 1)} {
+        margin-left: 0;
+    }
+    
+    &:#{nth($rowItems, 1)} {
+        clear: left;
+    }
+
+    //debug
+    @if $deploy == false {
+    @if $debug == true { 
+        
+            position: relative;
+            background-color: #ff0000;
+
+            &:first-child, &:#{nth($rowItems, 1)} {
+                background-color: #0f0f0f;
+            }
+
+            &:before {
+                content: "first";
+                left: 0;
+                top: 0;
+                padding: 4px 6px;
+                font-size: 12px;
+                line-height: 13px;
+                color: #000000;
+                border: pem(1px) solid #000000;
+                display: none;
+                position: absolute;
+                z-index: 10;
+                background-color: #ff0ff0;
+            }
+            
+            &:first-child:before, &:#{nth($rowItems, 1)}:before {
+                display: block;
+            }
+        }
+    }
+    
+}
+
+@mixin floatedColumnListB($col_gap, $col_amount, $borderSettings, $colWidth: 100%) {
+    
+    //first row items
+    $rowItems: ('nth-child(' + $col_amount + 'n+1)');
+    
+    margin-left: $col_gap;
+    float: left;
+    clear: none;
+    //columnWidth($colWidth, $gap, $colNumber)
+    width: columnWidth($colWidth, $col_gap, $col_amount);
+    
+    &:before {
+        content: "";
+        left: -(getPercentageFrom(
+            $col_gap, 
+            columnWidth($colWidth, $col_gap, $col_amount)
+        ) / 2);
+        top: 0;
+        width: 0;
+        height: 100%;
+        border-left: $borderSettings;
+        display: block;
+        position: absolute;
+   }
+    
+    //clear first row item
+    &:first-child, &:#{nth($rowItems, 1)} {
+        margin-left: 0;
+        
+        &:before {
+            content: none;
+            display: none;
+        }
+        
+    }
+    
+    &:#{nth($rowItems, 1)} {
+        clear: left;
+    }
+    
+
+    //debug
+    @if $debug == true { 
+        
+        position: relative;
+        background-color: #ff0000;
+
+        &:first-child, &:#{nth($rowItems, 1)} {
+            background-color: #0f0f0f;
+        }
+
+    }
+    
+}
+
+//floated column lists
+@mixin floatedInlineList($col_gap, $col_amount, $colWidth: 100%) {
+    
+    //first row items
+    $rowItems: ('nth-child(' + $col_amount + 'n+1)');
+    
+    margin-left: $col_gap;
+    //columnWidth($colWidth, $gap, $colNumber)
+    width: columnWidth($colWidth, $col_gap, $col_amount);
+    vertical-align: top;
+    display: inline-block;
+    
+    //clear first row item
+    &:first-child, &:#{nth($rowItems, 1)} {
+        margin-left: 0;
+    }
+    
+    &:#{nth($rowItems, 1)} {
+        //clear: left;
+    }
+
+    //debug
+    @if $debug == true { 
+        
+        position: relative;
+        background-color: #ff0000;
+
+        &:first-child, &:#{nth($rowItems, 1)} {
+            background-color: #0f0f0f;
+        }
+
+        &:before {
+            content: "first";
+            left: 0;
+            top: 0;
+            padding: 4px 6px;
+            font-size: 12px;
+            line-height: 13px;
+            color: #000000;
+            border: pem(1px) solid #000000;
+            display: none;
+            position: absolute;
+            z-index: 10;
+            background-color: #ffffff;
+        }
+        
+        &:first-child:before, &:#{nth($rowItems, 1)}:before {
+            display: block;
+        }
+    }
+    
+}
+
+//columnList
+@mixin columnList($col_gap, $noBreak:false, $col_amount: 1, $colWidth: auto, $ruleWidth: medium, $ruleStyle: none, $ruleColor: transparent) {
+
+    columns: $colWidth $col_amount;
+    column-gap: $col_gap;
+    column-rule: $ruleWidth $ruleStyle $ruleColor;
+
+    @if $noBreak == true {
+        > * {
+            width: 100%;
+            word-wrap: break-word;
+            display: inline-block;
+            column-break-inside: avoid;
+        }
+    }
+    
+    //debug
+    @if $deploy == false {
+        @if $debug == true {
+            
+            > * {
+                @if $noBreak == true {
+                    margin-bottom: pem(10px);
+                    border-bottom: pem(2px) solid #000000;
+                }
+                background-color: #ff0000;
+            }
+            
+        }
+    }
+
+}
+
+//column count
+
+
+//Convert angle
+@function convert-angle($value, $unit) {
+    $convertable-units: deg grad turn rad;
+    $conversion-factors: 1 (10grad/9deg) (1turn/360deg) (3.1415926rad/180deg);
+    
+    @if index($convertable-units, unit($value)) and index($convertable-units, $unit) {
+        @return $value
+             / nth($conversion-factors, index($convertable-units, unit($value)))
+             * nth($conversion-factors, index($convertable-units, $unit));
+    }
+  
+    @warn "Cannot convert `#{unit($value)}` to `#{$unit}`.";
+}
+
+//Test if `$value` is an angle, return boolean
+@function is-direction($value) {
+    $is-direction: index(
+        (to top, to top right, to right top, to right, to bottom right, to right bottom, to bottom, to bottom left, to left bottom, to left, to left top, to top left), 
+        $value
+    );
+    
+    $is-angle: type-of($value) == 'number' and index('deg' 'grad' 'turn' 'rad', unit($value));
+  
+    @return $is-direction or $is-angle;
+}
+
+//Convert a direction to legacy syntax
+@function legacy-direction($value) {
+    
+    //Test if `$value` is an angle
+    @if is-direction($value) == false {
+        @warn "Cannot convert `#{$value}` to legacy syntax because it doesn't seem to be an angle or a direction";
+    }
+  
+    $conversion-map: ( 
+        to top          : bottom,
+        to top right    : bottom left,
+        to right top    : left bottom,
+        to right        : left,
+        to bottom right : top left,
+        to right bottom : left top,
+        to bottom       : top,
+        to bottom left  : top right,
+        to left bottom  : right top,
+        to left         : right,
+        to left top     : right bottom,
+        to top left     : bottom right
+    );
+    
+    @if map-has-key($conversion-map, $value) {
+        @return map-get($conversion-map, $value);
+    }
+    
+    //Convert angle
+    @return 90deg - convert-angle($value, 'deg');
+}
+
+//multiple backgrounds
+@mixin backgroundImages ($backgrounds...) {
+    
+    $bg: nth($backgrounds, 1);
+    $bg_size: nth($backgrounds, 2);
+    
+    //@if length($bg) > 1 {
+    //    @for $i from 2 through length($bg) {
+    //        $bg: unquote($bg + ', ' + nth($backgrounds, $i));
+    //    }
+    //}
+    
+    content: length($bg);
+    background: $bg;
+    background-size: $bg_size;
+}
+
+//simple gradientFill (linear-gradient and plain color fallback) 
+@mixin simpleGradientFill($direction, $defaultColor, $color-stops...) {
+    
+    @if is-direction($direction) == false {
+        $color-stops: ($direction, $color-stops);
+        $direction: 180deg;
+    }
+  
+    background-color: $defaultColor;
+    background-image: -webkit-linear-gradient(legacy-direction($direction), $color-stops);
+    background-image: linear-gradient($direction, $color-stops);
+}
+
+//brightness gradientFill (linear-gradient whit basecolor and brightness tones and plain color fallback) 
+@mixin brightnessGradientFill($direction, $defaultColor, $color-stops...) {
+    
+    @if is-direction($direction) == false {
+        $color-stops: ($direction, $color-stops);
+        $direction: 180deg;
+    }
+  
+    background-color: nth(nth($color-stops, 1), 1);
+    background-image: -webkit-linear-gradient(legacy-direction($direction), $color-stops), -webkit-linear-gradient(legacy-direction($direction), $defaultColor 0, $defaultColor 100%);
+    background-image: linear-gradient($direction, $color-stops), linear-gradient($direction, $defaultColor 0, $defaultColor 100%);
+}
+
+
+//imageAndGradientFill
+@mixin imageAndGradientFill($image, $imagePos, $imageSize, $imageRepeat, $direction, $defaultColor, $color-stops...) {
+    background-color: transparent, nth(nth($color-stops, 1), 1);
+    background-repeat: $imageRepeat;
+    //background: -webkit-linear-gradient(legacy-direction($direction), $color-stops), -webkit-linear-gradient(legacy-direction($direction), $defaultColor 0, $defaultColor 100%);
+    background-size: $imageSize;
+    background-position: $imagePos;
+    background-image: 
+        unquote('url(' + image-url($image, true, false) + ')'),//image SAFARI
+        -webkit-linear-gradient(legacy-direction($direction), $color-stops)//gradient SAFARI
+    ;
+    background-image: 
+        unquote('url(' + image-url($image, true, false) + ')'),//image
+        linear-gradient($direction, $color-stops)//gradient
+    ;
+}
+
+//imageAndRadialGradientFill
+@mixin imageAndRadialGradientFill($image, $imagePos, $imageSize, $imageRepeat, $origin, $defaultColor, $color-stops...) {
+    background-color: nth(nth($color-stops, 1), 1);
+    background-repeat: $imageRepeat, $imageRepeat;
+    //background: -webkit-linear-gradient(legacy-direction($direction), $color-stops), -webkit-linear-gradient(legacy-direction($direction), $defaultColor 0, $defaultColor 100%);
+    background-size: $imageSize, 100% auto;
+
+    background-image: 
+        unquote('url(..' + image-url($image, true, false) + ')'),//image
+        radial-gradient(circle $origin, $color-stops)//gradient
+    ;
+}
+
+
+//buttonBackground 
+@mixin buttonColor($image, $defaultColor, $color01, $stop01, $color02, $stop02) {
+    background-color: $defaultColor;
+    background-repeat: no-repeat;
+    background-position: right 0, 0 0;
+    background-image: $image, -webkit-linear-gradient($color01 $stop01, $color02 $stop02); /* For Safari */
+    background-image: $image, -o-linear-gradient($color01 $stop01, $color02 $stop02); /* For Opera 11.1 to 12.0 */
+    background-image: $image, -moz-linear-gradient($color01 $stop01, $color02 $stop02); /* For Firefox 3.6 to 15 */
+    background-image: $image, linear-gradient($color01 $stop01, $color02 $stop02); /* Standard syntax */
+}
+
+//tested buttons (//button01, //button06, //button03, //button04)
+
+//reviewed
+//button01(click effect, Image, Gradient and Hover Gradient)
+@mixin submitButton01(
+    $padding, $width, $height, $image, $defaultColor, $color01, $color02, $hdefaultColor, $hcolor01, $hcolor02, $stop01, $stop02, $borderRadius, $display, $isButton, $base: $fSize_base
+) {
+    
+    $local_fSize: nth($fSize_button, 1);
+    
+    margin: 4px 0 0 0;
+    padding: $padding;
+    width: $width;
+    height: $height;
+    font: normal #{pem($local_fSize, $base)}/#{nth($fSize_button, 2)} $fFamily_button;
+    text-transform: uppercase;
+    color: #ffffff;
+    text-decoration: none;
+    border-width: 0;
+    border-radius: $borderRadius;
+    outline: none;
+    cursor: pointer;
+    display: $display;
+    position: relative;
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    
+    //simpleGradientFill($direction, $defaultColor, $color-stops...)
+    @include simpleGradientFill(0deg, $defaultColor, $color01 $stop01, $color02 $stop02);
+    //transition($property, $duration, $timingFunction, $delay)
+    @include transitionProps(50mx, ease-in, 0ms, (
+        background-color, transform
+    ));
+    
+    @include transforms(scale(1));
+    
+    //image, if any
+    &:after {
+
+        content: "";
+        right: 0;
+        top: 50%;
+        display: block;
+        position: absolute;
+        background-origin: border-box;
+
+
+        @if $image != none { 
+            
+            //buttonImage
+            //backgroundImageSettings($image, $stretchTo: 100%, $sprite_left: 0%, $bkg-size: 100%, $base: $fSize_base, $units: 'px')
+            //@return ($image, $width, $height, $sprite_left, $bkg-size, $units, $image_width, $image_height)
+            $buttonImageSettings: backgroundImageSettings('btt_comprar.png', $units: 'px');
+            $buttonImageSprites: 1;
+            $buttonImageWidth: nth($buttonImageSettings, 2);
+            $buttonImageHeight: nth($buttonImageSettings, 3) / $buttonImageSprites;
+            $buttonImageBkg_inc: getPercentageFrom($buttonImageHeight, nth($buttonImageSettings, 3) - $buttonImageHeight);
+            
+            margin-top: -($buttonImageHeight / 2);
+            width: $buttonImageWidth;  
+            height: $buttonImageHeight;
+            background: setBkgImage(#000000, nth($buttonImageSettings, 1), nth($buttonImageSettings, 4), 0, no-repeat);
+            background-size: 100% auto;
+        }
+    }
+
+    span {
+        //text-shadow: rgba(0, 0, 0, 0.21) -1px -1px 0;
+        white-space: nowrap;
+        display: $display;
+        overflow: visible;
+        visibility: visible;
+        
+        @include layoutPaint(#00fcff);
+        
+    }
+    
+    @if $isButton == true {
+                
+        &:hover {
+            @include simpleGradientFill(0deg, $hdefaultColor, $hcolor01 $stop01, $hcolor02 $stop02);
+        }
+        
+        &:active {
+
+            @include transforms(scale(0.95));
+            
+            span {
+                outline-style: none;
+            }
+        }
+        
+        &::-moz-focus-inner {
+            padding: 0;
+            border: 0;
+        }
+        
+    }
+    @else {
+        
+        padding-top: ($button_height / 2) - ( (nth($fSize_button, 1) * nth($fSize_button, 2)) / 2);
+        
+        &:link, &:visited {
+            height: $height;
+            text-decoration: none;
+        }
+        
+        &:hover {
+            background-color: $hcolor01;
+            //shadow
+            @if $hcolor02 != null {
+                box-shadow: 0 (-($height/2)) 0 0 $hcolor02 inset;
+            }
+        }
+        
+        &:active {
+            background-color: $hcolor01;
+            //shadow
+            @if $hcolor02 != null {
+                box-shadow: 0 (-($height/2)) 0 0 $hcolor02 inset; 
+            }
+            @include transforms(scale(0.95));
+            //top: 1px;
+        }
+        
+        span {
+        }
+        
+    }
+    
+}
+
+//button02(Image, InnerShadow And Border)
+@mixin submitButton02($padding, $width, $height, $image, $color01, $color02, $borderRadius, $borderColor, $display, $isButton) {
+        
+    top: 0;
+    padding: 0;
+    width: $width;
+    height: $height;
+    color: #FFFFFF;
+    text-decoration: none;
+    border: nth($button_borderWidth, 1) solid $borderColor;
+    border-radius: $borderRadius;
+    box-shadow: 0 (-($height/2)) 0 0 $color02 inset; 
+    outline: none;
+    overflow: hidden;
+    cursor: pointer;
+    display: $display;
+    position: relative;
+    background-color: $color01;
+    
+    @include layoutPaint(#0f0f0f);
+    
+    span {
+
+        margin: 0 0;
+        padding: $padding;
+        width: auto;
+        height: $height;
+        font: normal 15px/0.9 $fFamily_default;
+        text-transform: uppercase;
+        //text-shadow: rgba(0, 0, 0, 0.21) -1px -1px 0;
+        white-space: nowrap;
+        display: $display;
+        position: relative;
+        overflow: visible;
+        visibility: visible;
+        
+        @if $image != none {  
+            background: $image right 0 no-repeat;
+        }
+        
+        @include layoutPaint(#ff0ff0);
+        
+    }
+    
+    @if $isButton == true {
+        &:active {
+            top: 1px;
+        
+            span {
+                outline-style: none;
+            }
+        }
+        
+        &::-moz-focus-inner {
+            padding: 0;
+            border: 0;
+        }
+        
+    }
+    @else {
+        &:link, &:visited, &:hover {
+            top: 0;
+            height: $height;
+            text-decoration: none;
+        }
+        &:active {
+            top: 1px;
+        }
+    }
+    
+}
+
+//reviewed
+//button03(click effect, Image And flatColor)
+@mixin submitButton03(
+    $padding, $width, $height, $image, $defaultColor, $hdefaultColor, $borderRadius, $display, $isButton, $base: $fSize_base
+) {
+    
+    $local_fSize: nth($fSize_button, 1);
+    
+    margin: 4px 0 0 0;
+    padding: $padding;
+    width: $width;
+    height: $height;
+    font: normal #{pem($local_fSize, $base)}/#{nth($fSize_button, 2)} $fFamily_button;
+    text-transform: uppercase;
+    color: #ffffff;
+    text-decoration: none;
+    border-width: 0;
+    border-radius: $borderRadius;
+    outline: none;
+    cursor: pointer;
+    display: $display;
+    position: relative;
+    background-color: $defaultColor;
+    
+    //transition($property, $duration, $timingFunction, $delay)
+    @include transitionProps(50mx, ease-in, 0ms, (
+        background-color, transform
+    ));
+    
+    @include transforms(scale(1));
+    
+    //image, if any
+    &:after {
+
+        content: "";
+        right: 0;
+        top: 50%;
+        display: block;
+        position: absolute;
+        background-origin: border-box;
+        
+        @if $image != none { 
+            
+            //buttonImage
+            //backgroundImageSettings($image, $stretchTo: 100%, $sprite_left: 0%, $bkg-size: 100%, $base: $fSize_base, $units: 'px')
+            //@return ($image, $width, $height, $sprite_left, $bkg-size, $units, $image_width, $image_height)
+            $buttonImageSettings: backgroundImageSettings('btt_comprar.png', $units: 'px');
+            $buttonImageSprites: 1;
+            $buttonImageWidth: nth($buttonImageSettings, 2);
+            $buttonImageHeight: nth($buttonImageSettings, 3) / $buttonImageSprites;
+            $buttonImageBkg_inc: getPercentageFrom($buttonImageHeight, nth($buttonImageSettings, 3) - $buttonImageHeight);
+            
+            margin-top: -($buttonImageHeight / 2);
+            width: $buttonImageWidth;  
+            height: $buttonImageHeight;
+            background: setBkgImage(#000000, nth($buttonImageSettings, 1), nth($buttonImageSettings, 4), 0, no-repeat);
+            background-size: 100% auto;
+        }
+    }
+
+    span {
+        //text-shadow: rgba(0, 0, 0, 0.21) -1px -1px 0;
+        white-space: nowrap;
+        display: $display;
+        overflow: visible;
+        visibility: visible;
+        
+        @include layoutPaint(#00fcff);
+        
+    }
+    
+    @if $isButton == true {
+                
+        &:hover {
+            background-color: $hdefaultColor;
+        }
+        
+        &:active {
+
+            @include transforms(scale($button_clickScale));
+            
+            span {
+                outline-style: none;
+            }
+        }
+        
+        &::-moz-focus-inner {
+            padding: 0;
+            border: 0;
+        }
+        
+    }
+    @else {
+        
+        padding-top: ($button_height / 2) - ( (nth($fSize_button, 1) * nth($fSize_button, 2)) / 2);
+        
+        &:link, &:visited {
+            height: $height;
+            text-decoration: none;
+        }
+        
+        &:hover {
+            background-color: $hdefaultColor;
+        }
+        
+        &:active {
+            background-color: $hdefaultColor;
+
+            @include transforms(scale(0.95));
+            //top: 1px;
+        }
+        
+        span {
+        }
+        
+    }
+    
+}
+
+//reviewed
+//button04(click effect, Image, InnerShadow And Border, Hover color)
+@mixin submitButton04($padding, $width, $height, $image, $color01, $color02, $hcolor01, $hcolor02, $borderColor, $hborderColor, $borderRadius, $display, $isButton, $base: $fSize_base) {
+    
+    $local_fSize: nth($fSize_button, 1);
+    
+    margin: 4px 0 0 0;
+    padding: $padding;
+    width: $width;
+    height: $height;
+    font: bold #{pem($local_fSize, $base)}/#{nth($fSize_button, 2)} $fFamily_button;
+    color: #ffffff;
+    text-decoration: none;
+    border: nth($button_borderWidth, 1) solid $borderColor;
+    border-radius: $borderRadius;
+    //inner shadow
+    @if $color02 != null {
+        box-shadow: 0 (-($height/2)) 0 0 $color02 inset; 
+    }
+    outline: none;
+    cursor: pointer;
+    display: $display;
+    position: relative;
+    background-color: $color01;
+    
+    //transition($property, $duration, $timingFunction, $delay)
+    @include transitionProps(50mx, ease-in, 0ms, (
+        background-color, transform
+    ));
+    
+    @include transforms(scale(1));
+    
+    //@include layoutPaint(#0f0f0f);
+    
+    //image, if any
+    &:after {
+
+        content: "";
+        right: 0;
+        top: 50%;
+        display: block;
+        position: absolute;
+        background-origin: border-box;
+
+
+        @if $image != none { 
+            
+            //buttonImage
+            //backgroundImageSettings($image, $stretchTo: 100%, $sprite_left: 0%, $bkg-size: 100%, $base: $fSize_base, $units: 'px')
+            //@return ($image, $width, $height, $sprite_left, $bkg-size, $units, $image_width, $image_height)
+            $buttonImageSettings: backgroundImageSettings('btt_comprar.png', $units: 'px');
+            $buttonImageSprites: 1;
+            $buttonImageWidth: nth($buttonImageSettings, 2);
+            $buttonImageHeight: nth($buttonImageSettings, 3) / $buttonImageSprites;
+            $buttonImageBkg_inc: getPercentageFrom($buttonImageHeight, nth($buttonImageSettings, 3) - $buttonImageHeight);
+            
+            margin-top: -($buttonImageHeight / 2);
+            width: $buttonImageWidth;  
+            height: $buttonImageHeight;
+            background: setBkgImage(#000000, nth($buttonImageSettings, 1), nth($buttonImageSettings, 4), 0, no-repeat);
+            background-size: 100% auto;
+        }
+    }
+    
+    span {
+        //margin: 0;
+        //width: auto;
+        //height: $height;
+        //text-shadow: rgba(0, 0, 0, 0.21) -1px -1px 0;
+        white-space: nowrap;
+        display: $display;
+        //position: relative;
+        overflow: visible;
+        visibility: visible;
+        
+        @include layoutPaint(#00fcff);
+        
+    }
+    
+    @if $isButton == true {
+                
+        &:hover {
+            background-color: $hcolor01;
+            //shadow
+            @if $hcolor02 != null {
+                box-shadow: 0 (-($height/2)) 0 0 $hcolor02 inset;
+            }
+        }
+        
+        &:active {
+            //top: 1px;
+            
+            @include transforms(scale(0.95));
+            
+            span {
+                outline-style: none;
+            }
+        }
+        
+        &::-moz-focus-inner {
+            padding: 0;
+            border: 0;
+        }
+        
+    }
+    @else {
+        
+        padding-top: ($button_height / 2) - ( (nth($fSize_button, 1) * nth($fSize_button, 2)) / 2);
+        
+        &:link, &:visited {
+            height: $height;
+            text-decoration: none;
+        }
+        
+        &:hover {
+            background-color: $hcolor01;
+            //shadow
+            @if $hcolor02 != null {
+                box-shadow: 0 (-($height/2)) 0 0 $hcolor02 inset;
+            }
+        }
+        
+        &:active {
+            background-color: $hcolor01;
+            //shadow
+            @if $hcolor02 != null {
+                box-shadow: 0 (-($height/2)) 0 0 $hcolor02 inset; 
+            }
+            @include transforms(scale(0.95));
+            //top: 1px;
+        }
+        
+        span {
+        }
+        
+    }
+
+}
+
+//button05(click effect, Image, InnerShadow And Bevel effect, and Hover color)
+@mixin submitButton05($padding, $width, $height, $image, $color01, $color02, $hcolor01, $hcolor02, $borderRadius, $display, $isButton) {
+        
+    //top: 0;
+    padding: 0;
+    width: $width;
+    height: $height;
+    color: #FFFFFF;
+    text-decoration: none;
+    border-width: 0;
+    border-radius: $borderRadius;
+    box-shadow: -1px -1px 0 0 rgba(0, 0, 0, 0.40) inset, 1px 1px 0 0 rgba(255, 255, 255, 0.45) inset, 0 (-($height/2)) 0 0 $color02 inset; 
+    outline: none;
+    overflow: hidden;
+    cursor: pointer;
+    display: $display;
+    position: relative;
+    background-color: $color01;
+    
+    //transition($property, $duration, $timingFunction, $delay)
+    @include transition(all, 50ms, linear, 0ms);
+    @include transforms(scale(1));
+    
+    //@include layoutPaint(#0f0f0f);
+    
+    span {
+
+        margin: 0 0;
+        padding: $padding;
+        width: auto;
+        height: $height;
+        font: normal 12px/1 $fFamily_default;
+        text-transform: lowercase;
+        white-space: nowrap;
+        display: $display;
+        position: relative;
+        overflow: visible;
+        visibility: visible;
+        
+        
+        @if $image != none {  
+            background: $image right 0 no-repeat;
+        }
+        
+        @include layoutPaint(#00fcff);
+        
+    }
+    
+    @if $isButton == true {
+                
+        &:hover {
+            background-color: $hcolor01;
+            box-shadow: -1px -1px 0 0 rgba(0, 0, 0, 0.40) inset, 1px 1px 0 0 rgba(255, 255, 255, 0.8) inset, 0 (-($height/2)) 0 0 $hcolor02 inset; 
+        }
+        
+        &:active {
+            //top: 1px;
+            
+            @include transforms(scale(0.95));
+            
+            span {
+                outline-style: none;
+            }
+        }
+        
+        &::-moz-focus-inner {
+            padding: 0;
+            border: 0;
+        }
+        
+    }
+    @else {
+        
+        &:link, &:visited {
+            height: $height;
+            text-decoration: none;
+        }
+        
+        &:hover {
+            background-color: $hcolor01;
+            border-color: $hborderColor;
+            box-shadow: -1px -1px 0 0 rgba(0, 0, 0, 0.40) inset, 1px 1px 0 0 rgba(255, 255, 255, 0.8) inset, 0 (-($height/2)) 0 0 $hcolor02 inset; 
+        }
+        
+        &:active {
+            background-color: $hcolor01;
+            border-color: $hborderColor;
+            box-shadow: -1px -1px 0 0 rgba(0, 0, 0, 0.40) inset, 1px 1px 0 0 rgba(255, 255, 255, 0.8) inset, 0 (-($height/2)) 0 0 $hcolor02 inset; 
+            
+            @include transforms(scale(0.95));
+            //top: 1px;
+        }
+    }
+    
+}
+
+//reviewed
+//button06(click effect, Image, InnerShadow and Hover color)
+@mixin submitButton06($padding, $width, $height, $image, $color01, $color02, $hcolor01, $hcolor02, $borderRadius, $display, $isButton, $base: $fSize_base) {
+    
+    $local_fSize: nth($fSize_button, 1);
+    
+    margin: 4px 0 0 0;
+    padding: $padding;
+    width: $width;
+    height: $height;
+    font: normal #{pem($local_fSize, $base)}/#{nth($fSize_button, 2)} $fFamily_button;
+    text-transform: uppercase;
+    color: #ffffff;
+    text-decoration: none;
+    border-width: 0;
+    border-radius: $borderRadius;
+    //inner shadow
+    @if $color02 != null {
+        box-shadow: 0 (-($height/2)) 0 0 $color02 inset; 
+    }
+    outline: none;
+    cursor: pointer;
+    display: $display;
+    position: relative;
+    background-color: $color01;
+    
+    //transition($property, $duration, $timingFunction, $delay)
+    @include transitionProps(50mx, ease-in, 0ms, (
+        background-color, transform
+    ));
+    
+    @include transforms(scale(1));
+    
+    //@include layoutPaint(#0f0f0f);
+    
+    //image, if any
+    &:after {
+
+        content: "";
+        right: 0;
+        top: 50%;
+        display: block;
+        position: absolute;
+        background-origin: border-box;
+
+
+        @if $image != none { 
+            
+            //buttonImage
+            //backgroundImageSettings($image, $stretchTo: 100%, $sprite_left: 0%, $bkg-size: 100%, $base: $fSize_base, $units: 'px')
+            //@return ($image, $width, $height, $sprite_left, $bkg-size, $units, $image_width, $image_height)
+            $buttonImageSettings: backgroundImageSettings('btt_comprar.png', $units: 'px');
+            $buttonImageSprites: 1;
+            $buttonImageWidth: nth($buttonImageSettings, 2);
+            $buttonImageHeight: nth($buttonImageSettings, 3) / $buttonImageSprites;
+            $buttonImageBkg_inc: getPercentageFrom($buttonImageHeight, nth($buttonImageSettings, 3) - $buttonImageHeight);
+            
+            margin-top: -($buttonImageHeight / 2);
+            width: $buttonImageWidth;  
+            height: $buttonImageHeight;
+            background: setBkgImage(#000000, nth($buttonImageSettings, 1), nth($buttonImageSettings, 4), 0, no-repeat);
+            background-size: 100% auto;
+        }
+    }
+    
+    span {
+        //margin: 0;
+        //width: auto;
+        //height: $height;
+        //text-shadow: rgba(0, 0, 0, 0.21) -1px -1px 0;
+        white-space: nowrap;
+        display: $display;
+        //position: relative;
+        overflow: visible;
+        visibility: visible;
+        
+        @include layoutPaint(#00fcff);
+        
+    }
+    
+    @if $isButton == true {
+                
+        &:hover {
+            background-color: $hcolor01;
+            //shadow
+            @if $hcolor02 != null {
+                box-shadow: 0 (-($height/2)) 0 0 $hcolor02 inset;
+            }
+        }
+        
+        &:active {
+            //top: 1px;
+            
+            @include transforms(scale(0.95));
+            
+            span {
+                outline-style: none;
+            }
+        }
+        
+        &::-moz-focus-inner {
+            padding: 0;
+            border: 0;
+        }
+        
+    }
+    @else {
+        
+        padding-top: ($button_height / 2) - ( (nth($fSize_button, 1) * nth($fSize_button, 2)) / 2);
+        
+        &:link, &:visited {
+            height: $height;
+            text-decoration: none;
+        }
+        
+        &:hover {
+            background-color: $hcolor01;
+            //shadow
+            @if $hcolor02 != null {
+                box-shadow: 0 (-($height/2)) 0 0 $hcolor02 inset;
+            }
+        }
+        
+        &:active {
+            background-color: $hcolor01;
+            //shadow
+            @if $hcolor02 != null {
+                box-shadow: 0 (-($height/2)) 0 0 $hcolor02 inset; 
+            }
+            @include transforms(scale(0.95));
+            //top: 1px;
+        }
+        
+        span {
+        }
+        
+    }
+    
+}
+
+//button07(Image, one color and n brightness tones, border, innerGlow, and Hover colors)
+@mixin submitButton07(
+    $padding, $width, $height, $image, 
+    $defaultColor, 
+    $color01, $color02, $color03, $color04,
+    $hdefaultColor, 
+    $hcolor01, $hcolor02, $hcolor03, $hcolor04, 
+    $stop01, $stop02, $stop03, $stop04,
+    $innerGlowColor,
+    $borderColor,
+    $hborderColor,
+    $borderRadius, $display, $isButton
+) {
+    padding: 0;
+    width: $width;
+    height: $height;
+    color: #ffffff;
+    border: nth($button_borderWidth, 1) solid $borderColor !important;
+    border-radius: $borderRadius;
+    outline: none;
+    overflow: hidden;
+    cursor: pointer;
+    display: $display;
+    position: relative;
+    box-shadow: 1px 1px 0 0 $innerGlowColor inset, -1px -1px 0 0 $innerGlowColor inset, 2px 2px 3px 0 rgba(0 ,0, 0, 0.5); 
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    
+    //brightnessGradientFill($direction, $defaultColor, $color-stops...)
+    @include brightnessGradientFill(0deg, $defaultColor, $color01 $stop01, $color02 $stop02, $color03 $stop03, $color04 $stop04);
+
+    span {
+        margin: 0 0;
+        padding: $padding;
+        width: auto;
+        height: $height;
+        font: bold 12px/1 Tamoma, $fFamily_default;
+        text-rendering: optimizeSpeed;
+        text-shadow: rgba(0, 0, 0, 0.80) 1px 1px 2px;
+        white-space: nowrap;
+        display: $display;
+        position: relative;
+        overflow: visible;
+        visibility: visible;
+        background: $image right 0 no-repeat;
+        
+        @include layoutPaint(#ff0000);
+    }
+    
+    @if $isButton == true {
+                
+        &:hover {
+            border-color: $hborderColor !important;
+            @include brightnessGradientFill(0deg, $hdefaultColor, $hcolor01 $stop01, $hcolor02 $stop02, $hcolor03 $stop03, $hcolor04 $stop04);
+        }
+        
+        &:active {
+            //top: 1px;
+            
+            @include transforms(scale(0.98));
+            
+            span {
+                outline-style: none;
+            }
+        }
+        
+        &::-moz-focus-inner {
+            padding: 0;
+            border: 0;
+        }
+        
+    }
+    @else {
+        
+        &:link, &:visited {
+            height: $height;
+            text-decoration: none;
+        }
+        
+        &:hover {
+            @include simpleGradientFill($hcolor01, 180deg, -90deg, $hcolor01, $stop01, $hcolor02, $stop02);
+        }
+        
+        &:active {
+            @include simpleGradientFill($hcolor01, 180deg, -90deg, $hcolor01, $stop01, $hcolor02, $stop02);
+            
+            @include transforms(scale(0.95));
+            //top: 1px;
+        }
+        
+    }
+    
+}
+
+
+//mediaQueries
+@mixin mediaQuery($name, $breakpoints: $breakpoints, $push: false, $dummy: false) {
+    
+    // If the key exists in the map
+    @if map-has-key($breakpoints, $name) {
+        // Prints a media query based on the value
+        @media #{map-get($breakpoints, $name)} {
+            
+
+            //set dummy visibility only if $dummy is true
+            @if $dummy != false {
+                ##{$name} {
+
+                    visibility: visible;
+                    
+                    //debug
+                    @if $debug == true {
+                        overflow: visible;
+                        display: block;
+                    }
+                }
+            }
+            
+            @content;
+        }
+    }
+ 
+    // If the key doesn't exist in the map
+    // But $push is defined
+    @else if $push != false {
+        // Add the new breakpoint to the map
+        $breakpoints: map-merge($breakpoints, ($name: $push)) !global;
+        // And re-call the mixin normally
+        @include respond-to($name) {
+            @content;
+        }
+    }
+  
+    // If the key doesn't exist in the map
+    // And there is no push
+    @else {
+    // Just warn the user
+        @warn "Unfortunately, no value could be retrieved from `#{$name}`. "
+            + "Please make sure it is defined in `$breakpoints` map. "
+            + "Or pass the media query as a second parameter to add it to the map.";
+    }
+}
+
+
+//mediaQueries info
+@mixin queryInfo($content) {
+    
+    @if $deploy == false {
+
+        @if $debug == true or $debug_mQueries == true {
+            content: $content;
+            left: 0;
+            bottom: 0;
+            padding: pem(10px);
+            display: block;
+            background-color: rgba(#ffffff, 0.5);
+            position: fixed;
+            z-index: 200;
+        }
+
+    }
+}
+
+//media Query Dummies
+@mixin queryDummy($breakpoints) {
+    @each $breakPoint in map_keys($breakpoints) {
+        
+        ##{$breakPoint} {
+            left: 0;
+            top: 0;
+            font-size: 0;
+            line-height: 0;
+            overflow: hidden;
+            visibility: hidden;
+            display: none;
+            z-index: 100;                  
+            position: absolute;                  
+            
+            //debug
+            @if $debug == true {
+                
+                width: pem(100px);
+                height: pem(100px); 
+                background-color: #00ffff;
+                
+                &:after {
+                    padding: pem(10px);
+                    left: 0;
+                    top: 0;
+                    content: $breakPoint;
+                    font-size: 1rem;
+                    color: #ffffff;
+                    border: prem(2px);
+                    display: block;
+                    position: absolute;
+                    background-color: #000000;
+                }
+                
+            }
+            
+        }
+    }
+}
+
+//transform(One property)
+@mixin transform($function, $value){
+    transform: unquote($function+'('+$value+')');
+}
+
+//transform(One multiple properties)
+@mixin transforms($function...) {
+    transform: $function;
+}
+
+//transform origin
+
+//transition
+
+//transition reset
+
+//transition set of properties
+@mixin transitionProps($duration, $timingFunction, $delay, $properties:all){
+
+    $propsAndTime: ();
+    
+    @each $prop in $properties {
+        $propsAndTime: append($propsAndTime, ($prop $duration $timingFunction $delay), comma);
+    }
+    
+    transition: $propsAndTime;
+}
+
+//perspective
+
+
+//animate
+@mixin animate($aniName, $aniDuration, $aniTiming, $aniDelay, $aniIteration, $aniFillMode){
+    animation: $aniName $aniDuration $aniTiming $aniDelay $aniIteration $aniFillMode;
+}
+
+//animation playState 
+@mixin playState($playState){
+    animation: $playState;
+}
+
+//keyframes
+@mixin keyframes($animationName) {
+    
+    @keyframes #{$animationName} {
+        @content;
+    }
+
+}
+
+// BEM Mixins
+
+// Block Element
+@mixin element($element) {
+    &__#{$element} {
+        @content;
+    }
+}
+
+// Block Modifier
+@mixin modifier($modifier) {
+    &--#{$modifier} {
+        @content;
+    }
+}
+
+// @alias element
+@mixin e($element) {
+    @include element($element)  {
+        @content;
+    }
+}
+
+// @alias modifier
+@mixin m($modifier) {
+    @include modifier($modifier) {
+        @content;
+    }
+}
+
+
+
+
+
+
+
+

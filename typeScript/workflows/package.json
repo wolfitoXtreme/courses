@@ -1,0 +1,23 @@
+{
+  "name": "typescript",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "lite-server",
+    "build": "gulp"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/jquery": "^3.3.22",
+    "gulp": "^3.9.1",
+    "gulp-typescript": "^2.13.6",
+    "lite-server": "^2.2.2"
+  },
+  "dependencies": {
+    "jquery": "^2.2.4",
+    "systemjs": "^0.19.36"
+  }
+}

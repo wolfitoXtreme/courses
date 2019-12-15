@@ -1,0 +1,1 @@
+console.log('---------\nsite.js is build');

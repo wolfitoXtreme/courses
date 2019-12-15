@@ -1,0 +1,21 @@
+i.icon {
+    font-size: 1em;
+}
+
+.container.main {
+    margin-top: 7em;
+}
+
+textarea {
+    resize: none;
+}
+
+figure {
+    margin: 0;
+    padding: 0;
+    max-width: 100%;
+}
+
+.delete-form {
+    display: inline;
+}

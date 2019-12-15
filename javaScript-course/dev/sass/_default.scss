@@ -1,0 +1,618 @@
+@import 'setup';
+
+html {
+    height: 100%;
+    font: #{pem(nth($fSize_default, 1))}/#{nth($fSize_default, 2)} $fFamily_default;
+    //overflow-y: scroll;
+}
+
+//css reset
+body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, figure, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-weight: inherit;
+    font-style: inherit;
+    font-size: 100%;
+    font-family: inherit;
+    vertical-align: baseline;
+}
+
+ol, ul {
+    list-style: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: "";
+}
+
+blockquote, q {
+    quotes: "" "";
+}
+
+body {
+    height: 100%;
+    color: $fColor_default;
+    background-color: #ffffff;
+    //overflow: hidden;
+    
+    //@include transition(all, $default_speed, ease-in, 0ms);
+}
+
+/*all elements boxsizing*/
+body * {
+    box-sizing: border-box;
+    //fix for jumpie transition
+    backface-visibility: hidden;
+}
+
+//no highlighting
+input, textarea, button, select, a {
+    
+    &:link, &:visited, &:hover, &:active, &:focus {
+        outline: 0;
+        outline-style: none;
+        -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+        //-webkit-user-modify: read-write-plaintext-only;
+    }
+}
+
+/*HTML5 tags*/
+header, section, footer, aside, nav, main, article, figure {
+    display: block;
+} 
+
+/*Titles*/
+h1, h2, h3, h4, h5 {
+    margin: pem(12px) 0 pem(nth($textBlock_padding, 3)) pem(12px);
+    font-weight: bold;
+}
+
+/*strong*/
+strong {
+    font-weight: bold;
+}
+
+/*italic*/
+em {
+    font-style: italic;  
+}
+
+/*readable hide*/
+.hide {
+    @include hide();
+}
+
+
+/*Paraghraps*/
+p {
+    margin: pem(12px) 0 pem(nth($textBlock_padding, 3)) pem(12px);
+    font-size: pem(nth($fSize_paragraph, 1));
+    line-height: nth($fSize_paragraph, 2);
+}
+
+ul {
+    margin: pem(12px) 0 pem(nth($textBlock_padding, 3)) pem(12px);
+}
+
+/*Lists*/
+
+//list level1
+%listItem_Level1 {
+
+    $local_fSize: nth($fSize_list, 1);
+    $local_lHeight: nth($fSize_list, 2);
+    
+    //bullet
+
+    //backgroundImageSettings($image, $stretchTo: 100%, $sprite_left: 0%, $bkg-size: 100%, $base: $fSize_base, $units: 'px')
+    //@return ($image, $width, $height, $sprite_left, $bkg-size, $units, $image_width, $image_height)
+    // $bulletSettings: backgroundImageSettings('list_bull01.png', $units: 'px');
+    // $bulletSprites: 1;
+    // $bulletWidth: nth($bulletSettings, 2);
+    // $bulletHeight: nth($bulletSettings, 3);
+    // $bulletBkg_inc: getPercentageFrom($bulletHeight, nth($bulletSettings, 3) - $bulletHeight);
+
+    $bulletWidth: 8px;
+    $bulletHeight: $bulletWidth;
+    $bullet_radius: 100%;
+    $bullet_gap: 5px;
+    $bullet_color: $listItem_bulletColor;
+    
+    $padding: 
+        0
+        0
+        4px
+        calc(#{$bulletWidth} + #{$bullet_gap})
+    ;
+    
+    padding: $padding;
+    font-size: pem($local_fSize);
+    line-height: $local_lHeight;
+    position: relative;
+
+    &:before {
+        content: "";
+        left: 0;
+        top: pem(
+                centerInLine($local_fSize, $local_lHeight, $bulletHeight),
+                $local_fSize
+        );
+        width: pem($bulletWidth, $local_fSize);
+        height: pem($bulletHeight, $local_fSize);
+        border-radius: $bullet_radius;
+        display: block;
+        position: absolute;
+        box-sizing: border-box;
+        background-color: #925757;
+        // background-image: none;
+        // background: setBkgImage(transparent, nth($bulletSettings, 1), 0 0, no-repeat);
+        // background-origin: border-box;
+        // background-size: 100%;        
+    }
+
+}
+
+//list level2
+%listItem_Level2 {
+
+    $local_fSize: nth($fSize_list, 1);
+    $local_lHeight: nth($fSize_list, 2);
+    $fSize: 12px;
+    
+    //bullet
+    //backgroundImageSettings($image, $stretchTo: 100%, $sprite_left: 0%, $bkg-size: 100%, $base: $fSize_base, $units: 'px')
+    //@return ($image, $width, $height, $sprite_left, $bkg-size, $units, $image_width, $image_height)
+    // $bulletSettings: backgroundImageSettings('list_bull01.png', $units: 'px');
+    // $bulletSprites: 1;
+    // $bulletWidth: nth($bulletSettings, 2);
+    // $bulletHeight: nth($bulletSettings, 3);
+    // $bulletBkg_inc: getPercentageFrom($bulletHeight, nth($bulletSettings, 3) - $bulletHeight);
+    
+    // $padding: 
+    //     pem(nth($listItem_l1_padding, 1), $local_fSize)
+    //     pem(nth($listItem_l1_padding, 2), $local_fSize)
+    //     pem(nth($listItem_l1_padding, 3), $local_fSize)
+    //     (pem(nth($listItem_l1_padding, 4), $local_fSize) + pem($bulletWidth, $local_fSize))
+    // ;
+    
+
+    $bulletWidth: 5px;
+    $bulletHeight: $bulletWidth;
+    $bullet_gap: 3px;
+    $bullet_color: lighten($listItem_bulletColor, 5%);
+
+    padding-left: calc(#{$bulletWidth} + #{$bullet_gap});
+    font-size: pem($fSize, $local_fSize);
+    line-height: $local_lHeight;
+
+    &:before {
+        width: 0;
+        height: 0;
+        border-left: $bulletWidth solid $bullet_color;
+        border-bottom: $bulletWidth solid transparent;
+        border-top: $bulletWidth solid transparent;
+        border-radius: 0;
+        box-sizing: content-box;
+        background-color: transparent;
+
+        // center in textLine
+        top: pem(
+                centerInLine($fSize, $local_lHeight, $bulletHeight, -2),
+                $local_fSize
+        );
+    }
+
+}
+
+// ordered lists
+%orderedListItem {
+    
+    $local_fSize: nth($fSize_list, 1);
+    
+    margin: 0 0 pem(2px) 0;
+    padding: 
+        pem(nth($listItem_l1_padding, 1), $local_fSize)
+        pem(nth($listItem_l1_padding, 2), $local_fSize)
+        pem(nth($listItem_l1_padding, 3), $local_fSize)
+        pem(22px)
+    ;
+    font-size: pem(nth($fSize_list, 1));
+    line-height: nth($fSize_list, 2);
+    position: relative;
+    background-image: none;
+    
+    &:before {
+        content: counter(liCounter) ".";
+        counter-increment: liCounter;
+        left: 0.02em;
+        top: 0em;
+        font: normal #{pem(15px, $local_fSize)}/1.1 $fFamily_03;
+        color: lighten($fColor_default, 20%);
+        text-align: right;
+        display: block;
+        position: absolute; 
+    }
+    
+}
+
+// ordered lists (lowerAlpha)
+%orderedListItem_lAlpha {
+
+    &:before {
+        content: counter(liCounter, lower-latin) ".";
+        counter-increment: liCounter;
+    }
+    
+}
+   
+ul {
+    padding-bottom: pem(nth($textBlock_padding, 3));
+    list-style-type: none;
+    
+    li {
+        @extend %listItem_Level1;
+    }
+    
+    //lists (level 2)
+    ul {
+        padding: 0 0 pem(5px) pem(2px);
+        
+        li {
+            @extend %listItem_Level2;
+        }
+        
+    }
+    
+    //ordered lists (level 2)
+    ol li {
+        @extend %orderedListItem;
+    }
+    
+}
+
+/*Ordered lists*/
+ol {
+    
+    counter-reset: liCounter;
+
+    ul {
+        counter-reset: liCounter;
+    }
+    
+    li {
+        @extend %orderedListItem;
+        
+        ul li {
+            margin: 0;
+            @extend %listItem_Level2;
+        }
+    }
+    
+    // lowerAlpha
+    &.lowerAlpha {
+        
+        li {
+            @extend %orderedListItem_lAlpha;
+        
+            ul li {
+                margin: 0;
+                @extend %listItem_Level2;
+            }
+        }
+    }
+
+}
+
+address {
+    font-style: normal;
+}
+
+/*rulers*/
+hr {
+    display: none;
+}
+
+.hr {
+    height: $hr_height;
+    display: block;
+    clear: both;
+    overflow: hidden;
+    
+    @include layoutPaint(#498c7f);
+    
+}
+
+/*tables*/
+table {
+    border-collapse: separate;
+    border-spacing: 0;
+}
+
+caption, th, td {
+    text-align: left;
+    font-weight: normal;
+}
+
+/*Forms*/
+label {
+    font: bold #{pem(nth($fSize_formLabel, 1))}/#{nth($fSize_formLabel, 2)} $fFamily_formLabel;
+    cursor: pointer;
+    color: $label_color;
+}
+
+form fieldset {
+    border-style: none;
+}
+    
+form fieldset legend {
+    display: none;
+}
+
+.fieldRow {
+    &:after { @include clearFix; }
+}
+
+.field {
+    &:after { @include clearFix; }
+}
+
+.field.selectField {
+}
+ 
+input[type=text], 
+input[type=email],
+input[type=date],
+input[type=password], 
+input[type=number], 
+select, 
+textarea {
+    
+    $local_fSize: nth($fSize_formField, 1);
+
+    left: 0;
+    padding: $field_padding;
+    height: $field_height;
+    font: normal #{pem(nth($fSize_formField, 1))}/#{nth($fSize_formField, 2)} $fFamily_formField;
+    color: nth($field_color, 1);
+    border: nth($field_borderWidth, 1) solid nth($field_borderColor, 1);
+    border-radius: $field_borderRadius;
+    position: relative;
+    background-color: nth($field_bgColor, 1);
+    
+    //transitionProps($duration, $timingFunction, $delay, $properties:all)
+    @include transitionProps($default_speed, ease-in, 0ms, (
+        background-color, border-color, box-shadow
+    ));
+    
+    
+    &:hover {
+        border-color: nth($field_borderColor, 2);
+    }
+    
+    &:focus {
+        outline-style: none;
+        border-color: nth($field_borderColor, 2);
+        background-color: nth($field_bgColor, 2);
+        box-shadow: $field_shadow;
+    }
+
+
+}
+
+
+select {
+    // explorer
+    &::-ms-expand {
+        display: none;
+    }
+    
+    option {
+        padding: 0 nth($field_padding, 2) 0 nth($field_padding, 4);
+    }
+}
+
+textarea {
+    
+    padding: $textarea_padding;
+    height: $textarea_height;
+    line-height: 1.3;
+    display: block;
+    resize: none;
+    appearance: none;
+
+}
+
+
+input[type=checkbox] {
+    position: relative;
+    appearance: none;
+}
+
+
+.checkBox {
+    
+    $local_fSize: nth($fSize_formLabel, 1);
+    
+    // $image: 'checkBox.png';
+    // $svg_image: str-replace($image, 'png', 'png');
+    $width: $checkbox_height;
+    $height: $checkbox_height;
+    $checkBox_gap: 8px;
+    
+    padding-bottom: 4px;
+    min-height: $height;
+    display: inline-block;
+    position: relative;
+    
+    &:after {
+        @include clearFix;
+    }
+    
+    @include layoutPaint(#000000);
+    
+    //hide real checkbox
+    input[type=checkbox] {
+        left: 0;
+        top: 0;
+        width: 0;
+        height: 0;
+        opacity: 0;
+        border-style: none;
+        outline-style: none;
+        position: absolute;
+    }
+    
+    label {
+        padding: 
+            0
+            0
+            0
+            ($width + 5px)
+        ;
+
+        // padding: 
+        //     (
+        //         (($height) / 2) -
+        //         ((nth($fSize_default, 1) * nth($fSize_default, 2)) / 2) + 
+        //         3px
+        //     )
+        //     0
+        //     4px 
+        //     ($width + 5px) 
+        // ;
+        display: block;
+        
+        @include layoutPaint(#638ae6);
+    }
+    
+    //add check box image
+    &:before {
+        content: "";
+        //left: -($checkBox_gap);
+        //margin-left: -($width);
+        //left: 0;
+        top: pem(
+                centerInLine(nth($fSize_formLabel, 1), nth($fSize_formLabel, 2), $height),
+                $local_fSize
+        );
+        width: $width;
+        height: $height;
+        vertical-align: top;
+        border: nth($field_borderWidth, 1) solid nth($field_borderColor, 1);
+        border-radius: $checkbox_borderRadius;
+        display: block;
+        box-sizing: border-box;
+        overflow: hidden;
+        z-index: 10;
+        position: absolute;
+        // background: setBkgImage(nth($field_bgColor, 1), $svg_image, $width center, no-repeat);
+        background-origin: border-box;
+        background-size: 80%;
+        
+        //transition($property, $duration, $timingFunction, $delay)
+        //@include transition(all, 300ms, ease-in, 0ms);
+        @include transitionProps($default_speed, ease-in, 0ms, (
+            background-color, border-color, box-shadow
+        ));
+    }
+    
+    //check box image (no SVG fallback)  
+    .no-js &:before,
+    .no-svg &:before,
+    .no-svgasimg &:before,
+    .no-svgfilters &:before {
+        // background-image: setBkgImage(null, $image, null, null);
+    }
+    
+    &.checked:before {
+        background-position: center center;
+        overflow: hidden;
+    }
+    
+    &:hover {
+        &:before {
+            border-color: nth($field_borderColor, 2);
+        }
+    }
+    
+    &.focus {
+        &:before {
+            border-color: nth($field_borderColor, 2);
+            box-shadow: $field_shadow;
+        }
+    
+    }
+    
+    &:hover, &:focus:hover {
+        &:before {
+            border-color: nth($field_borderColor, 2);
+        }
+    }
+       
+    
+}
+
+input[type=radio] {
+    margin: auto;
+    width: auto;
+    height: auto;
+    border-style: none;
+    display: block;
+    background: inherit;
+}
+
+
+/*Buttons*/
+button {    
+    
+    //submitButton03($padding, $width, $height, $image, $defaultColor, $hdefaultColor, $borderRadius, $display, $isButton, $base: $fSize_base)
+    @include submitButton03(
+        $button_padding, //$padding
+        auto, //$width
+        $button_height, //$height
+        none, //$image
+        nth($button_Color01, 1), //$defaultColor
+        nth($button_Color01, 4), //$hdefaultColor
+        $button_borderRadius, //$borderRadius
+        inline-block, //$display
+        true //$isButton
+        //30px //$fSize_base
+    );
+
+    letter-spacing: -0.018em;
+    
+
+    &.disabled {
+        color: rgba(#ffffff, 0.5);
+        background-color: lighten(#000000, 80%);
+    }
+}
+
+
+/*Links*/
+a:link { 
+    color: nth($linkColor_default, 1);
+}
+    
+a:visited {
+    color: nth($linkColor_default, 1);
+  } 
+    
+a:hover, a:active {
+    color: nth($linkColor_default, 2);
+}
+
+/*images*/
+img {
+    display: block;
+}

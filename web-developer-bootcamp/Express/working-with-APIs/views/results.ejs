@@ -1,0 +1,37 @@
+<% include partials/header %>
+<h1>The results page</h1>
+
+<%= data %><br><br>
+
+<!--
+    sample data object:
+    Search: {
+        [{ 
+            Title: 'The California Kid',
+            Year: '1974',
+            imdbID: 'tt0071268',
+            Type: 'movie',
+            Poster:
+            'https://images-na.ssl-images-amazon.com/images/M/MV5BMTU0NjA3NjQxOV5
+            BMl5BanBnXkFtZTcwODk4ODU5Mw@@._V1_SX300.jpg'
+        }]
+    }
+-->
+
+<!-- Listing movies -->
+<ul>
+<% data.forEach(function(movie){ %>
+    <li>
+        <img src="<%= movie.Poster %>" width="120" alt="<%= movie.Title %>">
+        <p>
+            <b>Movie title:</b> <%= movie.Title %><br>
+            <b>Released:</b> <%= movie.Year %>
+        </p>
+
+    </li>
+<% }) %>
+</ul>
+
+<a href="/">search again</a>
+
+<% include partials/footer %>

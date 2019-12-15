@@ -1,0 +1,48 @@
+body {
+    font-family: "Segoe UI", Candara, "Bitstream Vera Sans", "DejaVu Sans", "Bitstream Vera Sans", "Trebuchet MS", Verdana, "Verdana Ref", sans-serif;
+    color: #09090A;
+    font-size: 16px;
+}
+
+body * {
+    font-size: 0.8rem;
+    box-sizing: border-box;
+}
+
+h1 {
+    font-size: 2rem;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+li {
+    margin-left: 0.5rem;
+    padding-left: 0.8rem;
+    position: relative;
+}
+
+li:before {
+    content: "";;
+    display: block;
+    left: 0;
+    top: 0.4rem;
+    width: 0.5rem;
+    height: 0.5rem;
+    border-radius: 100%;
+    position: absolute;
+    background-color: #09090A;
+}
+
+input[type="text"] {
+    padding: 0.5rem 1rem;
+    border: 1px solid #09090A;
+}
+
+button {
+    padding: 0.5rem 1rem;
+    border: 1px solid #09090A;
+}

@@ -1,0 +1,32 @@
+<script>
+
+    "use-strict";
+
+    var firstName = "John",
+        lastName = "Doe";
+
+    // function constructor
+    function Person(firstName, lastName) {
+        // "this" will point to the "window" object 
+        this.firstName = firstName; 
+        this.lastName = lastName;
+    }
+
+    var jane = new Person('Jane', 'Doe');
+
+    // regular use
+        console.log(
+            '---\nregular method\n', 
+            this.firstName,
+            this.lastName
+        ); // John Doe
+
+    // 'new' keyword to create a new function
+        console.log(
+            '---\n"new" keyword\n', 
+            jane.firstName,
+            jane.lastName
+        ); // Jane Doe
+
+
+</script>

@@ -1,0 +1,29 @@
+[{
+	"type": "Car",
+	"wheels": 4,
+	"price": 350000,
+	"available": true,
+	"color": "blue",
+	"thumb": "./content/img/car-ico.png"
+}, {
+	"type": "Motorcycle",
+	"wheels": 2,
+	"price": 250000,
+	"available": false,
+	"color": "red",
+	"thumb": "./content/img/motorcycle-ico.png"
+}, {
+	"type": "boat",
+	"wheels": 0,
+	"price": 1500000,
+	"available": false,
+	"color": "yellow",
+	"thumb": "./content/img/boat-ico.png"
+}, {
+	"type": "bicycle",
+	"wheels": 2,
+	"price": 420,
+	"available": true,
+	"color": "purple",
+	"thumb": "./content/img/bicycle-ico.png"
+}]

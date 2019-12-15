@@ -1,0 +1,148 @@
+@import 'functions';
+@import 'mixins';
+
+////////////////////
+//SASS VARS
+////////////////////
+
+$deploy: true !default;
+$debug: false !default;
+$debug_mQueries: false !default;
+
+$deploy: false;
+$debug: true;
+$debug_mQueries: true;
+
+//Font Families
+$fFamily_default: arimoRegular, Helvetica, sans-serif;
+$fFamily_01: opensansRegular, Arial, Helvetica, sans-serif;
+$fFamily_02: opensansSemiBold, Arial, Helvetica, sans-serif;
+$fFamily_03: opensansExtraBold, Arial, Helvetica, sans-serif;
+$fFamily_04: robotoRegular, Arial, Helvetica, sans-serif;
+$fFamily_05: robotoLight, Arial, Helvetica, sans-serif;
+$fFamily_06: robotoBlack, Arial, Helvetica, sans-serif;
+$fFamily_07: robotoCondensed, Arial, Helvetica, sans-serif;
+// $fFamily_08: robotoCondensedBold, Arial, Helvetica, sans-serif;
+
+
+$fFamily_tilte_01: $fFamily_07;
+$fFamily_tilte_02: $fFamily_07;
+$fFamily_tilte_03: $fFamily_02;
+$fFamily_formLabel: $fFamily_04;
+$fFamily_formField: $fFamily_default;
+$fFamily_button: $fFamily_01;
+$fFamily_pvp: $fFamily_02;
+
+//Font Sizes
+$fSize_base: 16px;
+$fSize_default: $fSize_base 1.3;
+$fSize_tilte_01: 32px 1;
+$fSize_tilte_02: 24px 1;
+$fSize_tilte_03: 20px 1;
+$fsize_mContTit: 20px 1.1;
+$fSize_formField: 14px 1;
+$fSize_formLabel: 13px 1;
+$fSize_paragraph: 14px 1.2;
+$fSize_list: 14px 1.2;
+$fSize_button: 12px 1.1; 
+$fZize_pvpBig: 48px 1.1;
+$fZize_pvpMed: 30px 1.1; 
+$fZize_pvpSmall: 10px 1.1;
+
+
+//Colors
+$fColor_default: #485059;
+$linkColor_default: #963c3c, #4982b3;
+$linkColor_01: #9c7575, #3b79a2;
+$linkColor_02: #3f4346, #b93131;
+$linkColor_03: rgba(#ffffff, 0.7), #ffffff;
+$fColor_pvp: #915857;
+
+//buttons
+                 //bg       //bgShadow/gradient                     //border    //h_bg                                  //h_bgShadow/gradient                   //h_border
+$button_Color01: #5e717d    lighten(#5e717d, 25%)                   #000000     darken(saturate(#5e717d, 35%), 5%)      lighten(#ba003f, 25%)                   #000000;    //default color
+$button_Color02: #824d4d    lighten(#824d4d, 25%)                   #000000     darken(saturate(#824d4d, 35%), 5%)      lighten(#ba003f, 25%)                   #000000;    //second color
+$button_Color03: #ff7f0b    lighten(#ff7f0b, 25%)                   #000000     #fbbb30                                 lighten(#fbbb30, 25%)                   #000000;    //third color
+$button_Color04: #a3a3a3    lighten(#a3a3a3, 15%)                   #000000     #b6b6b6                                 lighten(#b6b6b6, 15%)                   #000000;    //no important
+$button_Color05: #249411    lighten(#249411, 15%)                   #000000     lighten(saturate(#249411, 55%), 2%)     lighten(saturate(#249411, 40%), 08%)    #000000;    //green Accept
+$button_Color06: #cc0202    lighten(#cc0202, 25%)                   #000000     #db1313                                 lighten(#db1313, 25%)                   #000000;    //red reject
+    
+    //titles
+    $titleColor_01: #3d3d3d #517186;
+    $titleColor_02: #7c5858 #963c3c;
+    $titleColor_03: #686868 #874c4c;
+    
+    //text blocks (lists, paragraphs. etc..)
+    $textBlock_padding: 0 0 12px 0;
+
+    //others
+    $hr_height: 20px;
+    $hr_borderWidth: 1px 1px 1px 1px;
+
+    //lists
+    $listItem_l1_padding: 0 5px 6px 2px;
+    $listItem_l2_padding: 0 0 4px 3px;
+    $listItem_bulletColor: lighten($fColor_default, 15%);
+    
+    
+    //forms
+    $label_color: #915857;
+    $field_padding: 2px 8px 2px 8px;
+    $field_height: 32px;
+    $field_color: #000000, #747474;
+    $field_borderWidth: 1px 1px 1px 1px;
+    $field_borderRadius: 4px;
+    $field_borderColor: #d7d7d7, #5e717d; 
+    $field_bgColor: #ffffff, #ffffff;
+    $field_shadow: 2px 2px 2px 0 rgba(0, 0, 0, 0.2);
+    $field_warnColor: #b33131;
+    $select_padding: 3px 0px 3px 4px;
+    $select_height: $field_height;
+    $textarea_lines: 18;
+    $textarea_padding: 
+        nth(textAreaMeasures($field_padding, $field_height, nth($fSize_formField, 1), nth($fSize_formField, 2), $textarea_lines, 3px), 1)
+        nth($field_padding, 2)
+        nth(textAreaMeasures($field_padding, $field_height, nth($fSize_formField, 1), nth($fSize_formField, 2), $textarea_lines, 3px), 1)
+        nth($field_padding, 4)
+        ;
+    $textarea_height: nth(textAreaMeasures($field_padding, $field_height, nth($fSize_formField, 1), nth($fSize_formField, 2), $textarea_lines, 3px), 2);  
+    $textarea_scrollWidth: 30px;
+    $checkbox_height: 15px;
+    $checkbox_borderRadius: 2px;
+    $radio_height: $field_height;
+    $button_borderWidth: 0 0 0 0;
+    $button_borderRadius: 4px;
+    $button_clickScale: 0.96;
+    $button_height: 32px;
+    $button_padding: 0 40px 0 40px;
+
+
+//animation speeds    
+$default_speed: 450ms;   
+
+//Responsive breakPoints (1em: 16px)
+//300px breakpoint (18.75em)
+//400px breakpoint (25em)
+//600px breakpoint (37.5em)
+//800px breakpoint (50em)
+//920px breakpoint (57.5em)
+//1044px breakpoint (65.25em)
+
+
+$breakValues: (120px, 768px, 1024px, 1280px);
+$maxWidth: nth($breakValues, length($breakValues));
+
+$breakpoints: (
+    'x-small'               : '(max-width: #{pem(nth($breakValues, 1) - 1)})',
+    'small'                 : '(min-width: #{pem(nth($breakValues, 1))}) and (max-width: #{pem(nth($breakValues, 2) - 1)})',
+    'medium'                : '(min-width: #{pem(nth($breakValues, 2))}) and (max-width: #{pem(nth($breakValues, 3) - 1)})',
+    'large'                : '(min-width: #{pem(nth($breakValues, 3))}) and (max-width: #{pem(nth($breakValues, 4) - 1)})',
+    'x-large'                 : '(min-width: #{pem(nth($breakValues, 4))})'//,
+    // 'x-small-landscape'     : '(max-width: #{pem(nth($breakValues, 1) - 1)}) and (orientation: landscape)',
+    // 'small-landscape'       : '(min-width: #{pem(nth($breakValues, 1))}) and (max-width: #{pem(nth($breakValues, 2) - 1)}) and (orientation: landscape)',
+    // 'medium-landscape'      : '(min-width: #{pem(nth($breakValues, 2))}) and (max-width: #{pem(nth($breakValues, 3) - 1)}) and (orientation: landscape)',
+    // 'large-landscape'       : '(min-width: #{pem(nth($breakValues, 3))}) and (orientation: landscape)'
+);
+
+
+

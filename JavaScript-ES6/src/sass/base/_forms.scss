@@ -1,0 +1,338 @@
+// 
+// forms
+// 
+
+// form layout
+.form {
+    // form-row
+    &-row {
+        @include clearFix;
+    }
+
+    // form-buttons
+    &-buttons {
+        font-size: 0;
+        line-height: 0;
+        text-align: right;
+    }
+}
+
+// field sets
+fieldset {
+    margin: 0;
+    padding: 0;
+    min-width: 0;
+    border-style: none;
+}
+
+// legend 
+legend {
+    @include hidden;
+
+    // remove next sibling margin
+    + * {
+        margin-top: 0;
+    }
+}
+
+// labels
+label {
+    padding-left: prem(3px);
+    font-weight: 600;
+    opacity: 0.8;
+    font-size: prem($font-size-xxx-small);
+    letter-spacing: -0.028em;
+    text-transform: uppercase;
+    line-height: 1.1;
+    display: block;
+    @include hidden;
+    
+    // label-inline
+    &.label-inline {
+        display: inline-block;
+    }
+}
+
+
+// 
+// fields
+// 
+%fields {
+    margin: 0;
+    padding: prem(5px) prem(8px) prem(5px);
+    width: prem(220px);
+    font-weight: 300;
+    line-height: $line-height-default;
+    color: $black;
+    border: 2px solid $black;
+    border-radius: 5px;
+    @include no-highlight;
+
+    &:hover,
+    &:focus,
+    &.focus {
+        border-color: $light-black;
+    }
+
+    &:focus,
+    &.focus {
+        background-color: $dim-grey;
+    }
+
+    // placeholder
+    &[placeholder] {
+        color: $gainsboro;
+        text-overflow:ellipsis;
+    }
+
+    &:hover::placeholder {
+        color: $gainsboro;
+    }
+
+    // 100% wide fields
+    &.wide {
+        width: 100%;
+    }
+
+    &.error {
+        border-color: $error-color;
+    }
+
+    // disabled styles
+    &[disabled="disabled"] {
+         @extend %fields-disabled;
+    }
+}
+
+%fields-disabled {
+    color: $dark-grey;
+    border-color: $grey;
+    background-color: $light-grey;
+    cursor: default;
+    opacity: 0.5;
+    pointer-events: none;
+    user-select: none;
+}
+
+%input-buttons {
+    outline: none;
+    @include hidden;
+    @include no-highlight;
+
+    // show labels hidden by default
+    & ~ label {
+        @include unhidden;
+    }
+}
+
+// common input fields
+input[type="text"],
+input[type="tel"],
+input[type="email"],
+input[type="number"],
+input[type="password"] {
+    @extend %fields;
+}
+
+// not in scope
+input[type="file"] {}
+input[type="range"] {}
+input[type="search"] {}
+input[type="date"] {}
+input[type="datetime-local"] {}
+input[type="month"] {}
+input[type="week"] {}
+input[type="time"] {}
+input[type="url"] {}
+input[type="color"] {}
+
+// radio buttons
+input[type="radio"] {
+    @extend %input-buttons;
+
+    // radio button icons
+    & + label {
+        $_icon-size: prem(14px);
+        $_icon-inner-size: prem(6px);
+        $_gap: prem(3px);
+
+        padding: 0 prem(2px) prem(4px) $_icon-size + $_gap;
+        line-height: $line-height-default;
+        position: relative;
+
+        &:before,
+        &:after {
+            content: "";
+            left: 0;
+            margin-top: -($_icon-size / 2);
+            top: (0.9em * ($line-height-default)) / 2;
+            width: $_icon-size;
+            height: $_icon-size;
+            display: block;
+            border: 2px $black;
+            border-radius: 100%;
+            position: absolute;
+        }
+
+        &:after {
+            margin-top: -($_icon-inner-size / 2);
+            left: ($_icon-size - $_icon-inner-size) / 2;
+            width: $_icon-inner-size;
+            height: $_icon-inner-size;
+            background-color: $black;
+            border-style: none;
+        }
+        
+        // hover state change only for non touch devices (sticky hover)
+        // .no-touchevents &:hover {
+            
+        //     &:before {
+        //     }
+
+        //     &:after {
+        //     }
+        // }
+    }
+
+    // checked state
+    &:checked {
+        // radio button icons
+        & + label {
+            color: $black;
+            &:before {
+                border-color: $black;
+            }
+            &:after {
+                background-color: $black;
+            }
+        }
+    }
+
+    // focus state
+    &:focus {
+        + label {
+            $_scale: scale(1.12);
+            
+            &:before {
+                border-color: $black;
+                transform: $_scale;
+            }
+
+            &:after {
+                transform: $_scale;
+            }
+        }
+    }
+
+    // disabled
+    &[disabled="disabled"] {
+        pointer-events: none;
+        user-select: none;
+
+        & + label {
+            pointer-events: none;
+            opacity: 0.5;
+        }
+    }
+}
+
+// checkbox buttons
+input[type="checkbox"] {
+    @extend input[type="radio"];
+    & + label {
+        &:before,
+        &:after {
+            border-radius: 0;
+        }
+    }
+}
+
+// text areas
+textarea,
+.textarea {
+    height: prem((($font-size-default *  $line-height-default) * 5) + (13)); // five lines
+    overflow-x: hidden;
+    resize: none;
+    @extend %fields;
+}
+
+// select
+select {
+    appearance: none;
+    -moz-appearance: none; // Firefox appearance
+    @extend %fields;
+
+    // remove drop down arrow for IE
+    &::-ms-expand {
+        display: none;
+    }
+}
+
+// options
+option option[value=""][disabled] {
+    display: none;
+}
+
+// 
+// buttons
+// 
+
+
+// default buttons
+button {
+    // dropped in favor of .button class name
+}
+
+// button
+button, 
+.button {
+    margin: prem(4px);
+    padding: prem(9px) prem(20px) prem(9px);
+    font: normal #{prem($font-size-xxx-small)}/#{$line-height-default} $default-font;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: $black;
+    letter-spacing: -0.030em;
+    display: inline-block;
+    cursor: pointer;
+    border: 1px solid $black;
+    border-radius: 5px;
+    background-color: $white;
+    transition: transform 40ms ease-in 0ms;
+    
+    @include no-highlight;
+
+    // &:link,
+    // &:visited {
+    // }
+
+    // &:hover,
+    // &:active,
+    // &:focus {
+    // }
+
+    // &:active,
+    // &:focus {
+    // }
+
+    // // reset button
+    // &[type="reset"] {
+        
+    //     &:link,
+    //     &:visited {
+    //     }
+
+    //     &:hover,
+    //     &:active,
+    //     &:focus {
+    //     }
+    // }
+
+    // button disabled
+    // button-disabled
+    &[disabled="disabled"] {
+        opacity: 0.5;
+        cursor: default;
+        pointer-events: none;
+    }
+}

@@ -1,0 +1,107 @@
+<script>
+    
+    // Car exercise
+    // ----------
+    console.log('\n---');
+
+    // class Car
+    class Car {
+        // creating a constructor to bind the value of this
+        constructor() { 
+            this.drive = this.drive.bind(this);
+        }
+
+        setDriveSound(sound) { // same as -> setDriveSound: function(sound)
+            this.sound = sound;
+        }
+
+        drive() { // same as -> drive: function()
+            console.log(this.sound);
+        };
+    };
+
+    const car = new Car();
+
+    car.setDriveSound('beep');
+    car.drive(); // drive() -> this.sound -> beep
+
+    const truck = {
+        sound: 'boop!',
+        driveMyTruck: car.drive
+    };
+
+    truck.driveMyTruck(); // driveMyTruck() -> this.sound -> boop! without the constructor set
+
+    const drive = car.drive;
+
+    drive(); // gets error since this is not defined
+             // and if no constructor is binding 'this' to the drive method
+
+
+    // Dog exercise
+    // ----------
+    console.log('\n---');
+
+
+    // class Dog
+    class Dog {
+        // creating a constructor to bind the value of this
+        // constructor() { 
+        //     this.makeSound = this.makeSound.bind(this);
+        // }
+
+        setDogSound(sound) { // same as -> setDogSound: function(sound)
+            this.sound = sound;
+        }
+
+        makeSound() {
+            console.log(this.sound);
+        }
+
+    };
+
+    const   snoopy = new Dog();
+
+    snoopy.setDogSound('woof!');
+    snoopy.makeSound();
+
+    const odie  = {
+        sound: 'woof, woof, woof!',
+        odieBarks: snoopy.makeSound
+    };
+
+    odie.odieBarks();
+
+    // const bark = snoopy.makeSound;
+
+    // bark();
+
+    // array map exercise
+    // ----------
+    console.log('\n---');
+
+    const myThings = [0, 1, 2, 3, 4];
+    console.log('myThings =' + myThings);
+
+    let newNumbers = [];
+
+    for (let i = 0; i < myThings.length; i++) {
+        newNumbers.push(myThings[i] * 10);
+
+    };
+
+    console.log('newNumbers = ' + newNumbers);
+
+    // map statement will iterate through the array as the 'for loop' does
+    const otherNumbers = myThings.map((thing) => {
+        return thing * 10;
+    });
+
+    console.log('otherNumbers = ' + otherNumbers);
+
+    // fucntion can be abbreviated like this
+    const moreNumbers = myThings.map((thing) => thing * 100);
+
+    console.log('moreNumbers = ' + moreNumbers);
+
+</script>

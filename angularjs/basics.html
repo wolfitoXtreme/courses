@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myNinjaApp">
+    <head>
+        <title>TheNetNinja Angular Playlist</title>
+        <link href="content/css/styles.css" rel="stylesheet" type="text/css" />
+        
+        <script src="./node_modules/angular/angular.min.js"></script>
+
+        <!-- routes angular dependency (not needed here as not working with views) -->
+        <script src="./node_modules/angular-route/angular-route.js"></script>
+        <script src="./app/app.js"></script>
+    </head>
+    <body class="content">
+        <h1>Basics</h1>
+        <h3>Two way data binding</h3>
+        <input type="text" ng-model="favMeat" placeholder="enter your fave meat" />
+        <p>Your fav meat is {{favMeat}}</p>
+        
+        <h3>Directives</h3>
+        <p>Can be tags or attributes</p>
+        <p><a href="https://code.angularjs.org/1.6.6/docs/guide/directive" target="_blank">https://code.angularjs.org/1.6.6/docs/guide/directive</a></p>
+
+        
+        <p>{{ 4 + 1 }}</p>
+
+        <div ng-init="numbers=[1, 2, 3, 4]; meats=['pork', 'ham', 'beef']; color='orange'">
+            <p>{{numbers[0] + numbers[3]}}</p>
+            <p>{{meats[1]}} and {{meats[0]}}</p>
+            <p class="{{color}}">Orange</p>
+        </div>
+
+        <h3>ng-repeat directive</h3>
+        <div ng-init="ninjas=['Yoshi', 'Crystal', 'Ryu', 'Shaun']">
+            <ul>
+                <li ng-repeat="ninja in ninjas">{{ninja}}</li>
+            </ul>
+        </div>
+        
+        <hr>
+
+        <h1>Modules</h1>
+        <h3>Controllers</h3>
+        <div ng-controller="NinjaController">
+            <p>Message from controller $scope: <b>{{message}}</b></p>
+
+            <p>Using ng-repeat directive:</p>
+            <ul>
+                <li ng-repeat="person in people">{{person}}</li>
+            </ul>
+        </div>
+
+        <h3>Filters</h3>
+        <div ng-controller="NinjaController">
+            <p></p>
+            <input type="text" ng-model="search" placeholder="Search for a vehicle">
+            <ul>
+                <!-- using filter 'orderBy:keyword' and 'filter:search' coming from ng-model definition  -->
+                <li ng-repeat="vehicle in vehicles | orderBy: 'type' | filter: search">
+                    <!-- using filter 'uppercase', then filter 'currency' -->
+                    {{vehicle.type | uppercase}} - {{vehicle.price | currency: '€'}}
+                </li>
+            </ul>
+        </div>
+        
+        <hr>
+        
+        <h1>ng-include directive</h1>
+        <!-- Including as a tag -->
+        <ng-include src="'header.html'"></ng-include>
+        <br>
+        <!-- Including as an attribute -->
+        <header ng-include="'header.html'"></header>
+        
+        <hr>
+        
+        <h1>ng-show and ng-hide directives</h1>
+        <div ng-controller="NinjaController">
+            <h3>ng-show</h3>
+            <ul>
+                <!-- Will evaluate vehicle property available -->
+                <li ng-repeat="vehicle in vehicles | orderBy: 'type'" ng-show="!vehicle.available">
+                    {{vehicle.type | uppercase}} - {{vehicle.price | currency: '€'}}
+                </li>
+            </ul>
+            
+            <h3>ng-hide</h3>
+            <ul>
+                <!-- Will evaluate vehicle property available, same as above without negating -->
+                <li ng-repeat="vehicle in vehicles | orderBy: 'type'" ng-hide="vehicle.available">
+                    {{vehicle.type | uppercase}} - {{vehicle.price | currency: '€'}}
+                </li>
+            </ul>
+        </div>
+
+        <hr>
+        
+        <h1>ng-click directive</h1>
+        <div ng-controller="NinjaController">
+            <!-- passing order filter value through click event -->
+            <button ng-click="order='type'">Order by type</button>
+            <button ng-click="order='price'">Order by price</button>
+            <button ng-click="order='wheels'">Order by wheels</button>
+            <ul>
+                <li ng-repeat="vehicle in vehicles | orderBy: order">
+                    <p style="padding: 0.2rem; border: 0.2rem solid {{vehicle.color}};">
+                        {{vehicle.type | uppercase}} - {{vehicle.price | currency: '€'}} 
+                        
+                        <!-- passing vehicle object to 'NinjaController' function (removeVehicle) -->
+                        <span class="remove" ng-click="removeVehicle(vehicle)">x</span>
+                        <span>{{vehicle.wheels}} wheels</span>
+                    </p>
+                </li>
+            </ul>
+        </div>
+        
+        <hr>
+        
+        <h1>ng-submit directive</h1>
+        <div ng-controller="NinjaController">
+            <!-- passing order filter value through click event -->
+            <button ng-click="order='type'">Order by type</button>
+            <button ng-click="order='price'">Order by price</button>
+            <button ng-click="order='wheels'">Order by wheels</button>
+            <ul>
+                <li ng-repeat="vehicle in vehicles | orderBy: order">
+                    <p style="padding: 0.2rem; border: 0.2rem solid {{vehicle.color}};">
+                        {{vehicle.type | uppercase}} - {{vehicle.price | currency: '€'}} 
+                        
+                        <!-- passing vehicle object to 'NinjaController' function (removeVehicle) -->
+                        <span class="remove" ng-click="removeVehicle(vehicle)">x</span>
+                        <span>{{vehicle.wheels}} wheels</span>
+                    </p>
+                </li>
+            </ul>
+            <!-- ng-submit directive-->
+            <form ng-submit="addVehicle(newVehicle)">
+                <input type="text" placeholder="type" ng-model="newVehicle.type">
+                <input type="text" placeholder="wheels" ng-model="newVehicle.wheels">
+                <input type="text" placeholder="price" ng-model="newVehicle.price">
+                <input type="text" placeholder="color" ng-model="newVehicle.color">
+                <button type="submit">Add New vehicle</button>
+            </form>
+        </div>
+        
+        <hr>
+
+        <h1>ng-src directive</h1>
+        <div ng-controller="NinjaController">
+            <!-- passing order filter value through click event -->
+            <button ng-click="order='type'">Order by type</button>
+            <button ng-click="order='price'">Order by price</button>
+            <button ng-click="order='wheels'">Order by wheels</button>
+            <ul>
+                <li ng-repeat="vehicle in vehicles | orderBy: order">
+                    <p style="padding: 0.2rem; border: 0.2rem solid {{vehicle.color}};">
+                        <!-- using 'ng-src' directive instead src attribute  o avoid parsing errors  -->
+                        <!-- ng-show will return false if not data provided -->
+                        <img 
+                            ng-src="{{vehicle.thumb}}" 
+                            ng-show="vehicle.thumb"  
+                            style="width: 2rem;" alt=""
+                        >
+                        {{vehicle.type | uppercase}} - {{vehicle.price | currency: '€'}}
+                        
+                        <!-- passing vehicle object to 'NinjaController' function (removeVehicle) -->
+                        <span class="remove" ng-click="removeVehicle(vehicle)">x</span>
+                        <span>{{vehicle.wheels}} wheels</span>
+                    </p>
+                </li>
+            </ul>
+            <!-- ng-submit directive-->
+            <form ng-submit="addVehicle(newVehicle)">
+                <input type="text" placeholder="type" ng-model="newVehicle.type">
+                <input type="text" placeholder="wheels" ng-model="newVehicle.wheels">
+                <input type="text" placeholder="price" ng-model="newVehicle.price">
+                <input type="text" placeholder="color" ng-model="newVehicle.color">
+                <button type="submit">Add New vehicle</button>
+            </form>
+        </div>
+        
+        <hr>
+
+        <h1>Views and Routing</h1>
+        <ul>
+            <li><a href="/home" target="_blank">views-and-routing (Home page)</a></li>
+            <li><a href="/directory" target="_blank">views-and-routing (Directory page)</a></li>
+        </ul>
+        <hr>
+
+    </body>
+    </html>
+    

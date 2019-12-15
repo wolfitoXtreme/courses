@@ -1,0 +1,1137 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"E",
+				"ExtractTextPlugin"
+			],
+			[
+				"compo",
+				"componentDidMount"
+			],
+			[
+				"o",
+				"onVideoSelect"
+			],
+			[
+				"tex-",
+				"text-align\tproperty"
+			],
+			[
+				"com",
+				"components"
+			],
+			[
+				"video",
+				"videoID"
+			],
+			[
+				"instruc",
+				"instructor"
+			],
+			[
+				"instrt",
+				"instructors"
+			],
+			[
+				"is",
+				"isHuman"
+			],
+			[
+				"add",
+				"addNumbers"
+			],
+			[
+				"a",
+				"author"
+			],
+			[
+				"ca",
+				"campground"
+			],
+			[
+				"us",
+				"user"
+			],
+			[
+				"camp",
+				"campgrounds"
+			],
+			[
+				"lo",
+				"LocalStrategy"
+			],
+			[
+				"au",
+				"authenticate"
+			],
+			[
+				"user",
+				"username"
+			],
+			[
+				"back",
+				"background-color\tproperty"
+			],
+			[
+				"e",
+				"else"
+			],
+			[
+				"commn",
+				"Comments"
+			],
+			[
+				"Cam",
+				"Campground"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "webpack.config.js",
+			"settings":
+			{
+				"buffer_size": 3887,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "package.json",
+			"settings":
+			{
+				"buffer_size": 533,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": ".babelrc",
+			"settings":
+			{
+				"buffer_size": 54,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "build/bundle.js",
+			"settings":
+			{
+				"buffer_size": 18810,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "index.html",
+			"settings":
+			{
+				"buffer_size": 226,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "src/index.js",
+			"settings":
+			{
+				"buffer_size": 372,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "src/image-viewer.js",
+			"settings":
+			{
+				"buffer_size": 1105,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "styles/image-viewer.css",
+			"settings":
+			{
+				"buffer_size": 92,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "src/sum.js",
+			"settings":
+			{
+				"buffer_size": 252,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "node_modules/webpack/package.json",
+			"settings":
+			{
+				"buffer_size": 4188,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/D/software/util/hint-sheet.txt",
+			"settings":
+			{
+				"buffer_size": 16351,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/D/web/projects/GitHub/cssguy4hire/app/js/dev/contactPanel.js",
+			"settings":
+			{
+				"buffer_size": 4809,
+				"line_ending": "Windows"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 259.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"Package Control: ",
+				"Package Control: Install Package"
+			],
+			[
+				"install package",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Co",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: install",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: insta",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: ins",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 432.0
+	},
+	"console":
+	{
+		"height": 126.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = '6f4c264a24d933ce70df5dedcf1dcaee' + 'ebe013ee18cced0ef93d5f746d80ef60'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/D/web/courses/webpack/js-modules"
+	],
+	"file_history":
+	[
+		"/D/web/courses/webpack/js-modules/node_modules/url-loader/package.json",
+		"/D/web/courses/reactAndRedux/intro-to-react/videos/public/index.html",
+		"/D/web/courses/webpack/js-modules/public/index.html",
+		"/D/web/projects/GitHub/cssguy4hire/app/js/dev/contactPanel.js",
+		"/D/web/courses/webpack/js-modules/js-modules.sublime-project",
+		"/D/web/courses/reactAndRedux/intro-to-react/jsx/src/index.js",
+		"/D/web/courses/reactAndRedux/intro-to-react/class-components/public/semantic.min.css",
+		"/D/web/courses/reactAndRedux/intro-to-react/class-components/public/icons.ttf",
+		"/D/web/courses/reactAndRedux/intro-to-react/ReduxSimpleStarter/src/index.js",
+		"/D/web/courses/reactAndRedux/intro-to-react/ReduxSimpleStarter/style/style.css",
+		"/D/web/courses/reactAndRedux/intro-to-react/ReduxSimpleStarter/src/components/search-bar.js",
+		"/D/web/courses/reactAndRedux/intro-to-react/ReduxSimpleStarter/src/components/video-list.js",
+		"/D/web/courses/reactAndRedux/intro-to-react/ReduxSimpleStarter/src/components/video-list-item.js",
+		"/D/web/courses/reactAndRedux/intro-to-react/ReduxSimpleStarter/src/components/video-detail.js",
+		"/D/web/courses/reactAndRedux/intro-to-react/ReduxSimpleStarter/index.html",
+		"/D/web/courses/reactAndRedux/intro-to-react/jsx/jsx.sublime-project",
+		"/D/web/courses/reactAndRedux/intro-to-react/ReduxSimpleStarter/package.json",
+		"/D/web/courses/reactAndRedux/intro-to-react/ReduxSimpleStarter/ReduxSimpleStarter.sublime-project",
+		"/D/web/courses/reactAndRedux/intro-to-react/jsx/jsx.sublime-workspace",
+		"/D/web/projects/GitHub/cssguy4hire/app/js/dev/textAreas.js",
+		"/D/web/projects/GitHub/cssguy4hire/app/js/dev/panelNav.js",
+		"/D/web/projects/GitHub/cssguy4hire/app/js/dev/selectFields.js",
+		"/D/web/projects/GitHub/cssguy4hire/app/js/dev/slider.js",
+		"/D/web/projects/GitHub/cssguy4hire/app/js/dev/currentFocus.js",
+		"/D/web/projects/GitHub/cssguy4hire/app/js/app.js",
+		"/D/software/util/sublimeCustom/installed-packages.txt",
+		"/D/docs/usefull-commands.txt",
+		"/D/web/courses/reactAndRedux/intro-to-react/ReduxSimpleStarter/.gitignore",
+		"/D/web/courses/reactAndRedux/intro-to-react/ReduxSimpleStarter/ReduxSimpleStarter.sublime-workspace",
+		"/D/web/courses/web-developer-bootcamp/yelpAppV3/app.js",
+		"/D/software/util/hint-sheet.txt",
+		"/C/Users/Cesar/AppData/Roaming/Sublime Text 3/Packages/User/SublimeLinter.sublime-settings",
+		"/D/software/util/sublimeCustom/jshint.conf",
+		"/D/software/util/sublimeCustom/SublimeLinter.sublime-settings",
+		"/D/software/util/sublimeCustom/eslint.conf",
+		"/C/Users/Cesar/AppData/Roaming/Sublime Text 3/Packages/SublimeLinter/SublimeLinter.sublime-settings",
+		"/D/web/courses/reactAndRedux/intro-to-react/ReduxSimpleStarter/src/components/app.js",
+		"/D/web/courses/web-developer-bootcamp/yelpAppV3/package.json",
+		"/D/web/courses/web-developer-bootcamp/yelpAppV3/config/keys.js",
+		"/D/web/courses/web-developer-bootcamp/yelpAppV3/models/user.js",
+		"/D/web/courses/web-developer-bootcamp/yelpAppV3/.gitignore",
+		"/D/web/courses/web-developer-bootcamp/deployingDemo/package.json",
+		"/D/web/courses/web-developer-bootcamp/deployingDemo/views/home.ejs",
+		"/D/web/courses/web-developer-bootcamp/deployingDemo/views/about.ejs",
+		"/D/web/courses/web-developer-bootcamp/deployingDemo/app.js",
+		"/D/web/courses/javaScript-course/dev/js/assets/F2_FunctionConstructorsAndPrototype.js",
+		"/D/web/courses/javaScript-course/dev/js/assets/D19_CallApplyBind.js",
+		"/D/web/courses/javaScript-course/dev/js/assets/D18_ClosuresAndCallbacks.js",
+		"/D/web/courses/javaScript-course/dev/js/assets/D20_FunctionalProgramming.js",
+		"/D/web/courses/javaScript-course/dev/js/assets/D20b_FunctionalProgrammingPart2.js",
+		"/D/web/courses/javaScript-course/dev/js/assets/D17_FunctionFactories.js",
+		"/D/web/courses/javaScript-course/dev/js/assets/D16_Closures.js",
+		"/D/web/courses/web-developer-bootcamp/yelpAppV3/seeds.js",
+		"/D/web/courses/web-developer-bootcamp/yelpAppV2/models/comment.js",
+		"/D/web/courses/web-developer-bootcamp/yelpAppV2/models/campground.js",
+		"/D/web/courses/web-developer-bootcamp/yelpAppV2/views/campgrounds/index.ejs",
+		"/D/web/courses/web-developer-bootcamp/yelpAppV2/models/user.js",
+		"/D/web/courses/web-developer-bootcamp/Express/simpleApp/app.js",
+		"/D/web/courses/web-developer-bootcamp/yelpAppV2/app.js",
+		"/D/web/courses/web-developer-bootcamp/javaScript/function-constructors.html",
+		"/D/web/courses/web-developer-bootcamp/javaScript/this-call-use-bind.html",
+		"/D/web/courses/web-developer-bootcamp/yelpAppV2/seeds.js",
+		"/D/web/courses/web-developer-bootcamp/deployingDemo/.gitignore",
+		"/D/web/projects/GitHub/cssguy4hire/app/js/dev/lib/jquery-ui.min.js",
+		"/D/web/projects/GitHub/cssguy4hire/app/js/dev/lib/jquery.min.js",
+		"/D/web/projects/GitHub/cssguy4hire/app/js/dev/lib/jquery-3.3.1.min.js",
+		"/D/web/projects/GitHub/cssguy4hire/app/js/dev/lib/jquery.selectBox - Copy.js",
+		"/C/Users/Cesar/Desktop/test.js",
+		"/D/web/projects/GitHub/cssguy4hire/package.json",
+		"/D/web/projects/GitHub/cssguy4hire/gulpfile.js",
+		"/D/web/courses/web-developer-bootcamp/gitDemo/gitIntro/app.js",
+		"/D/web/courses/web-developer-bootcamp/gitDemo/gitIntro/cats.js",
+		"/D/web/courses/web-developer-bootcamp/yelpAppV2/public/stylesheets/home.css",
+		"/D/web/courses/web-developer-bootcamp/yelpAppV2/views/campgrounds/show.ejs",
+		"/D/web/courses/web-developer-bootcamp/yelpAppV2/routes/campgrounds.js",
+		"/D/web/courses/web-developer-bootcamp/yelpAppV2/public/stylesheets/main.css",
+		"/D/web/courses/web-developer-bootcamp/yelpAppV2/views/home.ejs",
+		"/D/web/courses/web-developer-bootcamp/yelpAppV2/views/campgrounds/new.ejs",
+		"/D/web/courses/web-developer-bootcamp/yelpAppV2/views/campgrounds/edit.ejs",
+		"/D/web/courses/web-developer-bootcamp/yelpAppV2/views/partials/header.ejs",
+		"/D/web/courses/web-developer-bootcamp/yelpAppV2/routes/index.js",
+		"/D/web/courses/web-developer-bootcamp/yelpAppV2/public/js/test.js",
+		"/D/web/courses/web-developer-bootcamp/yelpAppV2/middleware/index.js",
+		"/D/web/courses/web-developer-bootcamp/yelpAppV2/routes/comments.js",
+		"/D/web/courses/web-developer-bootcamp/Express/templatesApp/app.js",
+		"/D/web/courses/web-developer-bootcamp/yelpAppV2/package.json",
+		"/D/web/courses/web-developer-bootcamp/yelpApp/app.js",
+		"/D/web/courses/web-developer-bootcamp/yelpAppV2/views/register.ejs",
+		"/D/web/courses/web-developer-bootcamp/yelpAppV2/views/partials/footer.ejs",
+		"/D/web/courses/web-developer-bootcamp/yelpAppV2/views/login.ejs",
+		"/D/web/courses/web-developer-bootcamp/yelpAppV2/views/comments/new.ejs",
+		"/D/web/courses/web-developer-bootcamp/yelpAppV2/views/comments/edit.ejs",
+		"/D/web/courses/web-developer-bootcamp/yelpAppV2/package-lock.json",
+		"/D/web/courses/web-developer-bootcamp/yelpAppV2/public/stylesheets/bootstrap.min.css",
+		"/D/web/projects/GitHub/cssguy4hire/gulp/tasks/watch.js",
+		"/D/web/courses/web-developer-bootcamp/Express/working-with-APIs/package.json",
+		"/D/web/courses/web-developer-bootcamp/Express/working-with-APIs/app.js",
+		"/D/web/courses/web-developer-bootcamp/yelpAppV2/routes/commnets.js",
+		"/D/web/courses/web-developer-bootcamp/yelpApp/seeds.js",
+		"/D/web/courses/web-developer-bootcamp/authentication/authdemo/app.js",
+		"/D/web/courses/web-developer-bootcamp/authentication/authdemo/views/register.ejs",
+		"/D/web/courses/web-developer-bootcamp/authentication/authdemo/models/user.js",
+		"/D/web/courses/web-developer-bootcamp/dataAsociations/referencing-module-exports.js",
+		"/D/web/courses/web-developer-bootcamp/dataAsociations/models/user.js",
+		"/D/web/courses/web-developer-bootcamp/dataAsociations/models/post.js",
+		"/D/web/courses/web-developer-bootcamp/yelpApp/views/partials/header.ejs",
+		"/D/web/courses/web-developer-bootcamp/yelpApp/views/login.ejs",
+		"/D/web/courses/web-developer-bootcamp/yelpApp/views/register.ejs",
+		"/D/web/courses/web-developer-bootcamp/yelpApp/views/home.ejs",
+		"/D/web/courses/web-developer-bootcamp/yelpApp/views/campgrounds/index.ejs",
+		"/D/web/courses/web-developer-bootcamp/yelpApp/models/user.js",
+		"/D/web/courses/web-developer-bootcamp/yelpApp/models/campground.js",
+		"/D/web/courses/web-developer-bootcamp/yelpApp/models/comment.js",
+		"/D/web/courses/web-developer-bootcamp/authentication/authdemo/views/home.ejs",
+		"/D/web/courses/web-developer-bootcamp/authentication/authdemo/views/login.ejs",
+		"/D/web/courses/web-developer-bootcamp/authentication/authdemo/views/secret.ejs",
+		"/D/web/courses/web-developer-bootcamp/dataAsociations/embed.js",
+		"/D/web/courses/web-developer-bootcamp/authentication/authdemo/package.json",
+		"/D/web/courses/web-developer-bootcamp/yelpApp/package.json",
+		"/D/web/courses/javaScript-course/dev/js/assets/D16b_ClosuresPart2.js",
+		"/D/web/courses/web-developer-bootcamp/yelpApp/views/campgrounds/new.ejs",
+		"/D/web/courses/web-developer-bootcamp/yelpApp/public/stylesheets/main.css",
+		"/D/web/courses/web-developer-bootcamp/yelpApp/views/campgrounds/show.ejs",
+		"/D/web/courses/web-developer-bootcamp/yelpApp/views/comments/new.ejs",
+		"/D/web/courses/web-developer-bootcamp/yelpApp/views/show.ejs",
+		"/D/web/courses/web-developer-bootcamp/dataAsociations/referencing.js",
+		"/D/web/courses/web-developer-bootcamp/yelpApp/views/index.ejs",
+		"/D/web/courses/web-developer-bootcamp/yelpApp/public/bootstrap.min.css"
+	],
+	"find":
+	{
+		"height": 41.0
+	},
+	"find_in_files":
+	{
+		"height": 105.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": true,
+		"find_history":
+		[
+			",",
+			"left",
+			"h=",
+			"element"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "webpack.config.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3887,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3174,
+								3174
+							]
+						],
+						"settings":
+						{
+							"SL.117.region_keys":
+							[
+								"sublime_linter.protected_regions"
+							],
+							"SL.122.region_keys":
+							[
+							],
+							"SL.43.region_keys":
+							[
+								"sublime_linter.protected_regions"
+							],
+							"SL.90.region_keys":
+							[
+							],
+							"WordCount":
+							{
+								"changes": -1,
+								"modified": true,
+								"selection": true,
+								"status": -1,
+								"syntax": "javascript"
+							},
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true,
+							"word_wrap": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 1390.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "package.json",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 533,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								400,
+								376
+							]
+						],
+						"settings":
+						{
+							"WordCount":
+							{
+								"changes": -1,
+								"modified": true,
+								"selection": true,
+								"status": -1,
+								"syntax": "json"
+							},
+							"syntax": "Packages/JavaScript/JSON.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": ".babelrc",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 54,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								45,
+								45
+							]
+						],
+						"settings":
+						{
+							"WordCount":
+							{
+								"changes": 44,
+								"count": 2,
+								"modified": false,
+								"selection": false,
+								"status": -1,
+								"syntax": "plain text"
+							},
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 7,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "build/bundle.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 18810,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								4822,
+								4822
+							]
+						],
+						"settings":
+						{
+							"SL.158.region_keys":
+							[
+							],
+							"SL.44.region_keys":
+							[
+								"SL.eslint.Gutter.|region.redish markup.error.sublime_linter|dot",
+								"SL.eslint.Highlights.|5cac2fa9a02c766aba53d4c10c89b79b5fa8c9da675a32d9126f68a76e5fcbf0|region.redish markup.error.sublime_linter|32",
+								"sublime_linter.protected_regions"
+							],
+							"WordCount":
+							{
+								"changes": -1,
+								"modified": true,
+								"selection": true,
+								"status": -1,
+								"syntax": "javascript"
+							},
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 2433.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "index.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 226,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								226,
+								226
+							]
+						],
+						"settings":
+						{
+							"SL.159.region_keys":
+							[
+								"sublime_linter.protected_regions"
+							],
+							"SL.45.region_keys":
+							[
+								"SL.eslint.Highlights.|10ace6c079ca6a757dc1e9cea05561c1a70b730f01f441852672e2873de35a99|region.redish markup.error.sublime_linter|32",
+								"SL.eslint.Highlights.|e25e0527bdece613fa6c1c27135bd0cc22283921b8522a1b79bb38c35a3ca34a|region.redish markup.error.sublime_linter|32",
+								"sublime_linter.protected_regions",
+								"SL.eslint.Highlights.|42a74b11c1bc0aa370c100b90ca801f873777ec93c6df64be8519a288413db6e|region.redish markup.error.sublime_linter|32",
+								"SL.eslint.Gutter.|region.redish markup.error.sublime_linter|dot",
+								"SL.eslint.Highlights.|0d357217ed6540c4a5c9114ab160261586176deb42899860428374436f780e0b|region.redish markup.error.sublime_linter|32"
+							],
+							"WordCount":
+							{
+								"changes": 170,
+								"count": 1,
+								"modified": false,
+								"selection": false,
+								"status": -1,
+								"syntax": "plain text"
+							},
+							"syntax": "Packages/HTML/HTML.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				}
+			]
+		},
+		{
+			"selected": 1,
+			"sheets":
+			[
+				{
+					"buffer": 5,
+					"file": "src/index.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 372,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								49,
+								49
+							]
+						],
+						"settings":
+						{
+							"SL.127.region_keys":
+							[
+							],
+							"SL.46.region_keys":
+							[
+								"sublime_linter.protected_regions"
+							],
+							"SL.95.region_keys":
+							[
+								"sublime_linter.protected_regions"
+							],
+							"WordCount":
+							{
+								"changes": -1,
+								"modified": true,
+								"selection": true,
+								"status": -1,
+								"syntax": "javascript"
+							},
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "src/image-viewer.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1105,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								855,
+								855
+							]
+						],
+						"settings":
+						{
+							"SL.128.region_keys":
+							[
+								"sublime_linter.protected_regions"
+							],
+							"SL.54.region_keys":
+							[
+								"sublime_linter.protected_regions"
+							],
+							"WordCount":
+							{
+								"changes": -1,
+								"modified": true,
+								"selection": true,
+								"status": -1,
+								"syntax": "javascript"
+							},
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
+							"word_wrap": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 236.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "styles/image-viewer.css",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 92,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								87,
+								87
+							]
+						],
+						"settings":
+						{
+							"WordCount":
+							{
+								"changes": -1,
+								"modified": true,
+								"selection": true,
+								"status": -1,
+								"syntax": "css"
+							},
+							"syntax": "Packages/CSS/CSS.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"file": "src/sum.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 252,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								93,
+								67
+							]
+						],
+						"settings":
+						{
+							"SL.48.region_keys":
+							[
+								"sublime_linter.protected_regions"
+							],
+							"SL.96.region_keys":
+							[
+								"sublime_linter.protected_regions"
+							],
+							"WordCount":
+							{
+								"changes": -1,
+								"modified": true,
+								"selection": true,
+								"status": -1,
+								"syntax": "javascript"
+							},
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 8,
+					"type": "text"
+				},
+				{
+					"buffer": 9,
+					"file": "node_modules/webpack/package.json",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 4188,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"WordCount":
+							{
+								"changes": -1,
+								"modified": true,
+								"selection": true,
+								"status": -1,
+								"syntax": "json"
+							},
+							"syntax": "Packages/JavaScript/JSON.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1851.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 9,
+					"type": "text"
+				}
+			]
+		},
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 10,
+					"file": "/D/software/util/hint-sheet.txt",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 16351,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								409,
+								409
+							]
+						],
+						"settings":
+						{
+							"SL.94.region_keys":
+							[
+								"SL.eslint.Highlights.|812373a26f3f532bbfd2c43dec091dc37112ffdc0338d1e127f8a3de76cc4456|region.redish markup.error.sublime_linter|32",
+								"SL.eslint.Gutter.|region.redish markup.error.sublime_linter|dot",
+								"sublime_linter.protected_regions"
+							],
+							"WordCount":
+							{
+								"changes": 0,
+								"count": 1366,
+								"modified": false,
+								"selection": false,
+								"status": -1,
+								"syntax": "plain text"
+							},
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 528.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 10,
+					"type": "text"
+				},
+				{
+					"buffer": 11,
+					"file": "/D/web/projects/GitHub/cssguy4hire/app/js/dev/contactPanel.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 4809,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"SL.112.region_keys":
+							[
+								"SL.eslint.Highlights.|5bb8931e21be9b30dbd7701329d52d19f43213e9bf2370cfdfce17b090bd3adc|region.redish markup.error.sublime_linter|32",
+								"SL.eslint.Gutter.|region.redish markup.error.sublime_linter|dot",
+								"sublime_linter.protected_regions"
+							],
+							"WordCount":
+							{
+								"changes": -1,
+								"modified": true,
+								"selection": true,
+								"status": -1,
+								"syntax": "javascript"
+							},
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 2450.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 11,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 25.0
+	},
+	"input":
+	{
+		"height": 40.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			],
+			[
+				1,
+				0,
+				2,
+				1
+			],
+			[
+				2,
+				0,
+				3,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			0.433157070257,
+			0.956296296296,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.SublimeLinter":
+	{
+		"height": 0.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "js-modules.sublime-project",
+	"replace":
+	{
+		"height": 46.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"appjs",
+				"app\\js\\app.js"
+			],
+			[
+				"gulp",
+				"gulp\\gulp-config.js"
+			],
+			[
+				"typo",
+				"app\\scss\\base\\_typography.scss"
+			],
+			[
+				"packa",
+				"D:\\web\\projects\\GitHub\\cssguy4hire\\package.json"
+			],
+			[
+				"vari",
+				"app\\scss\\config\\_variables.scss"
+			],
+			[
+				"app.scss",
+				"app\\scss\\app.scss"
+			],
+			[
+				"orienta",
+				"app\\js\\dev\\deviceOrientation.js"
+			],
+			[
+				"index",
+				"app\\index.html"
+			],
+			[
+				"pane",
+				"app\\js\\dev\\panelNav.js"
+			],
+			[
+				"app.js",
+				"app\\js\\app.js"
+			],
+			[
+				"inde",
+				"app\\index.html"
+			],
+			[
+				"about",
+				"app\\scss\\components\\_about.scss"
+			],
+			[
+				"layout",
+				"app\\scss\\base\\_layout.scss"
+			],
+			[
+				"select",
+				"app\\scss\\lib\\_selectbox.scss"
+			],
+			[
+				"form",
+				"app\\scss\\base\\_forms.scss"
+			],
+			[
+				"app.css",
+				"app\\css\\app.css"
+			],
+			[
+				"mixins",
+				"app\\scss\\helpers\\_mixins.scss"
+			],
+			[
+				"functions",
+				"app\\scss\\helpers\\_functions.scss"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": false,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 50.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

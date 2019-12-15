@@ -1,0 +1,131 @@
+<script>
+
+    "use-strict";
+
+    var person =  {
+        fullName: 'John Doe',
+        sayHi: function() {
+            return 'Hi ' + this.fullName;
+        },
+        delay: 2000,
+        sayGoodBy: function() {
+            setTimeout(function() {
+                console.log('---\nbind method\n', 'Good by ' + this.fullName);
+            }.bind(this), this.delay); 
+
+            // "this" will no longer be part of parent object since is called later on
+            // setTimeout is a method of the "window" object
+            // thus bind is required to "bind" this value to later execution
+        },
+        determineContext: function() {
+           return this === person;
+        },
+        addNumbers: function(a, b, c, d) {
+            return this.fullName + ' added ' + (a + b + c + d);
+        },
+        dog: {
+            bark: function() {
+                return 'woof! ' + this.fullName;
+            },
+            determineContext: function() {
+                return this === person;
+            }
+        }
+    };
+
+    var jane = {
+        fullName: 'Jane Doe',
+        delay: 3000
+    };
+
+    var richard = {
+        fullName: 'Richard Doe',
+        delay: 4000
+    };
+
+    // regular method
+        console.log(
+            '---\nregular method\n', 
+            person.sayHi()
+        ); // Hi John Doe
+        console.log(
+            '---\n"call" method, "this" in context\n', 
+            person.determineContext()
+        ); // true
+
+        console.log(
+            '---\nregular method\n', 
+            person.dog.bark()
+        ); // woof! undefined
+
+        console.log(
+            '---\nregular method\n', 
+            person.addNumbers(1, 2, 3, 4)
+        ); // woof! undefined
+
+
+    // "call" method
+        console.log(
+            '---\n"call" method\n', 
+            person.dog.bark.call(person)
+        ); // woof! John Doe
+
+        console.log(
+            '---\n"call" method, "this" in context\n', 
+            person.dog.determineContext.call(person)
+        ); // true
+
+        console.log(
+            '---\n"call" method\n', 
+            person.dog.bark.call(jane)
+        ); // woof! woof Jane Doe
+
+        console.log(
+            '---\n"call" method\n', 
+            person.sayHi.call(jane)
+        ); // Hi Jane Doe
+
+        console.log(
+            '---\n"call" method\n', 
+            person.sayHi.call(richard)
+        ); // Hi Richard Doe
+
+        // call sends parameters comma separated after "this" value
+        console.log(
+            '---\n"call" method\n', 
+            person.addNumbers.call(jane, 1, 2, 3, 4)
+        ); // Jane Doe added 10
+
+    // "apply" method
+    // same as "call" but parameters are sent inside an array
+        console.log(
+            '---\n"apply" method\n', 
+            person.addNumbers.apply(jane, [2, 2, 2, 2]) 
+        ); // Jane Doe added 8
+
+    // "bind" method
+    // bind method returns a function not a value, has to be invoked
+    var janeAdd = person.addNumbers.bind(jane, 1, 2, 3, 4);
+    var janeAdd2 = person.addNumbers.bind(jane, 1, 2);
+
+    console.log(
+        '---\nbind method\n', 
+        janeAdd()
+    ); // Jane Doe added 10
+
+    console.log(
+        '---\nbind method\n', 
+        janeAdd2(1, 1) // providing remaining parameters, see janeAdd2
+    ); // Jane Doe added 5
+
+
+    person.sayGoodBy(); // Good by John Doe (after 2 seconds)
+
+    person.sayGoodBy.call(jane); // Good by Jane Doe (after 3 seconds)
+
+    // person.sayGoodBy.call(richard);
+    var test = person.sayGoodBy.bind(richard); 
+    test(); // Good by Richard Doe (after 4 seconds)
+    
+
+</script>

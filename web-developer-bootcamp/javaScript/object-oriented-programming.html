@@ -1,0 +1,94 @@
+<script>
+    
+    // function constructor
+    function House(bedrooms, bathrooms, area) {
+        this.bedrooms =     bedrooms;
+        this.bathrooms =    bathrooms;
+        this.area =         area;
+    }
+
+    var firstHouse = new House(2, 1, 90);
+
+    // 'new' keyword to create a new function
+        console.log(
+            '---\n"new" keyword\n', 
+            'House bedrooms => ' + firstHouse.bedrooms,     // House bedrooms => 2
+            'House bathrooms => ' + firstHouse.bathrooms,   // House bathrooms => 1
+            'House area => ' + firstHouse.area              // House area => 90
+        ); // Jane Doe
+
+
+    // function constructor
+    function Dog(name, age){
+        this.name = name;
+        this.age =  age;
+        this.bark = function() {
+            console.log(this.name + ' just barked!');
+        };
+    }
+
+    var dog1 = new Dog('Dog one', 3),
+        dog2 = new Dog('Dog two', 1);
+
+    // using "call" method
+    // var bark = function() {
+    //     console.log(this.name + ' just barked!');
+    // };
+    // bark.call(dog1); // Dog one just barked!
+    // bark.call(dog2); // Dog two just barked!
+
+    dog1.bark(); // Dog one just barked!
+    dog2.bark(); // Dog two just barked!
+
+    // function constructor
+    function Car(type, make, model, year){
+        this.type =         type;
+        this.make =         make;
+        this.model =        model;
+        this.year =         year;
+        this.numWheels =    4;
+        this.getVehicle =   function() {
+                                console.log(
+                                    'Vehicle\n' +
+                                    'Type is => ' + this.type,
+                                    'Brand is => ' + this.make,
+                                    'Model is => ' + this.model,
+                                    'Year is => ' + this.year,
+                                    'Wheels are => ' + this.numWheels,
+                                    '\n---'
+                                );
+                            };
+    }
+
+    // function constructor, taking parameter from another using "call"
+    function Motorcycle(type, make, model, year){
+        // call Car constructor to set extra properties
+        Car.call(this, type, make, model, year);
+
+        this.numWheels =    2;
+    }
+    
+    // function constructor, taking parameter from another using "apply"
+    function plane(type, make, model, year){
+        Car.apply(this, [type, make, model, year]);
+        this.numWheels =    0;
+    }
+
+    // function constructor, , taking parameter from another using "apply"
+    function bicycle(){
+        Car.apply(this, arguments);
+        this.numWheels =    2;
+    }
+
+    var skoda =     new Car('car', 'skoda', 'first model', '1999');
+    var harley =    new Motorcycle('motorcycle', 'Harley', 'third model', '2015');
+    var boeing =    new plane('plane', 'Boeing', 'fifth model', '2015');
+    var bh =        new bicycle('bicycle', 'BH', 'twentieth model', '2019');
+
+    // regular method call
+    skoda.getVehicle(); 
+    harley.getVehicle();
+    boeing.getVehicle();
+    bh.getVehicle();
+
+</script>

@@ -1,0 +1,125 @@
+<script>
+
+    "use-strict";
+    
+
+    // Person exercise
+    // ----------
+
+    // function constructor
+    function Person(name) {
+        this.name = name;
+    }
+
+    var john = new Person('John Doe');
+    var jane = new Person('Jane Doe');
+    var richard = new Person('Richard Doe');
+
+    // check for prototype equality
+    console.log('__proto__ is prototype => ' +  (john.__proto__ === Person.prototype)); // true
+    console.log('__proto__ is prototype => ' +  (jane.__proto__ === Person.prototype)); // true
+
+    // checks for constructor equality
+    console.log('constructor is Person => ' +  (john.constructor === Person)); // true
+    console.log('constructor is Person => ' +  (jane.constructor === Person)); // true
+
+    // set object isHuman false
+    jane.isHuman = false;
+
+    // set prototype isHuman false
+    Person.prototype.isHuman = true;
+
+    // looking for property isHuman down the prototype chain
+    console.log(jane.name + ' is human? ' + jane.isHuman); // Jane Doe is human? false
+    console.log(john.name + ' is human? ' + john.isHuman); // John Doe is human? true
+
+    // once property is deleted, 
+    // JS will look for prototype property matching key through the prototype chain  
+    delete jane.isHuman;
+
+    console.log(jane.name + ' is human? ' + jane.isHuman); // Jane Doe is human? true
+
+    function ComplexPerson(name){
+        this.name = name;
+    }
+
+    // ComplexPerson exercise
+    // ----------
+    console.log('\n---');
+    
+    ComplexPerson.prototype.sayHi = function(){
+        return 'Hi ' + this.name;
+    }
+
+    var johnAgain = new ComplexPerson('John Doe');
+    var janeAgain = new ComplexPerson('Jane Doe');
+    var richardAgain = new ComplexPerson('Richard Doe');
+
+    console.log(johnAgain.sayHi());     // Hi John Doe
+    console.log(janeAgain.sayHi());     // Hi Jane Doe
+    console.log(richardAgain.sayHi());  // Hi Richard Doe
+
+
+
+    // Vehicle exercise
+    // ----------
+    console.log('\n---');
+    
+    function Vehicle(vehicleType, model, year){
+        this.vehicleType =  vehicleType;
+        this.model =        model;
+        this.year =         year;
+        this.isRunning =     false;
+    }
+
+    var car = new Vehicle('car', 'Ford Mustang first model', '1975');
+    var motorCycle = new Vehicle('motorcycle', 'Harley Davidson Second model', '1960');
+    var plane = new Vehicle('plane', 'Focke Wulf 190 Third model', '1938');
+
+    Vehicle.prototype.turnOn = function(){
+        this.isRunning = true;
+    };
+
+    Vehicle.prototype.turnOff = function(){
+        this.isRunning = false;
+    };
+
+    Vehicle.prototype.hunk = function(){
+        var beep = this.isRunning ? 'beep' : 'silence';
+        return beep;
+    };
+
+    console.log(
+        'car\n' + 
+        'isRunnig -> ' + car.isRunning + '\n' +
+        'hunk vehicle -> ' + car.hunk()
+    );
+
+    // car
+    // isRunnig -> false
+    // hunk vehicle -> silence
+
+    console.log(
+        'motorCycle\n' + 
+        'isRunnig -> ' + motorCycle.isRunning + '\n' +
+        'hunk vehicle -> ' + motorCycle.hunk()
+    );
+    // motorCycle
+    // isRunnig -> false
+    // hunk vehicle -> silence
+
+    car.turnOn();
+    motorCycle.turnOn();
+    plane.turnOn();
+
+    console.log(
+        'plane\n' + 
+        'isRunnig -> ' + plane.isRunning + '\n' +
+        'hunk vehicle -> ' + plane.hunk()
+    );
+    // plane
+    // isRunnig -> true
+    // hunk vehicle -> beep
+
+
+</script>

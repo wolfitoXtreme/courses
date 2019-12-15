@@ -1,0 +1,8 @@
+.image {
+    width: 300px;
+    border: 10px solid black;
+}
+
+.image-big {
+    width: 600px;
+}

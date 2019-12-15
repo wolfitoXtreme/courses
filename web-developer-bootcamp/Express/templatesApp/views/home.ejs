@@ -1,0 +1,13 @@
+<% include partials/header %>
+
+<h1>The Home page</h1>
+
+<%  if(typeof urlVar === 'undefined'){ %>
+    <p>No URL variable defined</p>    
+<%  }
+    else {
+ %>
+    <p>URL variable is <b><%= urlVar %></b></p>
+<% } %>
+
+<% include partials/footer %>
