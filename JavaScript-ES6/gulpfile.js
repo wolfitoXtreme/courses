@@ -26,11 +26,15 @@ gulp.task('sass', function () {
 gulp.task('browserify', function () {
 
     gulp.src(config.paths.js.entryFile)
-        .pipe(browserify(
-            // {'transform': ['babelify']}
-            ).on('error', function(err){
+        
+        // modules enabling and transpiling
+        .pipe(browserify({
+                'transform': ['babelify']
+            }).on('error', function(err){
                 console.log('gulp BROWSERIFY error', err.toString());
-            })) 
+            }
+        )) 
+        
         .pipe(rename(function (path) {
             // path.basename = path.basename.slice(0, path.basename.lastIndexOf('.')) + '.min'
             path.basename = path.basename + '.min';
@@ -46,4 +50,8 @@ gulp.task('watch', function () {
     gulp.watch(config.paths.js.in, ['browserify'])
 });
 
-gulp.task('default', ['watch']);
+gulp.task('default', [
+    'sass',
+    'browserify',
+    'watch'
+]);

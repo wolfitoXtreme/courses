@@ -294,7 +294,7 @@ let varB = 2;
 [varB, varA] = [varA, varB];
 console.log(varA); // -> 2
 console.log(varB); // -> 1
-
+ 
 
 console.log(
     '----------------------------------------------------------------------',

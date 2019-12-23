@@ -13,7 +13,7 @@ const paths = {
     },
     'js': {
         'entryFile': './src/js/*.js',
-        'in': './src/js/*.js',
+        'in': './src/js/**/*.js',
         'out': './dist/js/'
     }
 }
