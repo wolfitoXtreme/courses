@@ -1,0 +1,31 @@
+// 
+// functions
+//
+
+// strip units
+@function strip-units($number) {
+    @return $number / ($number * 0 + 1);
+}
+
+// convert pixels to em
+@function pem($pxVal, $base: $font-size-default) {
+    
+    $pxVal: strip-units($pxVal);
+    $base: strip-units($base);
+
+    @return $pxVal / $base * 1em;
+}
+
+// convert pixels to rem
+@function prem($pxVal, $base: 16px) {
+    $pxVal: strip-units($pxVal);
+    $base: strip-units($base);
+
+    // return pixel or rem value
+    @if $debug == true {
+        @return $pxVal * 1px;
+    }
+    @else {
+        @return $pxVal / $base * 1rem;
+    }
+}

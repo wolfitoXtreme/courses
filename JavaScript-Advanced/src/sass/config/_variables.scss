@@ -1,0 +1,86 @@
+// 
+// global variables
+//
+
+$debug: true;
+$debug: false !default;
+
+// 
+// fonts
+// ----------------
+
+
+// default font
+$default-font: "Franklin Gothic Medium", "Franklin Gothic", "ITC Franklin Gothic", Arial, sans-serif;
+
+// font sizes
+$font-sizes: (
+    "tiny":            10px,
+    "xxx-small":       12px,
+    "normal":          16px,
+    "medium":          18px,
+    "x-large":         22px,
+    "xx-huge":         36px
+);
+
+$font-size-tiny:            nth(map-get($font-sizes, tiny), 1);
+$font-size-xxx-small:       nth(map-get($font-sizes, xxx-small), 1);
+$font-size-normal:          nth(map-get($font-sizes, normal), 1);
+$font-size-medium:          nth(map-get($font-sizes, medium), 1);
+$font-size-x-large:         nth(map-get($font-sizes, x-large), 1);
+$font-size-xx-huge:         nth(map-get($font-sizes, xx-huge), 1);
+
+//  default font size
+$font-size-default:     $font-size-medium;
+
+// line-height default
+$line-height-default: 1.2;
+
+
+// 
+// colors
+// ----------------
+
+// default color names
+$colors-default: (
+    "black":            #000,
+    "light-black":      #060606,
+    "nero":             #262626,
+    "charcoal":         #404040,
+    "dim-grey":         #616161,
+    "grey":             #7f7f7f,
+    "dark-grey":        #aaaaaa,
+    "light-grey":       #c9c9c9,
+    "very-light-grey":  #d3d3d3,
+    "gainsboro":        #e5e5e5,
+    "white":            #ffffff,
+    "red":              #ff0000
+);
+
+$black:             map-get($colors-default, "black");
+$light-black:       map-get($colors-default, "light-black");
+$nero:              map-get($colors-default, "nero");
+$charcoal:          map-get($colors-default, "charcoal");
+$dim-grey:          map-get($colors-default, "dim-grey");
+$grey:              map-get($colors-default, "grey");
+$dark-grey:         map-get($colors-default, "dark-grey");
+$light-grey:        map-get($colors-default, "light-grey");
+$very-light-grey:   map-get($colors-default, "very-light-grey");
+$gainsboro:         map-get($colors-default, "gainsboro");
+$white:             map-get($colors-default, "white");
+$red:               map-get($colors-default, "red");
+
+// link colors
+// $link-colors: (
+//     'link':         $black,
+//     'visited':      $black,
+//     'hover':        $black,
+//     'active':       $black
+// );
+
+// form elements colors
+
+// error color
+$error-color: $red;
+
+// button colors

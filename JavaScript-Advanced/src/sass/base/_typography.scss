@@ -1,0 +1,264 @@
+// 
+// typography
+//
+
+$_heading-tags: h1, h2, h3, h4, h5, h6;
+$_text-block-tags: p, ul, ol, dl, pre, address, blockquote, table;
+$_block-tags: article, aside, canvas, div, fieldset, figure, form, hgroup, output, section, video;
+$_text-block-and-block-tags: join($_text-block-tags, $_block-tags);
+$_heading-and-block-tags: join($_heading-tags, $_block-tags);
+
+html {
+    font-family: $default-font;
+    font-size: $font-size-default;
+}
+
+body {
+    margin: prem(16px);
+    letter-spacing: -0.028em;
+    line-height: $line-height-default;
+}
+
+// // remove first and last contained elements margins
+* > *{
+    
+    &:first-child {
+        margin-top: 0;
+    }
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+// 
+// headings
+// 
+h1, h2, h3, h4, h5, h6 {
+    text-transform: uppercase;
+    line-height: 1;
+    letter-spacing: -0.03em;
+    
+    // any heading element following a heading block
+    @for $i from 1 through length($_heading-tags) {
+
+        & + #{nth($_heading-tags, $i)} {
+            margin-top: 0;
+        }
+    }
+
+    // any text block or block element following a heading block
+    @for $i from 1 through length($_text-block-and-block-tags) {
+
+        & + #{nth($_text-block-and-block-tags, $i)} {
+            margin-top: prem(5px);
+        }
+    }
+}
+
+h1 {
+    margin: prem(5px) 0 0;
+    font-size: $font-size-xx-huge;
+}
+
+h2 {
+    margin: prem(3px) 0 0;
+    font-size: $font-size-x-large;
+}
+
+h3 {
+    margin: prem(2px) 0 0;
+    font-size: $font-size-medium;
+}
+
+// h4 {
+// }
+
+// h5 {
+// }
+
+// h6 {
+// }
+
+// default texts
+%default-texts {
+    margin: prem(16px) 0;
+
+    // any heading or block element following a text block
+    @for $i from 1 through length($_heading-and-block-tags) {
+        & + #{nth($_heading-and-block-tags, $i)} {
+            margin-top: prem(12px);
+        }
+    }
+}
+
+// 
+// paragraphs
+// 
+p {
+    @extend %default-texts;
+}
+
+// 
+// lists
+//
+
+// lists
+%lists {
+    padding: 0;
+    list-style: none;
+    @extend %default-texts;
+
+    // nested lists and paragraphs
+    & p,
+    & ul,
+    & ol {
+        &:first-child,
+        &:last-child {
+            margin-bottom: prem(16px);
+        }
+    }
+
+    p:only-child {
+        margin: 0;
+    }
+}
+
+// list - items
+%list-items {
+    margin: 0 0 prem(5px);
+    padding: 0 0 0  prem(11px);
+
+    p:only-child {
+        padding: 0;
+    }
+}
+
+%bullets-level-1 {
+    $_bullet-size: prem(7px);
+
+    content: "";
+    margin-top: -($_bullet-size / 2);
+    top: (1em * $line-height-default) / 2;
+    left: 0;
+    width: $_bullet-size;
+    height: $_bullet-size;
+    border-radius: 100%;
+    display: block;
+    position: absolute;
+    background-color: $black;
+}
+
+%bullets-level-2 {
+    $_bullet-size: prem(5px);
+
+    margin-top: -($_bullet-size / 2);
+    width: $_bullet-size;
+    height: $_bullet-size;
+    border: 1px solid $black;
+    background-color: transparent;
+}
+
+%bullets-level-3 {
+    $_bullet-size: 1px;
+
+    height: $_bullet-size;
+    margin-top: -($_bullet-size / 2);
+    border-radius: 0;
+    border-style: none;
+    background-color: $black;
+}
+
+ul {
+    @extend %lists;
+}
+
+ol {
+    counter-reset: li-counter;
+    @extend %lists;
+}
+
+dl {
+    @extend %lists;
+}
+
+li {
+    position: relative;
+    @extend %list-items;
+}
+
+// // unordered lists items
+ul > li {
+    // bullets
+    &:before {
+        @extend %bullets-level-1;
+    }
+
+    // bullets - second level
+    ul > li {
+        &:before {
+            @extend %bullets-level-2;
+        }
+    }
+
+    // bullets - third level
+    ul > li > ul > li {
+        &:before {
+            @extend %bullets-level-3;
+        }
+    }
+}
+
+// ordered lits items
+ol > li {
+    &:before {
+        content: counter(li-counter) ". ";
+        counter-increment: li-counter;
+        left: prem(-6px);
+        top: 0.36em;
+        width: prem(13px);
+        font: normal 0.8em/1 oswald;
+        color: $black;
+        text-align: right;
+        display: block;
+        position: absolute;
+    }
+}
+
+dt {
+    font-weight: bold;
+    @extend %list-items;
+}
+
+dd {
+    @extend %list-items;
+}
+
+hr {
+    @include hidden;
+}
+
+// bold texts
+b, strong {
+    font-weight: 600; // matches semi-bold weight
+} 
+
+// links
+a {
+    @include no-highlight;
+
+    // &:link {
+        // color: map-get($link-colors, link);
+    // }
+    // &:visited {
+        // color: map-get($link-colors, visited);
+    // }
+    // &:hover {
+        // color: map-get($link-colors, hover);
+    // }
+    // &:active,
+    // &:focus {
+        // color: map-get($link-colors, active);
+    // }
+
+}

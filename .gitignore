@@ -3,7 +3,9 @@
 # dependencies
 **/node_modules
 
+# compiled
 **/dist/*
 
 # others
+**/.vscode/*
 **/package-lock.json
