@@ -9,3 +9,4 @@
 # others
 **/.vscode/*
 **/package-lock.json
+**/material/*.pdf

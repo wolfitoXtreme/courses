@@ -19,7 +19,7 @@ body {
     line-height: $line-height-default;
 }
 
-// // remove first and last contained elements margins
+// remove first and last contained elements margins
 * > *{
     
     &:first-child {
@@ -35,6 +35,7 @@ body {
 // headings
 // 
 h1, h2, h3, h4, h5, h6 {
+    margin-bottom: 0;
     text-transform: uppercase;
     line-height: 1;
     letter-spacing: -0.03em;
@@ -43,7 +44,7 @@ h1, h2, h3, h4, h5, h6 {
     @for $i from 1 through length($_heading-tags) {
 
         & + #{nth($_heading-tags, $i)} {
-            margin-top: 0;
+            margin-top: prem(10px);
         }
     }
 
@@ -51,23 +52,20 @@ h1, h2, h3, h4, h5, h6 {
     @for $i from 1 through length($_text-block-and-block-tags) {
 
         & + #{nth($_text-block-and-block-tags, $i)} {
-            margin-top: prem(5px);
+            margin-top: prem(8px);
         }
     }
 }
 
 h1 {
-    margin: prem(5px) 0 0;
     font-size: $font-size-xx-huge;
 }
 
 h2 {
-    margin: prem(3px) 0 0;
     font-size: $font-size-x-large;
 }
 
 h3 {
-    margin: prem(2px) 0 0;
     font-size: $font-size-medium;
 }
 
