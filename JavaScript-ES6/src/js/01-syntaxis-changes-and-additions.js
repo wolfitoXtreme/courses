@@ -1,13 +1,13 @@
 console.log(
-    '======================================================================',
+    '=========================================',
     '\n  Syntax Changes & Additions',
-    '\n======================================================================'
+    '\n========================================='
 );
 
 console.log(
-    '----------------------------------------------------------------------',
+    '-----------------------------------------',
     '\n  Let & Block Scope',
-    '\n----------------------------------------------------------------------'
+    '\n-----------------------------------------'
 );
  
 // var, generic variable
@@ -35,9 +35,9 @@ console.log(names); // -> ["John Doe", "Harry Doe", "Michael Joe", "Peter Doe"]
 
 
 console.log(
-    '----------------------------------------------------------------------',
+    '-----------------------------------------',
     '\n  Hoisting',
-    '\n----------------------------------------------------------------------'
+    '\n-----------------------------------------'
 );
 
 age = 27;           // variable initialization
@@ -58,9 +58,9 @@ console.log(myNumber);  // will work as var is declared before being used
 
 
 console.log(
-    '----------------------------------------------------------------------',
+    '-----------------------------------------',
     '\n  (Fat) Arrow Functions',
-    '\n----------------------------------------------------------------------'
+    '\n-----------------------------------------'
 );
 
 /* 
@@ -90,18 +90,18 @@ console.log(fnD(2));
 setTimeout(() => console.log('...time out fired'), 1000);
 
 console.log(
-    '----------------------------------------------------------------------',
+    '-----------------------------------------',
     '\n  (Fat) Arrow Functions and the "this" Keyword',
-    '\n----------------------------------------------------------------------'
+    '\n-----------------------------------------'
 );
 
 let myWindow = this;
 let buttonA = document.querySelector('.js-button-01');
 let buttonB = document.querySelector('.js-button-02');
 
-const fnExampleA = () => console.log('is window = ' + (myWindow === this), 'is button = ' + (buttonA === this));
+const fnExampleA = () => console.log('Far Arrow function', 'is window = ' + (myWindow === this), 'is button = ' + (buttonA === this));
 function fnExampleB() {
-    console.log('is window = ' + (myWindow === this), 'is button = ' + (buttonB === this));
+    console.log('Standard function', 'is window = ' + (myWindow === this), 'is button = ' + (buttonB === this));
 }
 
 fnExampleA(); // -> Arrow function will keep its context, this will be always 'window' as is defined here
@@ -110,10 +110,14 @@ fnExampleB(); // -> Normal function will change the context of whatever element 
 buttonA.addEventListener('click', fnExampleA);
 buttonB.addEventListener('click', fnExampleB);
 
+// triggering clicks
+buttonA.click();
+buttonB.click();
+
 console.log(
-    '----------------------------------------------------------------------',
+    '-----------------------------------------',
     '\n  Functions and Default Parameters',
-    '\n----------------------------------------------------------------------'
+    '\n-----------------------------------------'
 );
 
 // default parameter values, applies also to fat arrow functions
@@ -134,9 +138,9 @@ console.log(isEqualB(10));      // -> false, is not replacing the default parame
 
 
 console.log(
-    '----------------------------------------------------------------------',
+    '-----------------------------------------',
     '\n  Object Literal Extensions',
-    '\n----------------------------------------------------------------------'
+    '\n-----------------------------------------'
 );
 
 // standard object declaration
@@ -189,9 +193,9 @@ objD['greet him']();
 
 
 console.log(
-    '----------------------------------------------------------------------',
+    '-----------------------------------------',
     '\n  The Rest operator',
-    '\n----------------------------------------------------------------------'
+    '\n-----------------------------------------'
 );
 
 // the 'rest' operator allows to pass any number of parameters
@@ -210,9 +214,9 @@ console.log(sumUp(...numbers)); // using 'spread' operator, '...'
 console.log(sumUp(10, 20, 30));
 
 console.log(
-    '----------------------------------------------------------------------',
+    '-----------------------------------------',
     '\n  The Spread operator',
-    '\n----------------------------------------------------------------------'
+    '\n-----------------------------------------'
 );
 
 // the 'spread' operator converts an array to a list of values
@@ -222,9 +226,9 @@ console.log(Math.max(...moreNumbers)); // -> 5, '...' are 'spread' operator when
 
 
 console.log(
-    '----------------------------------------------------------------------',
+    '-----------------------------------------',
     '\n  The for-of Loop',
-    '\n----------------------------------------------------------------------'
+    '\n-----------------------------------------'
 );
 
 // the for-of Loop is meant to be used with arrays
@@ -234,9 +238,9 @@ for(let restResult of testResults) {
 }
 
 console.log(
-    '----------------------------------------------------------------------',
+    '-----------------------------------------',
     '\n  Template Literals',
-    '\n----------------------------------------------------------------------'
+    '\n-----------------------------------------'
 );
 
 // Template Literals '``', are strings with extra features
@@ -256,9 +260,9 @@ consectetur adipisicing elit.
 console.log(description);
 
 console.log(
-    '----------------------------------------------------------------------',
+    '-----------------------------------------',
     '\n  Destructuring - Arrays',
-    '\n----------------------------------------------------------------------'
+    '\n-----------------------------------------'
 );
 
 let evenMoreNumbers = [1, 2, 3];
@@ -297,12 +301,12 @@ console.log(varB); // -> 1
  
 
 console.log(
-    '----------------------------------------------------------------------',
+    '-----------------------------------------',
     '\n  Destructuring - Objects',
-    '\n----------------------------------------------------------------------'
+    '\n-----------------------------------------'
 );
 
-anotherObj = {
+let anotherObj = {
     hisName: 'John Doe',
     hisAge: 27,
     hisGreet(){
@@ -312,7 +316,7 @@ anotherObj = {
 
 // Destructuring for Objects is done by key name, not by order as with arrays
 let {hisName, hisAge, hisGreet} = anotherObj; // variables names have to match key names
-console.log(hisName, hisAge, hisGreet); // -> John Doe 27 ƒ hisGreet()...
+console.log('hisName: ' + hisName, 'hisAge:' + hisAge, 'hisGreet: ' + hisGreet); // -> John Doe 27 ƒ hisGreet()...
 
 let {hisName: theName, hisGreet: theGreet} = anotherObj; // is possible to assign other names
-console.log(theName, theGreet); // -> John Doe ƒ hisGreet()...
+console.log('theName: ' + theName, 'theGreet: ' + theGreet); // -> John Doe ƒ hisGreet()...
