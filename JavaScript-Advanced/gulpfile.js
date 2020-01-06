@@ -28,12 +28,12 @@ gulp.task('browserify', function () {
     gulp.src(config.paths.js.entryFile)
         
         // modules enabling and transpiling
-        .pipe(browserify({
-                // 'transform': ['babelify']
-            }).on('error', function(err){
-                console.log('gulp BROWSERIFY error', err.toString());
-            }
-        )) 
+        // .pipe(browserify({
+        //         // 'transform': ['babelify']
+        //     }).on('error', function(err){
+        //         console.log('gulp BROWSERIFY error', err.toString());
+        //     }
+        // )) 
         
         .pipe(rename(function (path) {
             path.basename = path.basename + '.min';
