@@ -1,8 +1,10 @@
 {
-    "presets": ["es2015"],
+    "presets": ["@babel/preset-env"],
     "plugins": [
-        ["transform-runtime", {
+        "@babel/plugin-transform-new-target",
+        ["@babel/plugin-transform-runtime", {
           "regenerator": true
         }]
-      ]
+    ],
+    "sourceMap" : true
 }
