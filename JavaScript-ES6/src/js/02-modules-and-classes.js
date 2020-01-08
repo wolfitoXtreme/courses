@@ -59,7 +59,7 @@ class Person {
     }
 }
 
-let person = new Person('John Doe');
+let person = new Person('John Doe Doe');
 
 person.greet();
 

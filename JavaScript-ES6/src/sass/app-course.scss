@@ -1,0 +1,63 @@
+// 
+// Configuration
+//
+@import 'config/variables';
+
+// 
+// helpers
+//
+@import 'helpers/functions';
+@import 'helpers/mixins';
+@import 'helpers/helpers';
+
+// 
+// Base
+//
+
+.weather {
+    text-align: center;
+
+    label {
+        padding-right: prem(5px);
+        @include unhidden;
+    }
+
+    // weather-heading
+    &-heading {
+        padding: prem(15px);
+        font-size: prem(25px);
+        color: $white;
+        background-color: #55d4f0;
+    }
+
+    // weather-box
+    &-box {
+        margin: prem(15px) 0;
+        padding: prem(20px);
+        display: flex;
+        flex-wrap: wrap;
+        background-color: rgb(166, 166, 206);
+    }
+
+    // weather-city-name
+    &-city-name {
+        font-size: prem(20px);
+        flex: 1 0 100%;
+    }
+
+    // weather-temperature
+    &-description {
+        margin: 0;
+        font-size: prem(16px);
+        text-align: left;
+        flex: 0 0 50%;
+    }
+
+    // weather-temperature
+    &-temperature {
+        margin: 0;
+        font-size: prem(16px);
+        text-align: right;
+        flex: 0 0 50%;
+    }
+}

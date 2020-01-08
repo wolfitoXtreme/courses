@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    
+    <script src="./dist/js/10-course-project.min.js" defer></script>
+    <link rel="stylesheet" href="./dist/styles/app.min.css">
+    <link rel="stylesheet" href="./dist/styles/app-course.min.css">
+
+</head>
+<body>
+    <section class="weather">
+        <h1 class="weather-heading">Weather App</h1>
+
+        <div id="search">
+            <label for="city" class="label-inline">City name</label>
+            <input type="text" id="city">
+            <button type="button">Show weather</button>
+        </div>
+
+        <div id="load" class="hidden">Loading...</div>
+
+        <div id="weather" class="weather-box hidden">
+            <h1 id="weatherCity" class="weather-city-name">City Name</h1>
+            <div id="weatherDescription" class="weather-description">Weather Description</div>
+            <div id="weatherTemperature" class="weather-temperature">Temperature</div>
+        </div>
+
+    </section>
+
+    <nav>
+        <ul>
+            <li><a href="./index.html">home</a></li>
+        </ul>
+    </nav>
+
+</body>
+</html>
