@@ -1,0 +1,19 @@
+{
+	"folders": [
+		{
+			"path": ".",
+			"folder_exclude_patterns": [
+				"node_modules"
+			],
+			"file_exclude_patterns": [
+				"*.sublime-*",
+				".gitignore"
+			]
+		}
+	],
+	"settings":	{
+		"SublimeLinter.linters.jshint.disable": true,
+		"SublimeLinter.linters.eslint.disable": false,
+		"SublimeLinter.linters.htmlhint.disable": false
+	}
+}

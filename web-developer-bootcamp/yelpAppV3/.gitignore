@@ -1,0 +1,5 @@
+# Project source
+node_modules
+config
+*sublime-project
+*sublime-workspace

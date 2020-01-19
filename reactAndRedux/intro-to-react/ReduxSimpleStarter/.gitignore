@@ -1,0 +1,12 @@
+/node_modules
+bundle.js
+npm-debug.log
+.DS_Store
+*sublime-project
+*sublime-workspace
+
+# IntelliJ
+*.iml
+/.idea
+
+

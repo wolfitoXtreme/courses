@@ -1,0 +1,489 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"ali",
+				"align-items\tproperty"
+			],
+			[
+				"mont",
+				"month"
+			],
+			[
+				"lat",
+				"latitude"
+			],
+			[
+				"com",
+				"component"
+			],
+			[
+				"A",
+				"ApprovalCard"
+			],
+			[
+				"App",
+				"ApprovaCard"
+			],
+			[
+				"p",
+				"props"
+			],
+			[
+				"tex-",
+				"text-align\tproperty"
+			],
+			[
+				"video",
+				"videoID"
+			],
+			[
+				"instruc",
+				"instructor"
+			],
+			[
+				"instrt",
+				"instructors"
+			],
+			[
+				"is",
+				"isHuman"
+			],
+			[
+				"add",
+				"addNumbers"
+			],
+			[
+				"a",
+				"author"
+			],
+			[
+				"ca",
+				"campground"
+			],
+			[
+				"us",
+				"user"
+			],
+			[
+				"camp",
+				"campgrounds"
+			],
+			[
+				"lo",
+				"LocalStrategy"
+			],
+			[
+				"au",
+				"authenticate"
+			],
+			[
+				"user",
+				"username"
+			],
+			[
+				"back",
+				"background-color\tproperty"
+			],
+			[
+				"e",
+				"else"
+			],
+			[
+				"commn",
+				"Comments"
+			],
+			[
+				"Cam",
+				"Campground"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 259.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"Package Control: ",
+				"Package Control: Install Package"
+			],
+			[
+				"install package",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Co",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: install",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: insta",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: ins",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 432.0
+	},
+	"console":
+	{
+		"height": 126.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = '6f4c264a24d933ce70df5dedcf1dcaee' + 'ebe013ee18cced0ef93d5f746d80ef60'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/D/web/courses/reactAndRedux/intro-to-react/class-components/src/seasson-display.css",
+		"/D/web/courses/reactAndRedux/intro-to-react/class-components/public/semantic.min.css",
+		"/C/Users/Cesar/Desktop/New folder/index.html",
+		"/C/Users/Cesar/Desktop/New folder/semantic.min.css",
+		"/D/web/courses/reactAndRedux/intro-to-react/class-components/src/semantic.min.css",
+		"/D/web/courses/reactAndRedux/intro-to-react/ReduxSimpleStarter/index.html",
+		"/D/web/courses/reactAndRedux/intro-to-react/class-components/src/seadon-display.js",
+		"/D/web/courses/reactAndRedux/intro-to-react/class-components/public/index.html",
+		"/D/web/courses/reactAndRedux/intro-to-react/ReduxSimpleStarter/package.json",
+		"/D/web/courses/reactAndRedux/intro-to-react/functional-components/package.json",
+		"/D/web/courses/reactAndRedux/intro-to-react/functional-components/functional-component.sublime-project",
+		"/D/web/courses/reactAndRedux/intro-to-react/jsx/jsx.sublime-project",
+		"/D/web/courses/reactAndRedux/intro-to-react/components/src/commen-detail.js",
+		"/D/web/courses/javaScript-course/dev/D16_Closures.html",
+		"/D/web/courses/reactAndRedux/intro-to-react/jsx/src/App.js",
+		"/D/web/courses/reactAndRedux/intro-to-react/jsx/src/App.css",
+		"/D/web/courses/reactAndRedux/intro-to-react/jsx/src/serviceWorker.js",
+		"/D/web/courses/reactAndRedux/intro-to-react/ReduxSimpleStarter/src/index.js",
+		"/D/web/courses/reactAndRedux/intro-to-react/ReduxSimpleStarter/style/style.css",
+		"/D/web/courses/reactAndRedux/intro-to-react/ReduxSimpleStarter/src/components/search-bar.js",
+		"/D/web/courses/reactAndRedux/intro-to-react/ReduxSimpleStarter/src/components/video-list.js",
+		"/D/web/courses/reactAndRedux/intro-to-react/ReduxSimpleStarter/src/components/video-list-item.js",
+		"/D/web/courses/reactAndRedux/intro-to-react/ReduxSimpleStarter/src/components/video-detail.js",
+		"/D/web/courses/reactAndRedux/intro-to-react/ReduxSimpleStarter/ReduxSimpleStarter.sublime-project",
+		"/D/web/courses/reactAndRedux/intro-to-react/jsx/jsx.sublime-workspace",
+		"/D/web/projects/GitHub/cssguy4hire/app/js/dev/textAreas.js",
+		"/D/web/projects/GitHub/cssguy4hire/app/js/dev/panelNav.js",
+		"/D/web/projects/GitHub/cssguy4hire/app/js/dev/selectFields.js",
+		"/D/web/projects/GitHub/cssguy4hire/app/js/dev/slider.js",
+		"/D/web/projects/GitHub/cssguy4hire/app/js/dev/contactPanel.js",
+		"/D/web/projects/GitHub/cssguy4hire/app/js/dev/currentFocus.js",
+		"/D/web/projects/GitHub/cssguy4hire/app/js/app.js",
+		"/D/software/util/sublimeCustom/installed-packages.txt",
+		"/D/docs/usefull-commands.txt",
+		"/D/web/courses/reactAndRedux/intro-to-react/ReduxSimpleStarter/.gitignore",
+		"/D/web/courses/reactAndRedux/intro-to-react/ReduxSimpleStarter/ReduxSimpleStarter.sublime-workspace",
+		"/D/web/courses/web-developer-bootcamp/yelpAppV3/app.js",
+		"/D/software/util/hint-sheet.txt",
+		"/C/Users/Cesar/AppData/Roaming/Sublime Text 3/Packages/User/SublimeLinter.sublime-settings",
+		"/D/software/util/sublimeCustom/jshint.conf",
+		"/D/software/util/sublimeCustom/SublimeLinter.sublime-settings",
+		"/D/software/util/sublimeCustom/eslint.conf",
+		"/C/Users/Cesar/AppData/Roaming/Sublime Text 3/Packages/SublimeLinter/SublimeLinter.sublime-settings",
+		"/D/web/courses/reactAndRedux/intro-to-react/ReduxSimpleStarter/src/components/app.js",
+		"/D/web/courses/web-developer-bootcamp/yelpAppV3/package.json",
+		"/D/web/courses/web-developer-bootcamp/yelpAppV3/config/keys.js",
+		"/D/web/courses/web-developer-bootcamp/yelpAppV3/models/user.js",
+		"/D/web/courses/web-developer-bootcamp/yelpAppV3/.gitignore",
+		"/D/web/courses/web-developer-bootcamp/deployingDemo/package.json",
+		"/D/web/courses/web-developer-bootcamp/deployingDemo/views/home.ejs",
+		"/D/web/courses/web-developer-bootcamp/deployingDemo/views/about.ejs",
+		"/D/web/courses/web-developer-bootcamp/deployingDemo/app.js",
+		"/D/web/courses/javaScript-course/dev/js/assets/F2_FunctionConstructorsAndPrototype.js",
+		"/D/web/courses/javaScript-course/dev/js/assets/D19_CallApplyBind.js",
+		"/D/web/courses/javaScript-course/dev/js/assets/D18_ClosuresAndCallbacks.js",
+		"/D/web/courses/javaScript-course/dev/js/assets/D20_FunctionalProgramming.js",
+		"/D/web/courses/javaScript-course/dev/js/assets/D20b_FunctionalProgrammingPart2.js",
+		"/D/web/courses/javaScript-course/dev/js/assets/D17_FunctionFactories.js",
+		"/D/web/courses/javaScript-course/dev/js/assets/D16_Closures.js",
+		"/D/web/courses/web-developer-bootcamp/yelpAppV3/seeds.js",
+		"/D/web/courses/web-developer-bootcamp/yelpAppV2/models/comment.js",
+		"/D/web/courses/web-developer-bootcamp/yelpAppV2/models/campground.js",
+		"/D/web/courses/web-developer-bootcamp/yelpAppV2/views/campgrounds/index.ejs",
+		"/D/web/courses/web-developer-bootcamp/yelpAppV2/models/user.js",
+		"/D/web/courses/web-developer-bootcamp/Express/simpleApp/app.js",
+		"/D/web/courses/web-developer-bootcamp/yelpAppV2/app.js",
+		"/D/web/courses/web-developer-bootcamp/javaScript/function-constructors.html",
+		"/D/web/courses/web-developer-bootcamp/javaScript/this-call-use-bind.html",
+		"/D/web/courses/web-developer-bootcamp/yelpAppV2/seeds.js",
+		"/D/web/courses/web-developer-bootcamp/deployingDemo/.gitignore",
+		"/D/web/projects/GitHub/cssguy4hire/app/js/dev/lib/jquery-ui.min.js",
+		"/D/web/projects/GitHub/cssguy4hire/app/js/dev/lib/jquery.min.js",
+		"/D/web/projects/GitHub/cssguy4hire/app/js/dev/lib/jquery-3.3.1.min.js",
+		"/D/web/projects/GitHub/cssguy4hire/app/js/dev/lib/jquery.selectBox - Copy.js",
+		"/C/Users/Cesar/Desktop/test.js",
+		"/D/web/projects/GitHub/cssguy4hire/package.json",
+		"/D/web/projects/GitHub/cssguy4hire/gulpfile.js",
+		"/D/web/courses/web-developer-bootcamp/gitDemo/gitIntro/app.js",
+		"/D/web/courses/web-developer-bootcamp/gitDemo/gitIntro/cats.js",
+		"/D/web/courses/web-developer-bootcamp/yelpAppV2/public/stylesheets/home.css",
+		"/D/web/courses/web-developer-bootcamp/yelpAppV2/views/campgrounds/show.ejs",
+		"/D/web/courses/web-developer-bootcamp/yelpAppV2/routes/campgrounds.js",
+		"/D/web/courses/web-developer-bootcamp/yelpAppV2/public/stylesheets/main.css",
+		"/D/web/courses/web-developer-bootcamp/yelpAppV2/views/home.ejs",
+		"/D/web/courses/web-developer-bootcamp/yelpAppV2/views/campgrounds/new.ejs",
+		"/D/web/courses/web-developer-bootcamp/yelpAppV2/views/campgrounds/edit.ejs",
+		"/D/web/courses/web-developer-bootcamp/yelpAppV2/views/partials/header.ejs",
+		"/D/web/courses/web-developer-bootcamp/yelpAppV2/routes/index.js",
+		"/D/web/courses/web-developer-bootcamp/yelpAppV2/public/js/test.js",
+		"/D/web/courses/web-developer-bootcamp/yelpAppV2/middleware/index.js",
+		"/D/web/courses/web-developer-bootcamp/yelpAppV2/routes/comments.js",
+		"/D/web/courses/web-developer-bootcamp/Express/templatesApp/app.js",
+		"/D/web/courses/web-developer-bootcamp/yelpAppV2/package.json",
+		"/D/web/courses/web-developer-bootcamp/yelpApp/app.js",
+		"/D/web/courses/web-developer-bootcamp/yelpAppV2/views/register.ejs",
+		"/D/web/courses/web-developer-bootcamp/yelpAppV2/views/partials/footer.ejs",
+		"/D/web/courses/web-developer-bootcamp/yelpAppV2/views/login.ejs",
+		"/D/web/courses/web-developer-bootcamp/yelpAppV2/views/comments/new.ejs",
+		"/D/web/courses/web-developer-bootcamp/yelpAppV2/views/comments/edit.ejs",
+		"/D/web/courses/web-developer-bootcamp/yelpAppV2/package-lock.json",
+		"/D/web/courses/web-developer-bootcamp/yelpAppV2/public/stylesheets/bootstrap.min.css",
+		"/D/web/projects/GitHub/cssguy4hire/gulp/tasks/watch.js",
+		"/D/web/courses/web-developer-bootcamp/Express/working-with-APIs/package.json",
+		"/D/web/courses/web-developer-bootcamp/Express/working-with-APIs/app.js",
+		"/D/web/courses/web-developer-bootcamp/yelpAppV2/routes/commnets.js",
+		"/D/web/courses/web-developer-bootcamp/yelpApp/seeds.js",
+		"/D/web/courses/web-developer-bootcamp/authentication/authdemo/app.js",
+		"/D/web/courses/web-developer-bootcamp/authentication/authdemo/views/register.ejs",
+		"/D/web/courses/web-developer-bootcamp/authentication/authdemo/models/user.js",
+		"/D/web/courses/web-developer-bootcamp/dataAsociations/referencing-module-exports.js",
+		"/D/web/courses/web-developer-bootcamp/dataAsociations/models/user.js",
+		"/D/web/courses/web-developer-bootcamp/dataAsociations/models/post.js",
+		"/D/web/courses/web-developer-bootcamp/yelpApp/views/partials/header.ejs",
+		"/D/web/courses/web-developer-bootcamp/yelpApp/views/login.ejs",
+		"/D/web/courses/web-developer-bootcamp/yelpApp/views/register.ejs",
+		"/D/web/courses/web-developer-bootcamp/yelpApp/views/home.ejs",
+		"/D/web/courses/web-developer-bootcamp/yelpApp/views/campgrounds/index.ejs",
+		"/D/web/courses/web-developer-bootcamp/yelpApp/models/user.js",
+		"/D/web/courses/web-developer-bootcamp/yelpApp/models/campground.js",
+		"/D/web/courses/web-developer-bootcamp/yelpApp/models/comment.js",
+		"/D/web/courses/web-developer-bootcamp/authentication/authdemo/views/home.ejs",
+		"/D/web/courses/web-developer-bootcamp/authentication/authdemo/views/login.ejs",
+		"/D/web/courses/web-developer-bootcamp/authentication/authdemo/views/secret.ejs",
+		"/D/web/courses/web-developer-bootcamp/dataAsociations/embed.js",
+		"/D/web/courses/web-developer-bootcamp/authentication/authdemo/package.json",
+		"/D/web/courses/web-developer-bootcamp/yelpApp/package.json",
+		"/D/web/courses/javaScript-course/dev/js/assets/D16b_ClosuresPart2.js",
+		"/D/web/courses/web-developer-bootcamp/yelpApp/views/campgrounds/new.ejs"
+	],
+	"find":
+	{
+		"height": 41.0
+	},
+	"find_in_files":
+	{
+		"height": 105.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 27.0
+	},
+	"input":
+	{
+		"height": 40.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.SublimeLinter":
+	{
+		"height": 0.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "index.sublime-project",
+	"replace":
+	{
+		"height": 73.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"appjs",
+				"app\\js\\app.js"
+			],
+			[
+				"gulp",
+				"gulp\\gulp-config.js"
+			],
+			[
+				"typo",
+				"app\\scss\\base\\_typography.scss"
+			],
+			[
+				"packa",
+				"D:\\web\\projects\\GitHub\\cssguy4hire\\package.json"
+			],
+			[
+				"vari",
+				"app\\scss\\config\\_variables.scss"
+			],
+			[
+				"app.scss",
+				"app\\scss\\app.scss"
+			],
+			[
+				"orienta",
+				"app\\js\\dev\\deviceOrientation.js"
+			],
+			[
+				"index",
+				"app\\index.html"
+			],
+			[
+				"pane",
+				"app\\js\\dev\\panelNav.js"
+			],
+			[
+				"app.js",
+				"app\\js\\app.js"
+			],
+			[
+				"inde",
+				"app\\index.html"
+			],
+			[
+				"about",
+				"app\\scss\\components\\_about.scss"
+			],
+			[
+				"layout",
+				"app\\scss\\base\\_layout.scss"
+			],
+			[
+				"select",
+				"app\\scss\\lib\\_selectbox.scss"
+			],
+			[
+				"form",
+				"app\\scss\\base\\_forms.scss"
+			],
+			[
+				"app.css",
+				"app\\css\\app.css"
+			],
+			[
+				"mixins",
+				"app\\scss\\helpers\\_mixins.scss"
+			],
+			[
+				"functions",
+				"app\\scss\\helpers\\_functions.scss"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": false,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 50.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

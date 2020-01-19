@@ -1,0 +1,1247 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"compo",
+				"componentDidMount"
+			],
+			[
+				"o",
+				"onVideoSelect"
+			],
+			[
+				"tex-",
+				"text-align\tproperty"
+			],
+			[
+				"com",
+				"components"
+			],
+			[
+				"video",
+				"videoID"
+			],
+			[
+				"instruc",
+				"instructor"
+			],
+			[
+				"instrt",
+				"instructors"
+			],
+			[
+				"is",
+				"isHuman"
+			],
+			[
+				"add",
+				"addNumbers"
+			],
+			[
+				"a",
+				"author"
+			],
+			[
+				"ca",
+				"campground"
+			],
+			[
+				"us",
+				"user"
+			],
+			[
+				"camp",
+				"campgrounds"
+			],
+			[
+				"lo",
+				"LocalStrategy"
+			],
+			[
+				"au",
+				"authenticate"
+			],
+			[
+				"user",
+				"username"
+			],
+			[
+				"back",
+				"background-color\tproperty"
+			],
+			[
+				"e",
+				"else"
+			],
+			[
+				"commn",
+				"Comments"
+			],
+			[
+				"Cam",
+				"Campground"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "src/index.js",
+			"settings":
+			{
+				"buffer_size": 364,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "package.json",
+			"settings":
+			{
+				"buffer_size": 503,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/components/app.js",
+			"settings":
+			{
+				"buffer_size": 2546,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/D/web/courses/web-developer-bootcamp/authentication/authdemo/app.js",
+			"settings":
+			{
+				"buffer_size": 4578,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "src/components/video-list.js",
+			"settings":
+			{
+				"buffer_size": 950,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "src/components/video-item.js",
+			"settings":
+			{
+				"buffer_size": 1252,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "src/apis/youtube.js",
+			"settings":
+			{
+				"buffer_size": 561,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "src/components/video-detail.js",
+			"settings":
+			{
+				"buffer_size": 1006,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "src/components/video-item.css",
+			"settings":
+			{
+				"buffer_size": 152,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "src/components/search-bar.js",
+			"settings":
+			{
+				"buffer_size": 1556,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "public/index.html",
+			"settings":
+			{
+				"buffer_size": 1708,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/D/software/util/hint-sheet.txt",
+			"settings":
+			{
+				"buffer_size": 16351,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/D/web/courses/reactAndRedux/redux/basic-concepts/index.js",
+			"settings":
+			{
+				"buffer_size": 4240,
+				"line_ending": "Windows"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 259.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"Package Control: ",
+				"Package Control: Install Package"
+			],
+			[
+				"install package",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Co",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: install",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: insta",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: ins",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 432.0
+	},
+	"console":
+	{
+		"height": 126.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = '6f4c264a24d933ce70df5dedcf1dcaee' + 'ebe013ee18cced0ef93d5f746d80ef60'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/D/web/courses/reactAndRedux/intro-to-react/videos",
+		"/D/web/courses/reactAndRedux/intro-to-react/videos/public",
+		"/D/web/courses/reactAndRedux/intro-to-react/videos/src"
+	],
+	"file_history":
+	[
+		"/C/Users/Cesar/Desktop/currency-col.txt",
+		"/D/web/projects/GitHub/cssguy4hire/cssguy4hire.sublime-project",
+		"/D/web/courses/reactAndRedux/redux/package-lock.json",
+		"/D/web/courses/webpack/code-splitting/src/index.html",
+		"/D/web/courses/reactAndRedux/hiring-test/MOCK_DATA.json",
+		"/D/web/courses/reactAndRedux/hiring-test/FE-REACTJS-TASK.md",
+		"/D/web/courses/webpack/js-modules/js-modules.sublime-project",
+		"/D/web/courses/reactAndRedux/intro-to-react/jsx/src/index.js",
+		"/D/web/courses/reactAndRedux/intro-to-react/class-components/public/semantic.min.css",
+		"/D/web/courses/reactAndRedux/intro-to-react/class-components/public/icons.ttf",
+		"/D/web/courses/reactAndRedux/intro-to-react/ReduxSimpleStarter/src/index.js",
+		"/D/web/courses/reactAndRedux/intro-to-react/ReduxSimpleStarter/style/style.css",
+		"/D/web/courses/reactAndRedux/intro-to-react/ReduxSimpleStarter/src/components/search-bar.js",
+		"/D/web/courses/reactAndRedux/intro-to-react/ReduxSimpleStarter/src/components/video-list.js",
+		"/D/web/courses/reactAndRedux/intro-to-react/ReduxSimpleStarter/src/components/video-list-item.js",
+		"/D/web/courses/reactAndRedux/intro-to-react/ReduxSimpleStarter/src/components/video-detail.js",
+		"/D/web/courses/reactAndRedux/intro-to-react/ReduxSimpleStarter/index.html",
+		"/D/web/courses/reactAndRedux/intro-to-react/jsx/jsx.sublime-project",
+		"/D/web/courses/reactAndRedux/intro-to-react/ReduxSimpleStarter/package.json",
+		"/D/web/courses/reactAndRedux/intro-to-react/ReduxSimpleStarter/ReduxSimpleStarter.sublime-project",
+		"/D/web/courses/reactAndRedux/intro-to-react/jsx/jsx.sublime-workspace",
+		"/D/web/projects/GitHub/cssguy4hire/app/js/dev/textAreas.js",
+		"/D/web/projects/GitHub/cssguy4hire/app/js/dev/panelNav.js",
+		"/D/web/projects/GitHub/cssguy4hire/app/js/dev/selectFields.js",
+		"/D/web/projects/GitHub/cssguy4hire/app/js/dev/slider.js",
+		"/D/web/projects/GitHub/cssguy4hire/app/js/dev/contactPanel.js",
+		"/D/web/projects/GitHub/cssguy4hire/app/js/dev/currentFocus.js",
+		"/D/web/projects/GitHub/cssguy4hire/app/js/app.js",
+		"/D/software/util/sublimeCustom/installed-packages.txt",
+		"/D/docs/usefull-commands.txt",
+		"/D/web/courses/reactAndRedux/intro-to-react/ReduxSimpleStarter/.gitignore",
+		"/D/web/courses/reactAndRedux/intro-to-react/ReduxSimpleStarter/ReduxSimpleStarter.sublime-workspace",
+		"/D/web/courses/web-developer-bootcamp/yelpAppV3/app.js",
+		"/D/software/util/hint-sheet.txt",
+		"/C/Users/Cesar/AppData/Roaming/Sublime Text 3/Packages/User/SublimeLinter.sublime-settings",
+		"/D/software/util/sublimeCustom/jshint.conf",
+		"/D/software/util/sublimeCustom/SublimeLinter.sublime-settings",
+		"/D/software/util/sublimeCustom/eslint.conf",
+		"/C/Users/Cesar/AppData/Roaming/Sublime Text 3/Packages/SublimeLinter/SublimeLinter.sublime-settings",
+		"/D/web/courses/reactAndRedux/intro-to-react/ReduxSimpleStarter/src/components/app.js",
+		"/D/web/courses/web-developer-bootcamp/yelpAppV3/package.json",
+		"/D/web/courses/web-developer-bootcamp/yelpAppV3/config/keys.js",
+		"/D/web/courses/web-developer-bootcamp/yelpAppV3/models/user.js",
+		"/D/web/courses/web-developer-bootcamp/yelpAppV3/.gitignore",
+		"/D/web/courses/web-developer-bootcamp/deployingDemo/package.json",
+		"/D/web/courses/web-developer-bootcamp/deployingDemo/views/home.ejs",
+		"/D/web/courses/web-developer-bootcamp/deployingDemo/views/about.ejs",
+		"/D/web/courses/web-developer-bootcamp/deployingDemo/app.js",
+		"/D/web/courses/javaScript-course/dev/js/assets/F2_FunctionConstructorsAndPrototype.js",
+		"/D/web/courses/javaScript-course/dev/js/assets/D19_CallApplyBind.js",
+		"/D/web/courses/javaScript-course/dev/js/assets/D18_ClosuresAndCallbacks.js",
+		"/D/web/courses/javaScript-course/dev/js/assets/D20_FunctionalProgramming.js",
+		"/D/web/courses/javaScript-course/dev/js/assets/D20b_FunctionalProgrammingPart2.js",
+		"/D/web/courses/javaScript-course/dev/js/assets/D17_FunctionFactories.js",
+		"/D/web/courses/javaScript-course/dev/js/assets/D16_Closures.js",
+		"/D/web/courses/web-developer-bootcamp/yelpAppV3/seeds.js",
+		"/D/web/courses/web-developer-bootcamp/yelpAppV2/models/comment.js",
+		"/D/web/courses/web-developer-bootcamp/yelpAppV2/models/campground.js",
+		"/D/web/courses/web-developer-bootcamp/yelpAppV2/views/campgrounds/index.ejs",
+		"/D/web/courses/web-developer-bootcamp/yelpAppV2/models/user.js",
+		"/D/web/courses/web-developer-bootcamp/Express/simpleApp/app.js",
+		"/D/web/courses/web-developer-bootcamp/yelpAppV2/app.js",
+		"/D/web/courses/web-developer-bootcamp/javaScript/function-constructors.html",
+		"/D/web/courses/web-developer-bootcamp/javaScript/this-call-use-bind.html",
+		"/D/web/courses/web-developer-bootcamp/yelpAppV2/seeds.js",
+		"/D/web/courses/web-developer-bootcamp/deployingDemo/.gitignore",
+		"/D/web/projects/GitHub/cssguy4hire/app/js/dev/lib/jquery-ui.min.js",
+		"/D/web/projects/GitHub/cssguy4hire/app/js/dev/lib/jquery.min.js",
+		"/D/web/projects/GitHub/cssguy4hire/app/js/dev/lib/jquery-3.3.1.min.js",
+		"/D/web/projects/GitHub/cssguy4hire/app/js/dev/lib/jquery.selectBox - Copy.js",
+		"/C/Users/Cesar/Desktop/test.js",
+		"/D/web/projects/GitHub/cssguy4hire/package.json",
+		"/D/web/projects/GitHub/cssguy4hire/gulpfile.js",
+		"/D/web/courses/web-developer-bootcamp/gitDemo/gitIntro/app.js",
+		"/D/web/courses/web-developer-bootcamp/gitDemo/gitIntro/cats.js",
+		"/D/web/courses/web-developer-bootcamp/yelpAppV2/public/stylesheets/home.css",
+		"/D/web/courses/web-developer-bootcamp/yelpAppV2/views/campgrounds/show.ejs",
+		"/D/web/courses/web-developer-bootcamp/yelpAppV2/routes/campgrounds.js",
+		"/D/web/courses/web-developer-bootcamp/yelpAppV2/public/stylesheets/main.css",
+		"/D/web/courses/web-developer-bootcamp/yelpAppV2/views/home.ejs",
+		"/D/web/courses/web-developer-bootcamp/yelpAppV2/views/campgrounds/new.ejs",
+		"/D/web/courses/web-developer-bootcamp/yelpAppV2/views/campgrounds/edit.ejs",
+		"/D/web/courses/web-developer-bootcamp/yelpAppV2/views/partials/header.ejs",
+		"/D/web/courses/web-developer-bootcamp/yelpAppV2/routes/index.js",
+		"/D/web/courses/web-developer-bootcamp/yelpAppV2/public/js/test.js",
+		"/D/web/courses/web-developer-bootcamp/yelpAppV2/middleware/index.js",
+		"/D/web/courses/web-developer-bootcamp/yelpAppV2/routes/comments.js",
+		"/D/web/courses/web-developer-bootcamp/Express/templatesApp/app.js",
+		"/D/web/courses/web-developer-bootcamp/yelpAppV2/package.json",
+		"/D/web/courses/web-developer-bootcamp/yelpApp/app.js",
+		"/D/web/courses/web-developer-bootcamp/yelpAppV2/views/register.ejs",
+		"/D/web/courses/web-developer-bootcamp/yelpAppV2/views/partials/footer.ejs",
+		"/D/web/courses/web-developer-bootcamp/yelpAppV2/views/login.ejs",
+		"/D/web/courses/web-developer-bootcamp/yelpAppV2/views/comments/new.ejs",
+		"/D/web/courses/web-developer-bootcamp/yelpAppV2/views/comments/edit.ejs",
+		"/D/web/courses/web-developer-bootcamp/yelpAppV2/package-lock.json",
+		"/D/web/courses/web-developer-bootcamp/yelpAppV2/public/stylesheets/bootstrap.min.css",
+		"/D/web/projects/GitHub/cssguy4hire/gulp/tasks/watch.js",
+		"/D/web/courses/web-developer-bootcamp/Express/working-with-APIs/package.json",
+		"/D/web/courses/web-developer-bootcamp/Express/working-with-APIs/app.js",
+		"/D/web/courses/web-developer-bootcamp/yelpAppV2/routes/commnets.js",
+		"/D/web/courses/web-developer-bootcamp/yelpApp/seeds.js",
+		"/D/web/courses/web-developer-bootcamp/authentication/authdemo/app.js",
+		"/D/web/courses/web-developer-bootcamp/authentication/authdemo/views/register.ejs",
+		"/D/web/courses/web-developer-bootcamp/authentication/authdemo/models/user.js",
+		"/D/web/courses/web-developer-bootcamp/dataAsociations/referencing-module-exports.js",
+		"/D/web/courses/web-developer-bootcamp/dataAsociations/models/user.js",
+		"/D/web/courses/web-developer-bootcamp/dataAsociations/models/post.js",
+		"/D/web/courses/web-developer-bootcamp/yelpApp/views/partials/header.ejs",
+		"/D/web/courses/web-developer-bootcamp/yelpApp/views/login.ejs",
+		"/D/web/courses/web-developer-bootcamp/yelpApp/views/register.ejs",
+		"/D/web/courses/web-developer-bootcamp/yelpApp/views/home.ejs",
+		"/D/web/courses/web-developer-bootcamp/yelpApp/views/campgrounds/index.ejs",
+		"/D/web/courses/web-developer-bootcamp/yelpApp/models/user.js",
+		"/D/web/courses/web-developer-bootcamp/yelpApp/models/campground.js",
+		"/D/web/courses/web-developer-bootcamp/yelpApp/models/comment.js",
+		"/D/web/courses/web-developer-bootcamp/authentication/authdemo/views/home.ejs",
+		"/D/web/courses/web-developer-bootcamp/authentication/authdemo/views/login.ejs",
+		"/D/web/courses/web-developer-bootcamp/authentication/authdemo/views/secret.ejs",
+		"/D/web/courses/web-developer-bootcamp/dataAsociations/embed.js",
+		"/D/web/courses/web-developer-bootcamp/authentication/authdemo/package.json",
+		"/D/web/courses/web-developer-bootcamp/yelpApp/package.json",
+		"/D/web/courses/javaScript-course/dev/js/assets/D16b_ClosuresPart2.js",
+		"/D/web/courses/web-developer-bootcamp/yelpApp/views/campgrounds/new.ejs",
+		"/D/web/courses/web-developer-bootcamp/yelpApp/public/stylesheets/main.css",
+		"/D/web/courses/web-developer-bootcamp/yelpApp/views/campgrounds/show.ejs",
+		"/D/web/courses/web-developer-bootcamp/yelpApp/views/comments/new.ejs",
+		"/D/web/courses/web-developer-bootcamp/yelpApp/views/show.ejs"
+	],
+	"find":
+	{
+		"height": 24.0
+	},
+	"find_in_files":
+	{
+		"height": 105.0,
+		"where_history":
+		[
+			"D:\\web\\courses\\, -*/node_modules/*, *.js",
+			"D:\\web\\courses\\javaScript-course, -*/node_modules/*, *.js",
+			"D:\\web\\courses\\reactAndRedux\\javaScript-course, -*/node_modules/*, *.js",
+			"D:\\web\\courses\\reactAndRedux\\, -*/node_modules/*, *.js",
+			"D:\\web\\courses\\reactAndRedux\\intro-to-react, -*/node_modules/*, *.js",
+			"D:\\web\\courses\\reactAndRedux, -*/node_modules/*, *.js",
+			"D:\\web\\courses\\, -*/node_modules/*, *.js",
+			"D:\\web\\courses\\web-developer-bootcamp, -*/node_modules/*, *.js"
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": true,
+		"find_history":
+		[
+			"push",
+			"each",
+			"var",
+			"each",
+			"key",
+			"each",
+			"for each",
+			"foreach",
+			"for",
+			"for each",
+			"next",
+			"Youtube",
+			"jsonplaceholder",
+			"axios",
+			"{\n",
+			"onInputChange",
+			"                            \n"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "src/index.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 364,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								129,
+								129
+							]
+						],
+						"settings":
+						{
+							"SL.15.region_keys":
+							[
+							],
+							"SL.65.region_keys":
+							[
+							],
+							"SL.73.region_keys":
+							[
+								"sublime_linter.protected_regions"
+							],
+							"SL.81.region_keys":
+							[
+								"sublime_linter.protected_regions"
+							],
+							"SL.89.region_keys":
+							[
+							],
+							"WordCount":
+							{
+								"changes": 0,
+								"count": 24,
+								"modified": false,
+								"selection": false,
+								"status": -1,
+								"syntax": "plain text"
+							},
+							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "package.json",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 503,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								503,
+								503
+							]
+						],
+						"settings":
+						{
+							"SL.16.region_keys":
+							[
+							],
+							"syntax": "Packages/JavaScript/JSON.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 10,
+					"type": "text"
+				}
+			]
+		},
+		{
+			"selected": 1,
+			"sheets":
+			[
+				{
+					"buffer": 2,
+					"file": "src/components/app.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2546,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								750,
+								720
+							]
+						],
+						"settings":
+						{
+							"SL.151.region_keys":
+							[
+							],
+							"SL.17.region_keys":
+							[
+							],
+							"SL.178.region_keys":
+							[
+							],
+							"SL.63.region_keys":
+							[
+							],
+							"SL.67.region_keys":
+							[
+							],
+							"SL.74.region_keys":
+							[
+								"sublime_linter.protected_regions"
+							],
+							"SL.83.region_keys":
+							[
+							],
+							"SL.91.region_keys":
+							[
+							],
+							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 614.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "/D/web/courses/web-developer-bootcamp/authentication/authdemo/app.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 4578,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								4069,
+								4069
+							]
+						],
+						"settings":
+						{
+							"SL.18.region_keys":
+							[
+							],
+							"SL.82.region_keys":
+							[
+							],
+							"WordCount":
+							{
+								"changes": -1,
+								"modified": true,
+								"selection": true,
+								"status": -1,
+								"syntax": "javascript"
+							},
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1507.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "src/components/video-list.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 950,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								178,
+								178
+							]
+						],
+						"settings":
+						{
+							"SL.152.region_keys":
+							[
+							],
+							"SL.18.region_keys":
+							[
+							],
+							"SL.64.region_keys":
+							[
+							],
+							"SL.84.region_keys":
+							[
+							],
+							"SL.92.region_keys":
+							[
+							],
+							"SL.93.region_keys":
+							[
+								"sublime_linter.protected_regions"
+							],
+							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 7,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "src/components/video-item.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1252,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								482,
+								482
+							]
+						],
+						"settings":
+						{
+							"SL.19.region_keys":
+							[
+							],
+							"SL.65.region_keys":
+							[
+							],
+							"SL.85.region_keys":
+							[
+							],
+							"SL.93.region_keys":
+							[
+							],
+							"SL.94.region_keys":
+							[
+								"sublime_linter.protected_regions"
+							],
+							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true,
+							"word_wrap": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 15.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 9,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "src/apis/youtube.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 561,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								314,
+								314
+							]
+						],
+						"settings":
+						{
+							"SL.22.region_keys":
+							[
+							],
+							"SL.77.region_keys":
+							[
+								"sublime_linter.protected_regions"
+							],
+							"SL.88.region_keys":
+							[
+							],
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "src/components/video-detail.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1006,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								411,
+								411
+							]
+						],
+						"settings":
+						{
+							"SL.20.region_keys":
+							[
+							],
+							"SL.66.region_keys":
+							[
+							],
+							"SL.86.region_keys":
+							[
+							],
+							"SL.94.region_keys":
+							[
+							],
+							"SL.96.region_keys":
+							[
+								"sublime_linter.protected_regions"
+							],
+							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true,
+							"word_wrap": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 60.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 8,
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"file": "src/components/video-item.css",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 152,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								152,
+								152
+							]
+						],
+						"settings":
+						{
+							"SL.21.region_keys":
+							[
+							],
+							"syntax": "Packages/CSS/CSS.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				},
+				{
+					"buffer": 9,
+					"file": "src/components/search-bar.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1556,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								17,
+								17
+							]
+						],
+						"settings":
+						{
+							"SL.23.region_keys":
+							[
+							],
+							"SL.75.region_keys":
+							[
+								"sublime_linter.protected_regions"
+							],
+							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1080.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 12,
+					"type": "text"
+				},
+				{
+					"buffer": 10,
+					"file": "public/index.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1708,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								569,
+								569
+							]
+						],
+						"settings":
+						{
+							"SL.24.region_keys":
+							[
+							],
+							"SL.70.region_keys":
+							[
+							],
+							"SL.74.region_keys":
+							[
+							],
+							"SL.76.region_keys":
+							[
+							],
+							"SL.98.region_keys":
+							[
+							],
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 11,
+					"type": "text"
+				}
+			]
+		},
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 11,
+					"file": "/D/software/util/hint-sheet.txt",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 16351,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								629,
+								629
+							]
+						],
+						"settings":
+						{
+							"SL.25.region_keys":
+							[
+								"SL.eslint.Highlights.|178e8c8574eb8efa093d686fe082a04e4cae4bd5818967e2b60ce6f6ec11d251|region.redish markup.error.sublime_linter|32",
+								"SL.eslint.Gutter.|region.redish markup.error.sublime_linter|dot",
+								"sublime_linter.protected_regions"
+							],
+							"SL.26.region_keys":
+							[
+								"SL.eslint.Gutter.|region.redish markup.error.sublime_linter|dot",
+								"SL.eslint.Highlights.|178e8c8574eb8efa093d686fe082a04e4cae4bd5818967e2b60ce6f6ec11d251|region.redish markup.error.sublime_linter|32",
+								"sublime_linter.protected_regions"
+							],
+							"SL.27.region_keys":
+							[
+								"SL.eslint.Gutter.|region.redish markup.error.sublime_linter|dot",
+								"SL.eslint.Highlights.|178e8c8574eb8efa093d686fe082a04e4cae4bd5818967e2b60ce6f6ec11d251|region.redish markup.error.sublime_linter|32",
+								"sublime_linter.protected_regions"
+							],
+							"SL.69.region_keys":
+							[
+								"SL.eslint.Highlights.|812373a26f3f532bbfd2c43dec091dc37112ffdc0338d1e127f8a3de76cc4456|region.redish markup.error.sublime_linter|32",
+								"SL.eslint.Gutter.|region.redish markup.error.sublime_linter|dot",
+								"sublime_linter.protected_regions"
+							],
+							"SL.71.region_keys":
+							[
+								"SL.eslint.Highlights.|812373a26f3f532bbfd2c43dec091dc37112ffdc0338d1e127f8a3de76cc4456|region.redish markup.error.sublime_linter|32",
+								"SL.eslint.Gutter.|region.redish markup.error.sublime_linter|dot",
+								"sublime_linter.protected_regions"
+							],
+							"SL.91.region_keys":
+							[
+								"sublime_linter.protected_regions",
+								"SL.eslint.Gutter.|region.redish markup.error.sublime_linter|dot",
+								"SL.eslint.Highlights.|178e8c8574eb8efa093d686fe082a04e4cae4bd5818967e2b60ce6f6ec11d251|region.redish markup.error.sublime_linter|32"
+							],
+							"WordCount":
+							{
+								"changes": 0,
+								"count": 1366,
+								"modified": false,
+								"selection": false,
+								"status": -1,
+								"syntax": "plain text"
+							},
+							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 315.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 12,
+					"file": "/D/web/courses/reactAndRedux/redux/basic-concepts/index.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 4240,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								107,
+								107
+							]
+						],
+						"settings":
+						{
+							"SL.28.region_keys":
+							[
+							],
+							"SL.79.region_keys":
+							[
+							],
+							"WordCount":
+							{
+								"changes": -1,
+								"modified": true,
+								"selection": true,
+								"status": -1,
+								"syntax": "javascript"
+							},
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 24.0
+	},
+	"input":
+	{
+		"height": 40.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			],
+			[
+				1,
+				0,
+				2,
+				1
+			],
+			[
+				2,
+				0,
+				3,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			0.253347956127,
+			0.55876064364,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.SublimeLinter":
+	{
+		"height": 0.0
+	},
+	"output.SublimeLinter Messages":
+	{
+		"height": 109.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "videos.sublime-project",
+	"replace":
+	{
+		"height": 44.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"appjs",
+				"app\\js\\app.js"
+			],
+			[
+				"gulp",
+				"gulp\\gulp-config.js"
+			],
+			[
+				"typo",
+				"app\\scss\\base\\_typography.scss"
+			],
+			[
+				"packa",
+				"D:\\web\\projects\\GitHub\\cssguy4hire\\package.json"
+			],
+			[
+				"vari",
+				"app\\scss\\config\\_variables.scss"
+			],
+			[
+				"app.scss",
+				"app\\scss\\app.scss"
+			],
+			[
+				"orienta",
+				"app\\js\\dev\\deviceOrientation.js"
+			],
+			[
+				"index",
+				"app\\index.html"
+			],
+			[
+				"pane",
+				"app\\js\\dev\\panelNav.js"
+			],
+			[
+				"app.js",
+				"app\\js\\app.js"
+			],
+			[
+				"inde",
+				"app\\index.html"
+			],
+			[
+				"about",
+				"app\\scss\\components\\_about.scss"
+			],
+			[
+				"layout",
+				"app\\scss\\base\\_layout.scss"
+			],
+			[
+				"select",
+				"app\\scss\\lib\\_selectbox.scss"
+			],
+			[
+				"form",
+				"app\\scss\\base\\_forms.scss"
+			],
+			[
+				"app.css",
+				"app\\css\\app.css"
+			],
+			[
+				"mixins",
+				"app\\scss\\helpers\\_mixins.scss"
+			],
+			[
+				"functions",
+				"app\\scss\\helpers\\_functions.scss"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 2,
+	"settings":
+	{
+	},
+	"show_minimap": false,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 438.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
