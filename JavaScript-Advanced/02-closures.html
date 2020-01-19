@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    
+    <link rel="stylesheet" href="./dist/styles/app.min.css">
+    <link rel="stylesheet" href="./dist/styles/02-closures.min.css">
+</head>
+<body>
+    <section>
+        <h1>Advanced JavaScript</h1>
+        <h2>Closures</h2>
+        <ul>
+        <li>A closure happens when a function remembers its lexical scope,
+            even when is executed outside of it.
+        </li>
+        <li>Is created when an inner function is transported outside of the 
+            outer function.
+        </li>
+        <li>
+            Closures  provides a number of benefits that are normally associated 
+            with object-oriented programming, in particular, data hiding and 
+            encapsulation.
+        </li>
+        </ul>
+
+        <p>
+            <button class="js-button-01">test closure</button>
+        </p>
+
+        <h3>Exercise</h3>
+
+        <ul class="js-notes notes"></ul>
+        <input type="text" class='js-current-note notes-current'>
+        <button class="js-add-note notes-add-btn">Add Note</button>
+        <button class="js-add-note notes-add-btn">Add Note</button>
+
+        <div class="js-notes-array"></div>
+
+    </section>
+
+    <nav>
+        <ul>
+            <li><a href="./index.html">home</a></li>
+        </ul>
+    </nav>
+    
+    <script src="./dist/js/02-closures.min.js"></script>
+
+</body>
+</html>

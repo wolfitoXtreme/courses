@@ -2,7 +2,7 @@
 
 console.log(
     '======================================================================',
-    '\n  Scope & Closures',
+    '\n  Scope',
     '\n======================================================================'
 );
 
@@ -43,8 +43,8 @@ function bar() {        // declaration and initialization (global scope), gets i
 function baz(foo) {             // declarations, baz(global scope) and foo (baz scope), gets initially compiled
     foo = 'bam';                // assignment, not initially compiled
     try {
-        bam = 'yay';                // assignment to a non initialized variable. 'strict mode' throws error when function is executed.
-                                    // 'non strict mode' will try to go to the parent scope create the lhs ref. and assign the value there 
+        bam = 'yay';            // assignment to a non initialized variable. 'strict mode' throws error when function is executed.
+                                // 'non strict mode' will try to go to the parent scope create the lhs ref. and assign the value there 
     } catch(err) {
         console.log(err);
     }
@@ -480,6 +480,12 @@ var objExplicit = {barExplicit: 'barExplicit2'};
 fooExplicit();
 fooExplicit.call(objExplicit); // explicity implying target for 'this'.
 
+console.log(
+    '----------------------------------------------------------------------',
+    '\n  \'This\' keyword - Hard binding',
+    '\n----------------------------------------------------------------------'
+);
+
 // hard binding
 function hardFoo() {
     console.log('this.hardBar = ' + this.hardBar);
@@ -551,9 +557,15 @@ utilFuncFooB = utilFuncFooB.bind2(utilFuncObjB);
 
 utilFuncFooB('My other utilFuncParam');
 
+console.log(
+    '----------------------------------------------------------------------',
+    '\n  \'This\' keyword - The New keyword',
+    '\n----------------------------------------------------------------------'
+);
+
 /* 
 the 'new' keyword
-    - Adding the 'new' keyword to a function call, makes the function behave as a constructor call
+    Adding the 'new' keyword to a function call, makes the function behave as a constructor call
     - creates a new object
     - Link the new created object with another object
     - Set 'This' as the created object
@@ -561,29 +573,64 @@ the 'new' keyword
 */
 
 function fooNew(obj) {
-    this.bazNew = 'baz';
-    // return 'this' when using the 'new' keyword
-    console.log(obj + ': this.barNew = ' + this.barNew + ',  bazNew = ' + bazNew);
-    console.log(obj + ': barNew = ' + barNew + ',  this.bazNew = ' + this.bazNew); 
+    this.bazNew = 'Local baz';
+    // returns 'this' when using the 'new' keyword
+    console.log(obj + ': barNew = ' + barNew + ',  bazNew = ' + bazNew); 
+    console.log(obj + ': this.barNew = ' + this.barNew + ',  this.bazNew = ' + this.bazNew);
 }
 
-var barNew = 'bar';
+var barNew = 'Global bar';
+
 /* 
 barNew - will point to the global object
 bazNew - will point to the global object
 */
-//fooNew('window');                   // -> bar baz
+// fooNew('window');                   // -> 'Global bar', 'Local baz'
+
 /* 
-barNew - will point to the new created object
-bazNew - will point to the new created object
+barNew - will point to the new created object (this.barNew -> undefined)
+bazNew - will point to the new created object 
 */
-var bazNew = new fooNew('bazNew');  // -> undefined undefined
-console.log(bazNew.bazNew);         // -> baz
+var bazNew = new fooNew('bazNew');  // -> 'Global bar', 'undefined'
+                                    // -> 'undefined', 'Local baz'
+console.log(bazNew.bazNew);         // -> 'Local baz'
 
 /* 
 This keyword Precedence analysis questions:
-    - was the function called with the 'New' keyword
-    - was it called with 'call' or 'apply' specifying an explicit 'this'
+    - was the function called with the 'New' keyword, then 'This' is that new object.
+    - was it called with 'call' or 'apply' specifying an explicit 'this', then 'This' is that object.
     - Was the function called through a containing/owning object (context)
-    - Default: the 'global object', except for strict mode
+    - Default: 'This' the 'global object', except for strict mode
 */
+
+// 'This', function precedence test
+function something() {
+    this.hello = 'hello';
+    console.log('this.hello = ' + this.hello, 'this.who = ' + this.who);
+}
+
+var who = 'global', 
+    testFoobar,
+    testBazbam,
+    obj1 = { who: 'obj1', something: something},
+    obj2 = {who: 'obj2'};
+
+something();                        // -> this.hello = hello this.who = global
+try {console.log(hello);}           // -> hello (created globally when executing 'something')
+catch(err) {console.log(err)};      // -> err
+
+obj1.something();                   // -> this.hello = hello this.who = obj1
+console.log(obj1.hello);            // -> hello
+
+obj1.something.call(obj2);          // -> this.hello = hello this.who = obj2
+console.log(obj2.hello);            // -> hello
+
+testFoobar = something.bind(obj2);  
+testFoobar();                       // -> this.hello = hello this.who = obj2
+testFoobar.call(obj1);              // -> this.hello = hello this.who = obj2
+
+testBazbam = new something();       // -> this.hello = hello this.who = undefined
+console.log(testBazbam.hello);      // -> hello
+
+testBazbam = new obj1.something();  // -> this.hello = hello this.who = undefined
+testBazbam = new testFoobar();      // -> this.hello = hello this.who = undefined

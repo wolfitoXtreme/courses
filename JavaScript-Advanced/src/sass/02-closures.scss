@@ -1,0 +1,98 @@
+// 
+// Configuration
+//
+@import 'config/variables';
+
+// 
+// helpers
+//
+@import 'helpers/functions';
+@import 'helpers/mixins';
+
+// 
+// Base
+// 
+
+.notes {
+    
+    // notes-item
+    // &#{&}-item {
+    &-item {
+        padding: 0;
+        font-size: prem(15px);
+        position: relative;
+
+        // doubling specificity
+        // notes-item.notes-item
+        &#{&} {
+            &:before {
+                content: "";
+                display: none;
+            }
+        }
+
+    }
+
+    // notes-anchor
+    &-anchor {
+        padding: prem(8px) prem(12px);
+        text-decoration: none;
+        border-radius: prem(5px);
+        display: block;
+        background-color: rgba($dark-grey, 0.5);
+
+        &:link,
+        &:visited {
+            color: $black;
+        }
+
+        &:active,
+        &:hover {
+            color: $white;
+            background-color: $charcoal;
+
+            + .notes-remove-btn {
+                color: $black;
+                background-color: $white;
+            }
+        }
+
+    }
+  
+    // notes-add-btn
+    &-add-btn {
+
+    }
+
+    // notes-remove-btn
+    &-remove-btn {
+        margin-top: prem(-9px);
+        top: 50%;
+        right: prem(8px);
+        width: prem(18px);
+        height: prem(18px);
+        text-decoration: none;
+        text-align: center;
+        line-height: 1;
+        border-radius: 50%;
+        display: block;
+        position: absolute;
+
+        &:link,
+        &:visited {
+            color: $white;
+            background-color: $black;
+        }
+
+        &:active,
+        &:hover {
+
+        }
+    }
+}
+
+.parent {
+    &#{&} {
+        content: 'test';
+     }
+}
