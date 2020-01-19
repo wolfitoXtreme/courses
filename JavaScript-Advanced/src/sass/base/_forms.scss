@@ -40,7 +40,7 @@ label {
     padding-left: prem(3px);
     font-weight: 600;
     opacity: 0.8;
-    font-size: prem($font-size-xxx-small);
+    font: normal #{prem($font-size-xxx-small)}/#{$line-height-default} $default-font;
     letter-spacing: -0.028em;
     text-transform: uppercase;
     line-height: 1.1;
@@ -59,9 +59,9 @@ label {
 // 
 %fields {
     margin: 0;
-    padding: prem(5px) prem(8px) prem(5px);
+    padding: prem(8px) prem(20px) prem(8px);
     width: prem(220px);
-    font-weight: 300;
+    font: #{prem($font-size-xxx-small)}/#{$line-height-default} $default-font;
     line-height: $line-height-default;
     color: $black;
     border: 2px solid $black;
@@ -71,12 +71,12 @@ label {
     &:hover,
     &:focus,
     &.focus {
-        border-color: $light-black;
+        // border-color: $light-black;
     }
 
     &:focus,
     &.focus {
-        background-color: $dim-grey;
+        // background-color: $dim-grey;
     }
 
     // placeholder

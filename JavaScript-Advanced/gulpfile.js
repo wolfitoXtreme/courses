@@ -1,5 +1,7 @@
 const   gulp = require('gulp'),
         sass = require('gulp-sass'),
+        sourcemaps = require('gulp-sourcemaps'),
+        autoprefixer = require('gulp-autoprefixer'),
         rename = require('gulp-rename'),
         browserify = require('gulp-browserify');
 
@@ -8,7 +10,8 @@ const   config = require('./config');
 gulp.task('sass', function () {
 
     gulp.src(config.paths.scss.in)
-        .pipe(sass({outputStyle: 'nested'}))
+        .pipe(sourcemaps.init())
+        .pipe(sass({outputStyle: 'expanded'}))
         .on('error', function (err) {
             console.log('gulp SASS error', err.toString());
 
@@ -17,6 +20,8 @@ gulp.task('sass', function () {
         .pipe(rename(function (path) {
             path.basename += '.min'
         }))
+        .pipe(sourcemaps.write())
+        .pipe(autoprefixer('> 3%'))
         .pipe(gulp.dest(config.paths.scss.out))
         .on('end', function(){
             console.log('gulp SASS ended successfully');
@@ -26,7 +31,7 @@ gulp.task('sass', function () {
 gulp.task('browserify', function () {
 
     gulp.src(config.paths.js.entryFile)
-        
+
         // modules enabling and transpiling
         // .pipe(browserify({
         //         // 'transform': ['babelify']
