@@ -1,0 +1,18 @@
+.stored {
+  margin: 0px auto;
+  padding: 0;
+  max-width: 300px;
+  list-style-type: none;
+
+  li {
+    margin: 2px;
+    padding: 5px 10px;
+    cursor: pointer;
+    border: 1px solid gray;
+
+    &:hover {
+      color: white;
+      background-color: gray;
+    }
+  }
+}
