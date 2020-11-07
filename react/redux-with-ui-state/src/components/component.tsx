@@ -49,8 +49,6 @@ const Container: React.FC<Props> = ({
     }
   };
 
-  useEffect(() => {});
-
   const resetFields = () => {
     setNameVal('');
     setAgeVal('');
